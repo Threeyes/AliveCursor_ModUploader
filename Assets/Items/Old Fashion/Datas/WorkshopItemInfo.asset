@@ -1,0 +1,27 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5695af25494a69147873bf0ff10072ea, type: 3}
+  m_Name: WorkshopItemInfo
+  m_EditorClassIdentifier: 
+  title: Old Fashion
+  description: "In honor of the good old bug\u2026\u2026\n\nHowto: Press middle mouse
+    button to generate tail."
+  texturePreview: {fileID: 2800000, guid: 5538626b53dc7464d85e00c9eba5d589, type: 3}
+  itemVisibility: 0
+  ageRatingType: 0
+  itemStyle: 0
+  itemGenre: 1
+  itemReference: 32
+  itemFeature: 0
+  itemSafety: 1
+  itemName: Old Fashion
+  itemId: 2847246787

@@ -1,0 +1,33 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5695af25494a69147873bf0ff10072ea, type: 3}
+  m_Name: WorkshopItemInfo
+  m_EditorClassIdentifier: 
+  title: Master Chief
+  description: 'Two-headed Green Monster.
+
+
+    Asset link:
+
+    -Frag Grenade:https://skfb.ly/o9yNz
+
+    -Particles:https://assetstore.unity.com/packages/vfx/particles/sherbb-s-particle-collection-170798#description'
+  texturePreview: {fileID: 2800000, guid: 96d287f3ba9c33d448d43b33ad7d03b8, type: 3}
+  itemVisibility: 0
+  ageRatingType: 0
+  itemStyle: 64
+  itemGenre: 2
+  itemReference: 1
+  itemFeature: 1
+  itemSafety: 1
+  itemName: Master Chief
+  itemId: 2847246319

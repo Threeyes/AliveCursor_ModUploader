@@ -1,0 +1,26 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5695af25494a69147873bf0ff10072ea, type: 3}
+  m_Name: WorkshopItemInfo
+  m_EditorClassIdentifier: 
+  title: Snake
+  description: "It's a little snake, hope that you don't find it creepy (\xB4\u2200\uFF40\uFF09!"
+  texturePreview: {fileID: 2800000, guid: 36c0e7a252f8de6458cd545c508c76d1, type: 3}
+  itemVisibility: 0
+  ageRatingType: 0
+  itemStyle: 1
+  itemGenre: 512
+  itemReference: 0
+  itemFeature: 0
+  itemSafety: 0
+  itemName: Snake
+  itemId: 2847247577

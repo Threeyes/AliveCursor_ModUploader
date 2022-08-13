@@ -1,0 +1,149 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!319 &31900000
+AvatarMask:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: New Avatar Mask
+  m_Mask: 00000000000000000000000000000000000000000100000000000000010000000000000000000000000000000100000000000000
+  m_Elements:
+  - m_Path: 
+    m_Weight: 1
+  - m_Path: body1_model0
+    m_Weight: 1
+  - m_Path: chiefhighpoly.qc_skeleton
+    m_Weight: 1
+  - m_Path: chiefhighpoly.qc_skeleton/bip_pelvis
+    m_Weight: 1
+  - m_Path: chiefhighpoly.qc_skeleton/bip_pelvis/bip_hip_L
+    m_Weight: 1
+  - m_Path: chiefhighpoly.qc_skeleton/bip_pelvis/bip_hip_L/bip_knee_L
+    m_Weight: 1
+  - m_Path: chiefhighpoly.qc_skeleton/bip_pelvis/bip_hip_L/bip_knee_L/bip_foot_L
+    m_Weight: 1
+  - m_Path: chiefhighpoly.qc_skeleton/bip_pelvis/bip_hip_L/bip_knee_L/bip_foot_L/bip_toe_L
+    m_Weight: 1
+  - m_Path: chiefhighpoly.qc_skeleton/bip_pelvis/bip_hip_L/bip_knee_L/bip_foot_L/bip_toe_L/bip_toe_L_end
+    m_Weight: 1
+  - m_Path: chiefhighpoly.qc_skeleton/bip_pelvis/bip_hip_R
+    m_Weight: 1
+  - m_Path: chiefhighpoly.qc_skeleton/bip_pelvis/bip_hip_R/bip_knee_R
+    m_Weight: 1
+  - m_Path: chiefhighpoly.qc_skeleton/bip_pelvis/bip_hip_R/bip_knee_R/bip_foot_R
+    m_Weight: 1
+  - m_Path: chiefhighpoly.qc_skeleton/bip_pelvis/bip_hip_R/bip_knee_R/bip_foot_R/bip_toe_R
+    m_Weight: 1
+  - m_Path: chiefhighpoly.qc_skeleton/bip_pelvis/bip_hip_R/bip_knee_R/bip_foot_R/bip_toe_R/bip_toe_R_end
+    m_Weight: 1
+  - m_Path: chiefhighpoly.qc_skeleton/bip_pelvis/bip_spine_0
+    m_Weight: 1
+  - m_Path: chiefhighpoly.qc_skeleton/bip_pelvis/bip_spine_0/bip_spine_1
+    m_Weight: 1
+  - m_Path: chiefhighpoly.qc_skeleton/bip_pelvis/bip_spine_0/bip_spine_1/bip_spine_2
+    m_Weight: 1
+  - m_Path: chiefhighpoly.qc_skeleton/bip_pelvis/bip_spine_0/bip_spine_1/bip_spine_2/bip_collar_L
+    m_Weight: 1
+  - m_Path: chiefhighpoly.qc_skeleton/bip_pelvis/bip_spine_0/bip_spine_1/bip_spine_2/bip_collar_L/bip_upperArm_L
+    m_Weight: 1
+  - m_Path: chiefhighpoly.qc_skeleton/bip_pelvis/bip_spine_0/bip_spine_1/bip_spine_2/bip_collar_L/bip_upperArm_L/bip_lowerArm_L
+    m_Weight: 1
+  - m_Path: chiefhighpoly.qc_skeleton/bip_pelvis/bip_spine_0/bip_spine_1/bip_spine_2/bip_collar_L/bip_upperArm_L/bip_lowerArm_L/bip_hand_L
+    m_Weight: 1
+  - m_Path: chiefhighpoly.qc_skeleton/bip_pelvis/bip_spine_0/bip_spine_1/bip_spine_2/bip_collar_L/bip_upperArm_L/bip_lowerArm_L/bip_hand_L/f_index.01.L
+    m_Weight: 1
+  - m_Path: chiefhighpoly.qc_skeleton/bip_pelvis/bip_spine_0/bip_spine_1/bip_spine_2/bip_collar_L/bip_upperArm_L/bip_lowerArm_L/bip_hand_L/f_index.01.L/f_index.02.L
+    m_Weight: 1
+  - m_Path: chiefhighpoly.qc_skeleton/bip_pelvis/bip_spine_0/bip_spine_1/bip_spine_2/bip_collar_L/bip_upperArm_L/bip_lowerArm_L/bip_hand_L/f_index.01.L/f_index.02.L/f_index.03.L
+    m_Weight: 1
+  - m_Path: chiefhighpoly.qc_skeleton/bip_pelvis/bip_spine_0/bip_spine_1/bip_spine_2/bip_collar_L/bip_upperArm_L/bip_lowerArm_L/bip_hand_L/f_index.01.L/f_index.02.L/f_index.03.L/f_index.03.L_end
+    m_Weight: 1
+  - m_Path: chiefhighpoly.qc_skeleton/bip_pelvis/bip_spine_0/bip_spine_1/bip_spine_2/bip_collar_L/bip_upperArm_L/bip_lowerArm_L/bip_hand_L/f_middle.01.L
+    m_Weight: 1
+  - m_Path: chiefhighpoly.qc_skeleton/bip_pelvis/bip_spine_0/bip_spine_1/bip_spine_2/bip_collar_L/bip_upperArm_L/bip_lowerArm_L/bip_hand_L/f_middle.01.L/f_middle.02.L
+    m_Weight: 1
+  - m_Path: chiefhighpoly.qc_skeleton/bip_pelvis/bip_spine_0/bip_spine_1/bip_spine_2/bip_collar_L/bip_upperArm_L/bip_lowerArm_L/bip_hand_L/f_middle.01.L/f_middle.02.L/f_middle.03.L
+    m_Weight: 1
+  - m_Path: chiefhighpoly.qc_skeleton/bip_pelvis/bip_spine_0/bip_spine_1/bip_spine_2/bip_collar_L/bip_upperArm_L/bip_lowerArm_L/bip_hand_L/f_middle.01.L/f_middle.02.L/f_middle.03.L/f_middle.03.L_end
+    m_Weight: 1
+  - m_Path: chiefhighpoly.qc_skeleton/bip_pelvis/bip_spine_0/bip_spine_1/bip_spine_2/bip_collar_L/bip_upperArm_L/bip_lowerArm_L/bip_hand_L/f_pinky.01.L
+    m_Weight: 1
+  - m_Path: chiefhighpoly.qc_skeleton/bip_pelvis/bip_spine_0/bip_spine_1/bip_spine_2/bip_collar_L/bip_upperArm_L/bip_lowerArm_L/bip_hand_L/f_pinky.01.L/f_pinky.02.L
+    m_Weight: 1
+  - m_Path: chiefhighpoly.qc_skeleton/bip_pelvis/bip_spine_0/bip_spine_1/bip_spine_2/bip_collar_L/bip_upperArm_L/bip_lowerArm_L/bip_hand_L/f_pinky.01.L/f_pinky.02.L/f_pinky.03.L
+    m_Weight: 1
+  - m_Path: chiefhighpoly.qc_skeleton/bip_pelvis/bip_spine_0/bip_spine_1/bip_spine_2/bip_collar_L/bip_upperArm_L/bip_lowerArm_L/bip_hand_L/f_pinky.01.L/f_pinky.02.L/f_pinky.03.L/f_pinky.03.L_end
+    m_Weight: 1
+  - m_Path: chiefhighpoly.qc_skeleton/bip_pelvis/bip_spine_0/bip_spine_1/bip_spine_2/bip_collar_L/bip_upperArm_L/bip_lowerArm_L/bip_hand_L/f_ring.01.L
+    m_Weight: 1
+  - m_Path: chiefhighpoly.qc_skeleton/bip_pelvis/bip_spine_0/bip_spine_1/bip_spine_2/bip_collar_L/bip_upperArm_L/bip_lowerArm_L/bip_hand_L/f_ring.01.L/f_ring.02.L
+    m_Weight: 1
+  - m_Path: chiefhighpoly.qc_skeleton/bip_pelvis/bip_spine_0/bip_spine_1/bip_spine_2/bip_collar_L/bip_upperArm_L/bip_lowerArm_L/bip_hand_L/f_ring.01.L/f_ring.02.L/f_ring.03.L
+    m_Weight: 1
+  - m_Path: chiefhighpoly.qc_skeleton/bip_pelvis/bip_spine_0/bip_spine_1/bip_spine_2/bip_collar_L/bip_upperArm_L/bip_lowerArm_L/bip_hand_L/f_ring.01.L/f_ring.02.L/f_ring.03.L/f_ring.03.L_end
+    m_Weight: 1
+  - m_Path: chiefhighpoly.qc_skeleton/bip_pelvis/bip_spine_0/bip_spine_1/bip_spine_2/bip_collar_L/bip_upperArm_L/bip_lowerArm_L/bip_hand_L/thumb.01.L
+    m_Weight: 1
+  - m_Path: chiefhighpoly.qc_skeleton/bip_pelvis/bip_spine_0/bip_spine_1/bip_spine_2/bip_collar_L/bip_upperArm_L/bip_lowerArm_L/bip_hand_L/thumb.01.L/thumb.02.L
+    m_Weight: 1
+  - m_Path: chiefhighpoly.qc_skeleton/bip_pelvis/bip_spine_0/bip_spine_1/bip_spine_2/bip_collar_L/bip_upperArm_L/bip_lowerArm_L/bip_hand_L/thumb.01.L/thumb.02.L/thumb.03.L
+    m_Weight: 1
+  - m_Path: chiefhighpoly.qc_skeleton/bip_pelvis/bip_spine_0/bip_spine_1/bip_spine_2/bip_collar_L/bip_upperArm_L/bip_lowerArm_L/bip_hand_L/thumb.01.L/thumb.02.L/thumb.03.L/thumb.03.L_end
+    m_Weight: 1
+  - m_Path: chiefhighpoly.qc_skeleton/bip_pelvis/bip_spine_0/bip_spine_1/bip_spine_2/bip_collar_R
+    m_Weight: 1
+  - m_Path: chiefhighpoly.qc_skeleton/bip_pelvis/bip_spine_0/bip_spine_1/bip_spine_2/bip_collar_R/bip_upperArm_R
+    m_Weight: 1
+  - m_Path: chiefhighpoly.qc_skeleton/bip_pelvis/bip_spine_0/bip_spine_1/bip_spine_2/bip_collar_R/bip_upperArm_R/bip_lowerArm_R
+    m_Weight: 1
+  - m_Path: chiefhighpoly.qc_skeleton/bip_pelvis/bip_spine_0/bip_spine_1/bip_spine_2/bip_collar_R/bip_upperArm_R/bip_lowerArm_R/bip_hand_R
+    m_Weight: 1
+  - m_Path: chiefhighpoly.qc_skeleton/bip_pelvis/bip_spine_0/bip_spine_1/bip_spine_2/bip_collar_R/bip_upperArm_R/bip_lowerArm_R/bip_hand_R/f_index.01.R
+    m_Weight: 1
+  - m_Path: chiefhighpoly.qc_skeleton/bip_pelvis/bip_spine_0/bip_spine_1/bip_spine_2/bip_collar_R/bip_upperArm_R/bip_lowerArm_R/bip_hand_R/f_index.01.R/f_index.02.R
+    m_Weight: 1
+  - m_Path: chiefhighpoly.qc_skeleton/bip_pelvis/bip_spine_0/bip_spine_1/bip_spine_2/bip_collar_R/bip_upperArm_R/bip_lowerArm_R/bip_hand_R/f_index.01.R/f_index.02.R/f_index.03.R
+    m_Weight: 1
+  - m_Path: chiefhighpoly.qc_skeleton/bip_pelvis/bip_spine_0/bip_spine_1/bip_spine_2/bip_collar_R/bip_upperArm_R/bip_lowerArm_R/bip_hand_R/f_index.01.R/f_index.02.R/f_index.03.R/f_index.03.R_end
+    m_Weight: 1
+  - m_Path: chiefhighpoly.qc_skeleton/bip_pelvis/bip_spine_0/bip_spine_1/bip_spine_2/bip_collar_R/bip_upperArm_R/bip_lowerArm_R/bip_hand_R/f_middle.01
+    m_Weight: 1
+  - m_Path: chiefhighpoly.qc_skeleton/bip_pelvis/bip_spine_0/bip_spine_1/bip_spine_2/bip_collar_R/bip_upperArm_R/bip_lowerArm_R/bip_hand_R/f_middle.01/f_middle.02.R
+    m_Weight: 1
+  - m_Path: chiefhighpoly.qc_skeleton/bip_pelvis/bip_spine_0/bip_spine_1/bip_spine_2/bip_collar_R/bip_upperArm_R/bip_lowerArm_R/bip_hand_R/f_middle.01/f_middle.02.R/f_middle.03.R
+    m_Weight: 1
+  - m_Path: chiefhighpoly.qc_skeleton/bip_pelvis/bip_spine_0/bip_spine_1/bip_spine_2/bip_collar_R/bip_upperArm_R/bip_lowerArm_R/bip_hand_R/f_middle.01/f_middle.02.R/f_middle.03.R/f_middle.03.R_end
+    m_Weight: 1
+  - m_Path: chiefhighpoly.qc_skeleton/bip_pelvis/bip_spine_0/bip_spine_1/bip_spine_2/bip_collar_R/bip_upperArm_R/bip_lowerArm_R/bip_hand_R/f_pinky.01.R
+    m_Weight: 1
+  - m_Path: chiefhighpoly.qc_skeleton/bip_pelvis/bip_spine_0/bip_spine_1/bip_spine_2/bip_collar_R/bip_upperArm_R/bip_lowerArm_R/bip_hand_R/f_pinky.01.R/f_pinky.02.R
+    m_Weight: 1
+  - m_Path: chiefhighpoly.qc_skeleton/bip_pelvis/bip_spine_0/bip_spine_1/bip_spine_2/bip_collar_R/bip_upperArm_R/bip_lowerArm_R/bip_hand_R/f_pinky.01.R/f_pinky.02.R/f_pinky.03.R
+    m_Weight: 1
+  - m_Path: chiefhighpoly.qc_skeleton/bip_pelvis/bip_spine_0/bip_spine_1/bip_spine_2/bip_collar_R/bip_upperArm_R/bip_lowerArm_R/bip_hand_R/f_pinky.01.R/f_pinky.02.R/f_pinky.03.R/f_pinky.03.R_end
+    m_Weight: 1
+  - m_Path: chiefhighpoly.qc_skeleton/bip_pelvis/bip_spine_0/bip_spine_1/bip_spine_2/bip_collar_R/bip_upperArm_R/bip_lowerArm_R/bip_hand_R/f_ring.01.R
+    m_Weight: 1
+  - m_Path: chiefhighpoly.qc_skeleton/bip_pelvis/bip_spine_0/bip_spine_1/bip_spine_2/bip_collar_R/bip_upperArm_R/bip_lowerArm_R/bip_hand_R/f_ring.01.R/f_ring.02.R
+    m_Weight: 1
+  - m_Path: chiefhighpoly.qc_skeleton/bip_pelvis/bip_spine_0/bip_spine_1/bip_spine_2/bip_collar_R/bip_upperArm_R/bip_lowerArm_R/bip_hand_R/f_ring.01.R/f_ring.02.R/f_ring.03.R
+    m_Weight: 1
+  - m_Path: chiefhighpoly.qc_skeleton/bip_pelvis/bip_spine_0/bip_spine_1/bip_spine_2/bip_collar_R/bip_upperArm_R/bip_lowerArm_R/bip_hand_R/f_ring.01.R/f_ring.02.R/f_ring.03.R/f_ring.03.R_end
+    m_Weight: 1
+  - m_Path: chiefhighpoly.qc_skeleton/bip_pelvis/bip_spine_0/bip_spine_1/bip_spine_2/bip_collar_R/bip_upperArm_R/bip_lowerArm_R/bip_hand_R/thumb.01.R
+    m_Weight: 1
+  - m_Path: chiefhighpoly.qc_skeleton/bip_pelvis/bip_spine_0/bip_spine_1/bip_spine_2/bip_collar_R/bip_upperArm_R/bip_lowerArm_R/bip_hand_R/thumb.01.R/thumb.02.R
+    m_Weight: 1
+  - m_Path: chiefhighpoly.qc_skeleton/bip_pelvis/bip_spine_0/bip_spine_1/bip_spine_2/bip_collar_R/bip_upperArm_R/bip_lowerArm_R/bip_hand_R/thumb.01.R/thumb.02.R/thumb.03.R
+    m_Weight: 1
+  - m_Path: chiefhighpoly.qc_skeleton/bip_pelvis/bip_spine_0/bip_spine_1/bip_spine_2/bip_collar_R/bip_upperArm_R/bip_lowerArm_R/bip_hand_R/thumb.01.R/thumb.02.R/thumb.03.R/thumb.03.R_end
+    m_Weight: 1
+  - m_Path: chiefhighpoly.qc_skeleton/bip_pelvis/bip_spine_0/bip_spine_1/bip_spine_2/bip_neck
+    m_Weight: 1
+  - m_Path: chiefhighpoly.qc_skeleton/bip_pelvis/bip_spine_0/bip_spine_1/bip_spine_2/bip_neck/bip_head
+    m_Weight: 1
+  - m_Path: chiefhighpoly.qc_skeleton/bip_pelvis/bip_spine_0/bip_spine_1/bip_spine_2/bip_neck/bip_head/bip_head_end
+    m_Weight: 1
+  - m_Path: masterchief
+    m_Weight: 1

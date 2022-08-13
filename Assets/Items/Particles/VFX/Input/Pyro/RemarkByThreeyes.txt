@@ -1,0 +1,3 @@
+Source：https://github.com/keijiro/VfxPyro
+Version：efc99d61ff21ea3d0a3e2524fd99d0b0ebdb1be2
+License：https://github.com/keijiro/VfxPyro/blob/master/LICENSE

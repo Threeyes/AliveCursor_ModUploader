@@ -1,0 +1,3 @@
+  title: Golfball
+  modelProvider: Scott VanArsdale
+  modelLink: https://sketchfab.com/3d-models/golf-ball-b0b50a16aa5d431e8ed799c1a413025c

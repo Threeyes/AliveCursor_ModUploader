@@ -1,0 +1,3 @@
+  title: Football
+  modelProvider: Scott VanArsdale
+  modelLink: https://sketchfab.com/3d-models/soccer-ball-0a96f1f19afc432bb22c3d74da546338

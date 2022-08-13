@@ -1,0 +1,3 @@
+  title: Liquid
+  modelProvider: Iggy-design
+  modelLink: https://assetstore.unity.com/packages/3d/luminaris-starship-71439
