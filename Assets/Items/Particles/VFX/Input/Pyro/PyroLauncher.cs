@@ -1,17 +1,13 @@
 using UnityEngine;
 using UnityEngine.VFX;
-sealed class PyroLauncher : MonoBehaviour
-  , IAC_SystemInput_MouseButtonHandler
+public class PyroLauncher : MonoBehaviour
 {
     [SerializeField] VisualEffect _vfx = null;
 
     VFXEventAttribute _attrib;
 
-    public void OnMouseButton(AC_MouseEventExtArgs e)
+    public void Launch()
     {
-        if (!e.IsMouseButtonDown)
-            return;
-
         Camera _camera = AC_ManagerHolder.EnvironmentManager.MainCamera;
         var pos = AC_ManagerHolder.SystemCursorManager.MousePosition;
         pos.z = _vfx.transform.position.z - _camera.transform.position.z;
