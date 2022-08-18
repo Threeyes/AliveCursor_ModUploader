@@ -313,7 +313,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 3434
     y: -4517
-    width: 5630
+    width: 5631
     height: 6905
 --- !u!114 &4
 MonoBehaviour:
@@ -948,7 +948,7 @@ MonoBehaviour:
   stripCapacity: 16
   particlePerStripCount: 16
   needsComputeBounds: 0
-  boundsSettingMode: 1
+  boundsMode: 1
   m_Space: 0
 --- !u!114 &23
 MonoBehaviour:
@@ -2671,7 +2671,7 @@ MonoBehaviour:
   stripCapacity: 16
   particlePerStripCount: 16
   needsComputeBounds: 0
-  boundsSettingMode: 1
+  boundsMode: 1
   m_Space: 0
 --- !u!114 &97
 MonoBehaviour:
@@ -5142,7 +5142,7 @@ MonoBehaviour:
   stripCapacity: 16
   particlePerStripCount: 16
   needsComputeBounds: 0
-  boundsSettingMode: 1
+  boundsMode: 1
   m_Space: 0
 --- !u!114 &176
 MonoBehaviour:
@@ -6320,7 +6320,7 @@ MonoBehaviour:
   stripCapacity: 16
   particlePerStripCount: 16
   needsComputeBounds: 0
-  boundsSettingMode: 1
+  boundsMode: 1
   m_Space: 0
 --- !u!114 &215
 MonoBehaviour:
@@ -7124,7 +7124,7 @@ MonoBehaviour:
   stripCapacity: 16
   particlePerStripCount: 16
   needsComputeBounds: 0
-  boundsSettingMode: 1
+  boundsMode: 1
   m_Space: 0
 --- !u!114 &249
 MonoBehaviour:
@@ -18672,7 +18672,7 @@ MonoBehaviour:
   m_Parent: {fileID: 2}
   m_Children: []
   m_UIPosition: {x: 0, y: 0}
-  m_UICollapsed: 1
+  m_UICollapsed: 0
   m_UISuperCollapsed: 0
   m_InputSlots: []
   m_OutputSlots:
@@ -20032,7 +20032,7 @@ MonoBehaviour:
   stripCapacity: 1
   particlePerStripCount: 128
   needsComputeBounds: 0
-  boundsSettingMode: 1
+  boundsMode: 1
   m_Space: 0
 --- !u!114 &755
 MonoBehaviour:
