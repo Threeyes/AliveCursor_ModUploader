@@ -13,8 +13,8 @@ MonoBehaviour:
   m_Name: WorkshopItemInfo
   m_EditorClassIdentifier: 
   title: Old Fashion
-  description: "In honor of the good old bug\u2026\u2026\n\nHowto: Press middle mouse
-    button to generate tail."
+  description: "In honor of the good old bug\u2026\u2026\n\nHowto: \n1. Press middle
+    mouse button to generate tail."
   texturePreview: {fileID: 2800000, guid: 5538626b53dc7464d85e00c9eba5d589, type: 3}
   itemVisibility: 0
   ageRatingType: 0

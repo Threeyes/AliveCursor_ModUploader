@@ -16,6 +16,12 @@ MonoBehaviour:
   description: 'Rock and roll!
 
 
+    Howto:
+
+    1. Change EnvironmentConfig to get
+    different outlook.
+
+
     Model Link: https://skfb.ly/6YL6s'
   texturePreview: {fileID: 2800000, guid: bce9cb712a135d841a703b5c638a43b7, type: 3}
   itemVisibility: 0

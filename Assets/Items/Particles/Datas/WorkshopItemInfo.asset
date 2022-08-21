@@ -16,8 +16,10 @@ MonoBehaviour:
   description: 'Countless particles!
 
 
-    PS: Use Black Desktop Background and get
-    ready to be shocked on bored state!'
+    Howto:
+
+    1. Use Black Desktop Background
+    and get ready to be shocked on bored state!'
   texturePreview: {fileID: 2800000, guid: e0a95ddcd22900b42ba5c5f56b30b652, type: 3}
   itemVisibility: 0
   ageRatingType: 0

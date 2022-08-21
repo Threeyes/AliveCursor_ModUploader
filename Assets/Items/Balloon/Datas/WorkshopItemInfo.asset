@@ -16,7 +16,13 @@ MonoBehaviour:
   description: 'Up!
 
 
-    Model link: https://sketchfab.com/3d-models/air-balloons-72fedbfe779d475586e31f2ef2920d2e'
+    Howto:
+
+    1.Press middle mouse button to generate balloon.
+
+
+    Model
+    link: https://sketchfab.com/3d-models/air-balloons-72fedbfe779d475586e31f2ef2920d2e'
   texturePreview: {fileID: 2800000, guid: c91bfa52e78c7a545bdbbe4c78eee7ea, type: 3}
   itemVisibility: 0
   ageRatingType: 0

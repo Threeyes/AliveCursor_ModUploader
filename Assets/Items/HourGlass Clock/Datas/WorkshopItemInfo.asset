@@ -13,7 +13,13 @@ MonoBehaviour:
   m_Name: WorkshopItemInfo
   m_EditorClassIdentifier: 
   title: HourGlass Clock
-  description: 
+  description: 'Don''t waste your time on this!
+
+
+    Howto:
+
+    1.Press middle
+    mouse button to check out the timescale.'
   texturePreview: {fileID: 2800000, guid: a6cea33fb8389144da0c5fe3e942faff, type: 3}
   itemVisibility: 0
   ageRatingType: 0
