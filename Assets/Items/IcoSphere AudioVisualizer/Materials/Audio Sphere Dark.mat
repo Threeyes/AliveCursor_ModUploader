@@ -57,7 +57,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MainTex:
-        m_Texture: {fileID: 2800000, guid: 02d51e0920119b743b03948cdf4e2fbb, type: 3}
+        m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MaskTex:
@@ -148,9 +148,9 @@ Material:
     - _BaseColor: {r: 0, g: 1, b: 0.69714594, a: 1}
     - _BaseColorAddSubDiff: {r: 0, g: 0, b: 0, a: 0}
     - _CameraFadeParams: {r: 0, g: 0, b: 0, a: 0}
-    - _Color: {r: 1, g: 1, b: 1, a: 1}
-    - _Color1: {r: 0.6554734, g: 1.0924556, b: 1.3041189, a: 1}
-    - _Color2: {r: 0, g: 0.21568628, b: 1, a: 1}
+    - _Color: {r: 0.5, g: 0.49292454, b: 0.49292454, a: 1}
+    - _Color1: {r: 0.24638219, g: 0.24638219, b: 0.24638219, a: 1}
+    - _Color2: {r: 0, g: 0, b: 0, a: 1}
     - _EmissionColor: {r: 0, g: 0.12064868, b: 0.5019608, a: 1}
     - _Flip: {r: 1, g: 1, b: 1, a: 1}
     - _HueVariation: {r: 1, g: 0.5, b: 0, a: 0.1}
