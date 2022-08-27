@@ -17,10 +17,10 @@ MonoBehaviour:
     sphereRadius: 0.5
     extrudeMethod: 0
     idleExtrusion: 0.01
-    sphereMaterial: {fileID: 2100000, guid: f2713fd16b16f774a9582da123243fc6, type: 2}
+    sphereMaterial: {fileID: 2100000, guid: f09a61c875d2962419307f5d8cf28d51, type: 2}
     listMaterialPreset:
-    - {fileID: 2100000, guid: f2713fd16b16f774a9582da123243fc6, type: 2}
     - {fileID: 2100000, guid: f09a61c875d2962419307f5d8cf28d51, type: 2}
+    - {fileID: 2100000, guid: f2713fd16b16f774a9582da123243fc6, type: 2}
     curMaterialPresetIndex: 0
     maxExtrusion: 0.1
     fftBounds: 32
@@ -56,6 +56,6 @@ MonoBehaviour:
       m_NumAlphaKeys: 2
     waveformWidthMultiplier: 1
     waveformRadius: 0.6
-    waveformHeight: 1
+    waveformHeight: 0.2
     rotateWaveformRing: 0
     waveformRotateSpeed: {x: 0, y: 0.01, z: 0}

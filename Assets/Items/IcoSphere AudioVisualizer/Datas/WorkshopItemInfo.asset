@@ -13,13 +13,9 @@ MonoBehaviour:
   m_Name: WorkshopItemInfo
   m_EditorClassIdentifier: 
   title: IcoSphere AudioVisualizer
-  description: 'Did you see that beats?
-
-
-    Howto:
-
-    1.Press modify keys + mouse
-    scroll to rotate the sphere.'
+  description: "Did you see that beats?\n\nDemonstrate: \n1. Configable PanoSkybox
+    settings.\n\nHowto:\n1. Press modify keys + mouse scroll to rotate the sphere.\n2.
+    Play music/video to see the visual rhythm."
   texturePreview: {fileID: 2800000, guid: 4d552b7000900ae4e99495be9f035c11, type: 3}
   itemVisibility: 0
   ageRatingType: 0

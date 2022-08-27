@@ -13,14 +13,10 @@ MonoBehaviour:
   m_Name: WorkshopItemInfo
   m_EditorClassIdentifier: 
   title: Particles
-  description: 'Countless particles!
-
-
-    Howto:
-
-    1. Use Black Desktop Background
-    and get ready to be shocked on bored state!'
-  texturePreview: {fileID: 2800000, guid: e0a95ddcd22900b42ba5c5f56b30b652, type: 3}
+  description: "Countless particles!\n\nDemonstrate: \n1. Configable VisualEffect.\n2.
+    Configable PostProcessing settings.\n\nHowto:\n1. Use Black Desktop Background
+    and get ready to be shocked on bored state!"
+  texturePreview: {fileID: 2800000, guid: d44b1ab6e15aa0441b99cfa8537206d9, type: 3}
   itemVisibility: 0
   ageRatingType: 0
   itemStyle: 0

@@ -13,14 +13,15 @@ MonoBehaviour:
   m_Name: DefaultEnvironmentControllerConfig
   m_EditorClassIdentifier: 
   config:
-    isUseReflection: 1
-    isOverrideLights: 1
+    isUseLights: 1
     sunLightRotation: {x: 30, y: 30, z: 240}
     sunLightIntensity: 0.3
     sunLightColor: {r: 1, g: 1, b: 1, a: 1}
-    isOverrideSkybox: 1
+    isUseReflection: 1
+    isUseSkybox: 1
     skyboxType: 1
-    defaultSkyboxMaterial: {fileID: 0}
+    defaultSkyboxMaterial: {fileID: 2100000, guid: 6a075527c9045204db03585cc6efed51,
+      type: 2}
     panoramaSkyboxMaterial: {fileID: 2100000, guid: c70c5fc4263d61e4a97018b7622b3fae,
       type: 2}
     defaultPanoramaTexture: {fileID: 2800000, guid: 50f0ed3a6d20a444eb93db1e83760750,

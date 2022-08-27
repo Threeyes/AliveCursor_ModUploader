@@ -305,6 +305,70 @@ MonoBehaviour:
   hasSetValue: 0
   persistentValue: {fileID: 0}
   targetValue: {fileID: 11400000, guid: 6e778064945ceb749935023abe17e880, type: 2}
+--- !u!1 &711205747
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 711205749}
+  - component: {fileID: 711205748}
+  m_Layer: 0
+  m_Name: EnvironmentController
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &711205748
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 711205747}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5facd325cd7c2504c88150040e09c9e9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  defaultConfig:
+    isUseLights: 1
+    sunLightRotation: {x: 30, y: 30, z: 240}
+    sunLightIntensity: 0.3
+    sunLightColor: {r: 1, g: 1, b: 1, a: 1}
+    isUseReflection: 0
+    isUseSkybox: 1
+    skyboxType: 0
+    defaultSkyboxMaterial: {fileID: 0}
+    panoramaSkyboxMaterial: {fileID: 0}
+    defaultPanoramaTexture: {fileID: 0}
+    externalPanoramaTexture: {fileID: 0}
+    externalPanoramaTextureFilePath: 
+    panoramaSkyboxRotation: 0
+    PersistentDirPath: 
+  soOverrideConfig: {fileID: 11400000, guid: 6e778064945ceb749935023abe17e880, type: 2}
+  goLightGroup: {fileID: 728691745}
+  sunSourceLight: {fileID: 1306740065}
+  reflectionProbe: {fileID: 992302968}
+--- !u!4 &711205749
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 711205747}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 728691746}
+  m_Father: {fileID: 0}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &728691745
 GameObject:
   m_ObjectHideFlags: 0
@@ -334,8 +398,9 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1306740062}
-  m_Father: {fileID: 0}
-  m_RootOrder: 2
+  - {fileID: 992302970}
+  m_Father: {fileID: 711205749}
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &741062930
 GameObject:
@@ -368,7 +433,7 @@ Transform:
   - {fileID: 1025883103}
   - {fileID: 867967023}
   m_Father: {fileID: 0}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &867967022
 GameObject:
@@ -569,6 +634,92 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 988000001}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &992302967
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 992302970}
+  - component: {fileID: 992302968}
+  - component: {fileID: 992302969}
+  m_Layer: 0
+  m_Name: ReflectionProbe
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!215 &992302968
+ReflectionProbe:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 992302967}
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Type: 0
+  m_Mode: 1
+  m_RefreshMode: 2
+  m_TimeSlicingMode: 0
+  m_Resolution: 512
+  m_UpdateFrequency: 0
+  m_BoxSize: {x: 100, y: 100, z: 100}
+  m_BoxOffset: {x: 0, y: 0, z: 0}
+  m_NearClip: 0.3
+  m_FarClip: 1000
+  m_ShadowDistance: 100
+  m_ClearFlags: 1
+  m_BackGroundColor: {r: 0.19215687, g: 0.3019608, b: 0.4745098, a: 0}
+  m_CullingMask:
+    serializedVersion: 2
+    m_Bits: 0
+  m_IntensityMultiplier: 1
+  m_BlendDistance: 1
+  m_HDR: 1
+  m_BoxProjection: 0
+  m_RenderDynamicObjects: 0
+  m_UseOcclusionCulling: 1
+  m_Importance: 1
+  m_CustomBakedTexture: {fileID: 0}
+--- !u!114 &992302969
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 992302967}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 05f9bbca5de24ec479d5ade46c196b21, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  onLog:
+    m_PersistentCalls:
+      m_Calls: []
+  logType: 3
+  withName: 0
+  format: 
+  tips: "\u6CE8\u610F\uFF1A\n1.Mode\u4E3ARealtime\n2.RefreshMode\u4E3AViaScripting\n3.CullingMask\u4E3Anothing\uFF0C\u907F\u514D\u5C06Mod\u70D8\u57F9\u5230\u53CD\u5C04\u7403\u4E2D"
+  isLogOnConsole: 1
+--- !u!4 &992302970
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 992302967}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 728691746}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1025883102
 GameObject:
   m_ObjectHideFlags: 0
@@ -884,7 +1035,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1598879702}
   - component: {fileID: 1598879708}
-  - component: {fileID: 1598879709}
   m_Layer: 0
   m_Name: AliveCursor
   m_TagString: Untagged
@@ -921,36 +1071,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ac93fae6ebbc8584c8aaa0c88d5b2ff0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &1598879709
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1598879701}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5facd325cd7c2504c88150040e09c9e9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  defaultConfig:
-    isUseReflection: 0
-    isOverrideLights: 0
-    sunLightRotation: {x: 30, y: 30, z: 240}
-    sunLightIntensity: 0.3
-    sunLightColor: {r: 1, g: 1, b: 1, a: 1}
-    isOverrideSkybox: 0
-    skyboxType: 0
-    defaultSkyboxMaterial: {fileID: 0}
-    panoramaSkyboxMaterial: {fileID: 0}
-    defaultPanoramaTexture: {fileID: 0}
-    externalPanoramaTexture: {fileID: 0}
-    externalPanoramaTextureFilePath: 
-    panoramaSkyboxRotation: 0
-    PersistentDirPath: 
-  soOverrideConfig: {fileID: 11400000, guid: 6e778064945ceb749935023abe17e880, type: 2}
-  goLightGroup: {fileID: 728691745}
-  sunSourceLight: {fileID: 1306740065}
 --- !u!1 &1799842585
 GameObject:
   m_ObjectHideFlags: 0
