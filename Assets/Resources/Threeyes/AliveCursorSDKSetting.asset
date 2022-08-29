@@ -12,8 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: aa493c39e90b5ee4996b5fbb8c6ff431, type: 3}
   m_Name: AliveCursorSDKSetting
   m_EditorClassIdentifier: 
-  curWorkshopItemInfo: {fileID: 11400000, guid: 383fce0159dc93848a7f530a64aac564,
+  curWorkshopItemInfo: {fileID: 11400000, guid: 5e974c24eee032447b794666d40776b0,
     type: 2}
-  itemWindow_IsPreviewGif: 0
+  itemWindow_IsPreviewGif: 1
   hubSimulator_ShowAssistantGizmo: 1
   hubSimulator_ShowAssistantInfo: 1
