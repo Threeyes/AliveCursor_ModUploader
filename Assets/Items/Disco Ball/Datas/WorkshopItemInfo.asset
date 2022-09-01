@@ -13,8 +13,9 @@ MonoBehaviour:
   m_Name: WorkshopItemInfo
   m_EditorClassIdentifier: 
   title: Disco Ball
-  description: "Rock and roll!\n\nDemonstrate: \n1. Configable PanoSkybox settings.\n\nHowto:\n1.
-    Change EnvironmentConfig to get different outlook.\n\nModel Link: https://skfb.ly/6YL6s"
+  description: "Rock and roll!\n\nDemonstrate: \n1. Configable  EnvironmentControllerConfig
+    settings.\n\nHowto:\n1. Change EnvironmentConfig to get different outlook.\n\nModel
+    Link: https://skfb.ly/6YL6s"
   texturePreview: {fileID: 2800000, guid: bce9cb712a135d841a703b5c638a43b7, type: 3}
   itemVisibility: 0
   ageRatingType: 0

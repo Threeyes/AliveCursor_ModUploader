@@ -1,0 +1,29 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 980af7252728ca348816956a0dcde1b7, type: 3}
+  m_Name: ZibraLiquidAdvancedRenderParametersControllerConfig
+  m_EditorClassIdentifier: 
+  config:
+    refractionQuality: 1
+    refractionBounces: 0
+    underwaterRender: 0
+    additionalJFAIterations: 0
+    vertexOptimizationIterations: 5
+    meshOptimizationIterations: 2
+    vertexOptimizationStep: 0.82
+    meshOptimizationStep: 0.91
+    dualContourIsoSurfaceLevel: 0.025
+    isoSurfaceLevel: 0.36
+    rayMarchIsoSurface: 0.65
+    rayMarchMaxSteps: 128
+    rayMarchStepSize: 0.2
+    rayMarchStepFactor: 4

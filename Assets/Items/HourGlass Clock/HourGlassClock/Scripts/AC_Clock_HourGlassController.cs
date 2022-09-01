@@ -2,7 +2,7 @@ using DG.Tweening;
 using System;
 using UnityEngine;
 
-public class AC_Clock_HourGlass : AC_Clock
+public class AC_Clock_HourGlassController : AC_ClockController
 {
     [Header("Custom")]
     public Transform tfSecondPivot;//Pivot of the second
