@@ -14,3 +14,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   config:
     color: {r: 0.3411765, g: 0.92156863, b: 0.85236126, a: 1}
+    reflectionColor: {r: 1.39772, g: 1.39772, b: 1.39772, a: 1}
+    emissiveColor: {r: 0, g: 0, b: 0, a: 1}
+    roughness: 0.04
+    metalness: 0.3
+    scatteringAmount: 0.1
+    absorptionAmount: 1
+    indexOfRefraction: 1.333
+    fluidSurfaceBlur: 3
+    particleScale: 1.5
+    foamIntensity: 0.8
+    foamAmount: 1
+    blurRadius: 0.0581
