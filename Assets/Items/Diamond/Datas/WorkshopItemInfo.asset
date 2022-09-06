@@ -1,0 +1,26 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5695af25494a69147873bf0ff10072ea, type: 3}
+  m_Name: WorkshopItemInfo
+  m_EditorClassIdentifier: 
+  title: Diamond
+  description: 
+  texturePreview: {fileID: 0}
+  itemVisibility: 0
+  ageRatingType: 0
+  itemStyle: 0
+  itemGenre: 0
+  itemReference: 0
+  itemFeature: 0
+  itemSafety: 0
+  itemName: Diamond
+  itemId: 0
