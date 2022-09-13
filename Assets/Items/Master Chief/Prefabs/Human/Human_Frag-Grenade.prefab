@@ -39,7 +39,7 @@ CapsuleCollider:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 10922157754812314}
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 13400000, guid: bd539b6409efafe4a9a9a290f4d492dd, type: 2}
   m_IsTrigger: 0
   m_Enabled: 1
   m_Radius: 0.97
@@ -361,7 +361,7 @@ MonoBehaviour:
   rig: {fileID: 6119024247028379528}
   delayEventPlayer: {fileID: 410944300416963539}
   masterChief_ExplosionForce: {fileID: 4649773408792091463}
-  preExplodeParticle: {fileID: 4548608919173429044, guid: 420c63536e9e6094fbba7671a1f294e2,
+  preExplodeParticle: {fileID: 1121192042590650, guid: e1b08032bec16ba4eb1ae23cbd572664,
     type: 3}
   testVelocityScale: 20
 --- !u!54 &6119024247028379528
@@ -523,7 +523,7 @@ SphereCollider:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7051028913716184211}
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 13400000, guid: bd539b6409efafe4a9a9a290f4d492dd, type: 2}
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
@@ -654,7 +654,7 @@ BoxCollider:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8101238493153151295}
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 13400000, guid: bd539b6409efafe4a9a9a290f4d492dd, type: 2}
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2

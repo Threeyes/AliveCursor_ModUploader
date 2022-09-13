@@ -49,6 +49,7 @@ public class MasterChief_Controller : MonoBehaviour
     }
 
     //Grenade
+    public float grenadeThrowPower = 1;
     //Ref:makegeo-TerrainDamager场景+  https://github.com/kurtdekker/makegeo/blob/master/makegeo/Assets/Scripts/WeaponGrenadeTosser.cs
     private void OnMiddleButtonDownUp(bool isDown)
     {
@@ -66,12 +67,13 @@ public class MasterChief_Controller : MonoBehaviour
             if (preTarget)
             {
                 MasterChief_Grenade masterChief_Grenade = preTarget.InstantiatePrefab<MasterChief_Grenade>(null, tfGrenadeThrowPoint.position);
+                masterChief_Grenade.transform.localScale = Vector3.one * AC_ManagerHolder.CommonSettingManager.CursorSize;
                 masterChief_Grenade.Init(grenadeConfig);
 
-                //Todo:朝向目的地扔
+                //朝目的地扔
                 Vector3 targetPos = AC_ManagerHolder.SystemCursorManager.WorldPosition;
                 Vector3 tossVelocity = (targetPos - tfGrenadeThrowPoint.position).normalized;
-                masterChief_Grenade.AddVelocity(tossVelocity);
+                masterChief_Grenade.AddVelocity(tossVelocity * grenadeThrowPower);
             }
         }
     }

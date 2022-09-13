@@ -22,11 +22,6 @@ public class MasterChief_Grenade : AC_GenerableObject<MasterChief_Grenade.Config
         //Todo：设置masterChief_ExplosionForce的范围
     }
 
-    public float testVelocityScale = 1;
-    public void AddVelocity(Vector3 velocity)
-    {
-        rig.AddForce(velocity * testVelocityScale, ForceMode.Impulse);
-    }
 
     public void OnDelayEventPlayerPlay()
     {
@@ -36,6 +31,14 @@ public class MasterChief_Grenade : AC_GenerableObject<MasterChief_Grenade.Config
         goEffect.transform.localScale = transform.lossyScale;//同步缩放
         Destroy(gameObject);
     }
+
+    #region Testing
+    public float testVelocityScale = 1;
+    public void AddVelocity(Vector3 velocity)
+    {
+        rig.AddForce(velocity * testVelocityScale, ForceMode.Impulse);
+    }
+    #endregion
 
     #region Define
     [System.Serializable]
