@@ -2008,8 +2008,8 @@ MonoBehaviour:
   targetId: 
   isLogOnPlay: 0
   isLogOnStop: 0
-  isPlayed: 1
-  state: 1
+  isPlayed: 0
+  state: 0
 --- !u!1 &1313171047
 GameObject:
   m_ObjectHideFlags: 0
