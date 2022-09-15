@@ -5,7 +5,10 @@ using UnityEngine;
 
 public class MasterChief_Controller : MonoBehaviour
 {
+    //通过cursorInputBehaviourCollection_Attack统一控制其他AC_CursorInputBehaviour的调用，便于ModifyKeys的统一设置
     public AC_CursorInputBehaviourCollection cursorInputBehaviourCollection_Attack;
+    public AC_CursorInputBehaviour cursorInputBehaviour_Left;
+    public AC_CursorInputBehaviour cursorInputBehaviour_Right;
 
     [Header("Scene Setup")]
     public Transform tfGrenadeThrowPoint;
@@ -25,8 +28,14 @@ public class MasterChief_Controller : MonoBehaviour
         cursorInputBehaviourCollection_Attack.onMiddleButtonDownUp.AddListener(OnMiddleButtonDownUp);
     }
 
+    //#Gun
     private void OnLeftButtonDownUp(bool isDown)
     {
+        if (isDown)
+            cursorInputBehaviour_Left.Play();
+        else
+            cursorInputBehaviour_Left.Stop();
+
         if (isDown)
         {
             GameObject preTarget = null;
@@ -48,7 +57,7 @@ public class MasterChief_Controller : MonoBehaviour
         }
     }
 
-    //Grenade
+    //#Grenade
     public float grenadeThrowPower = 1;
     //Ref:makegeo-TerrainDamager场景+  https://github.com/kurtdekker/makegeo/blob/master/makegeo/Assets/Scripts/WeaponGrenadeTosser.cs
     private void OnMiddleButtonDownUp(bool isDown)
@@ -77,8 +86,14 @@ public class MasterChief_Controller : MonoBehaviour
             }
         }
     }
+
+    //#Knife/Sword
     private void OnRightButtonDownUp(bool isDown)
     {
+        if (isDown)
+            cursorInputBehaviour_Right.Play();
+        else
+            cursorInputBehaviour_Right.Stop();
 
     }
 
