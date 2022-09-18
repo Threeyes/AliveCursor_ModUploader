@@ -7,10 +7,12 @@ public class Billboard_ClothController : ComponentHelperBase<Cloth>
     , IAC_ModHandler
    , IAC_CursorState_ChangedHandler
     , IAC_CommonSetting_CursorSizeHandler
+    , IAC_SystemWindow_ChangedHandler
 {
     public Vector3 relateWindForce = new Vector3(0, -1, 0);
     Transform tfParent;
     public TextAsset textAsset;
+
     #region Callback
     public void OnCursorSizeChanged(float value)
     {
@@ -36,6 +38,11 @@ public class Billboard_ClothController : ComponentHelperBase<Cloth>
         Resize();
     }
     public void OnModDeinit() { }
+    public void OnWindowChanged(AC_WindowEventExtArgs e)
+    {
+        if (e.stateChange == AC_WindowEventExtArgs.StateChange.After)
+            Resize();
+    }
 
     public void Resize()
     {
