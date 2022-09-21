@@ -21,6 +21,6 @@ MonoBehaviour:
   itemGenre: 512
   itemReference: 0
   itemFeature: 0
-  itemSafety: 0
+  itemSafety: 1
   itemName: Snake
   itemId: 2847247577
