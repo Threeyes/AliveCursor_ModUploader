@@ -1441,33 +1441,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b724efc19963ed5469b22c29cb3205fc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  onEyeBlink:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 683519331}
-        m_TargetAssemblyTypeName: Threeyes.EventPlayer.EventPlayer, Threeyes.Plugin.Core
-        m_MethodName: Play
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 1234663212}
-        m_TargetAssemblyTypeName: Threeyes.EventPlayer.EventPlayer, Threeyes.Plugin.Core
-        m_MethodName: Play
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+  listEventPlayerSOAction:
+  - {fileID: 683519331}
+  - {fileID: 1234663212}
   blinkIntervalDurationRange: {x: 3, y: 5}
   nextblinkIntervalDuration: 3
   lastBlinkTime: 0
@@ -2126,7 +2102,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 433024911}
-  m_RootOrder: 1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!23 &1234663210
 MeshRenderer:
@@ -3154,7 +3130,7 @@ PrefabInstance:
     - target: {fileID: 1775318904017788457, guid: 996cd43a1e6ed9645aab1f0b5b0dc06d,
         type: 3}
       propertyPath: m_RootOrder
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1775318904017788457, guid: 996cd43a1e6ed9645aab1f0b5b0dc06d,
         type: 3}
