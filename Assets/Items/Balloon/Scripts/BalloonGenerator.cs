@@ -19,21 +19,21 @@ public class BalloonGenerator : AC_ObjectGenerator
 
 	//Runtime
 	RandomFlyer curRandomFlyer;
-	protected Coroutine cacheEnumAutoRandomGenerate;
+	protected Coroutine cacheEnumAutoGenerate;
 
 	protected void OnDisable()//PS:隐藏或销毁都会调用
 	{
-		TryStopCoroutine();
+		TryStopAutoGenerateCoroutine();
 		if (curRandomFlyer)
 		{
 			curRandomFlyer.Explode();
 			curRandomFlyer = null;
 		}
 	}
-	protected virtual void TryStopCoroutine()
+	protected virtual void TryStopAutoGenerateCoroutine()
 	{
-		if (cacheEnumAutoRandomGenerate != null)
-			StopCoroutine(cacheEnumAutoRandomGenerate);
+		if (cacheEnumAutoGenerate != null)
+			StopCoroutine(cacheEnumAutoGenerate);
 	}
 	IEnumerator IEAutoRandomGenerate()
 	{
@@ -61,10 +61,10 @@ public class BalloonGenerator : AC_ObjectGenerator
 	#region Invoke by extern (CIB/CSB)
 	public void OnStateEnterExit(bool isEnter)
 	{
-		TryStopCoroutine();//任意State都会暂停协程
+		TryStopAutoGenerateCoroutine();//任意State都会暂停协程
 		if (isEnter)
 		{
-			cacheEnumAutoRandomGenerate = StartCoroutine(IEAutoRandomGenerate());
+			cacheEnumAutoGenerate = StartCoroutine(IEAutoRandomGenerate());
 		}
 	}
 
