@@ -37,7 +37,7 @@ public class PhysicsLiquid_Controller : MonoBehaviour
 	public void OnCursorStateChanged(AC_CursorStateInfo cursorStateInfo)
 	{
 		//# ZibraLiquid
-		//在隐藏相关State时，临时隐藏ZibraLiquid
+		//在隐藏相关State时，临时隐藏物体
 		bool isHiding = cursorStateInfo.cursorState == AC_CursorState.Exit || cursorStateInfo.cursorState == AC_CursorState.Hide || cursorStateInfo.cursorState == AC_CursorState.StandBy;
 		SetZibraLiquidActive(!isHiding);
 

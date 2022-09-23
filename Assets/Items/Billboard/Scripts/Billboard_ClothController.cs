@@ -5,7 +5,8 @@ using System.Collections;
 /// </summary>
 public class Billboard_ClothController : ComponentHelperBase<Cloth>
     , IAC_ModHandler
-   , IAC_CursorState_ChangedHandler
+    , IAC_CommonSetting_IsAliveCursorActiveHandler
+    , IAC_CursorState_ChangedHandler
     , IAC_CommonSetting_CursorSizeHandler
     , IAC_SystemWindow_ChangedHandler
 {
@@ -18,21 +19,36 @@ public class Billboard_ClothController : ComponentHelperBase<Cloth>
     {
         Resize();
     }
+    public void OnIsAliveCursorActiveChanged(bool isActive)
+    {
+        if (isActive)
+            Resize();
+    }
+
+    bool isLastHidingState;
     public void OnCursorStateChanged(AC_CursorStateInfo cursorStateInfo)
     {
         //# ZibraLiquid
-        //在隐藏相关State时，临时隐藏ZibraLiquid
-        bool isHiding = cursorStateInfo.cursorState == AC_CursorState.Exit || cursorStateInfo.cursorState == AC_CursorState.Hide || cursorStateInfo.cursorState == AC_CursorState.StandBy;
-        if (isHiding)
+        //在隐藏相关State时，临时隐藏物体
+        bool isCurHidingState = IsHidingState(cursorStateInfo.cursorState);
+        if (isCurHidingState)
         {
             gameObject.SetActive(false);
         }
         else
         {
-            if (!gameObject.activeInHierarchy)
+            if (isLastHidingState)//只有从隐藏切换到显示，才需要更新
                 Resize();
         }
+
+        isLastHidingState = isCurHidingState;
     }
+
+    static bool IsHidingState(AC_CursorState cursorState)//（ToUpdate：改为通用方法）
+    {
+        return cursorState == AC_CursorState.Exit || cursorState == AC_CursorState.Hide || cursorState == AC_CursorState.StandBy;
+    }
+
     public void OnModInit()
     {
         Resize();
@@ -46,8 +62,14 @@ public class Billboard_ClothController : ComponentHelperBase<Cloth>
 
     public void Resize()
     {
+        Threeyes.Coroutine.CoroutineManager.StartCoroutineEx(IEResize());
+    }
+
+    IEnumerator IEResize()
+    {
         //修复Bug: 缩放后，Y轴不同步缩放，因此需要重新激活该物体（已知问题，暂未修复 https://issuetracker.unity3d.com/issues/cloth-cloth-does-not-scale-when-in-play-mode）
         gameObject.SetActive(false);
+        yield return new WaitForSeconds(0.1f);//等待缩放不为0才能激活，否则会报错
         gameObject.SetActive(true);
     }
     #endregion
@@ -60,4 +82,6 @@ public class Billboard_ClothController : ComponentHelperBase<Cloth>
     {
         Comp.externalAcceleration = tfParent.TransformDirection(relateWindForce);//基于父物体的朝向
     }
+
+
 }
