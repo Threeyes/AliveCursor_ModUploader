@@ -1,5 +1,6 @@
 using UnityEngine;
 using System.Collections;
+using Threeyes.Coroutine;
 /// <summary>
 /// 功能：增加相对位置反向的力（以及横向的随机力，模拟摇摆的状态）
 /// </summary>
@@ -28,11 +29,11 @@ public class Billboard_ClothController : ComponentHelperBase<Cloth>
     bool isLastHidingState;
     public void OnCursorStateChanged(AC_CursorStateInfo cursorStateInfo)
     {
-        //# ZibraLiquid
-        //在隐藏相关State时，临时隐藏物体
+        //在相关隐藏State时，临时隐藏该物体
         bool isCurHidingState = IsHidingState(cursorStateInfo.cursorState);
         if (isCurHidingState)
         {
+            TryStopResizeCoroutine();
             gameObject.SetActive(false);
         }
         else
@@ -42,11 +43,6 @@ public class Billboard_ClothController : ComponentHelperBase<Cloth>
         }
 
         isLastHidingState = isCurHidingState;
-    }
-
-    static bool IsHidingState(AC_CursorState cursorState)//（ToUpdate：改为通用方法）
-    {
-        return cursorState == AC_CursorState.Exit || cursorState == AC_CursorState.Hide || cursorState == AC_CursorState.StandBy;
     }
 
     public void OnModInit()
@@ -60,11 +56,18 @@ public class Billboard_ClothController : ComponentHelperBase<Cloth>
             Resize();
     }
 
+    protected Coroutine cacheEnumResize;
     public void Resize()
     {
-        Threeyes.Coroutine.CoroutineManager.StartCoroutineEx(IEResize());
+        TryStopResizeCoroutine();
+        cacheEnumResize = CoroutineManager.StartCoroutineEx(IEResize());
     }
 
+    protected virtual void TryStopResizeCoroutine()
+    {
+        if (cacheEnumResize != null)
+            CoroutineManager.StopCoroutineEx(cacheEnumResize);
+    }
     IEnumerator IEResize()
     {
         //修复Bug: 缩放后，Y轴不同步缩放，因此需要重新激活该物体（已知问题，暂未修复 https://issuetracker.unity3d.com/issues/cloth-cloth-does-not-scale-when-in-play-mode）
@@ -83,5 +86,10 @@ public class Billboard_ClothController : ComponentHelperBase<Cloth>
         Comp.externalAcceleration = tfParent.TransformDirection(relateWindForce);//基于父物体的朝向
     }
 
+
+    static bool IsHidingState(AC_CursorState cursorState)//（ToUpdate：改为通用方法）
+    {
+        return cursorState == AC_CursorState.Exit || cursorState == AC_CursorState.Hide || cursorState == AC_CursorState.StandBy;
+    }
 
 }

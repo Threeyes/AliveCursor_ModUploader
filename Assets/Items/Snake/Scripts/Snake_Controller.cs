@@ -45,7 +45,7 @@ public class Snake_Controller : MonoBehaviour
         {
             cacheEnumAutoOpenBeak = StartCoroutine(IEAutoOpenBeak());
         }
-        lightBeak.gameObject.SetActive(isEnter);
+        lightBeak.gameObject.SetActive(isEnter);//显隐口中的灯光
     }
     protected virtual void TryStopAutoOpenBeakCoroutine()
     {
