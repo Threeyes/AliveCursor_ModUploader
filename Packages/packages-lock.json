@@ -24,7 +24,7 @@
       "url": "https://package.openupm.com"
     },
     "com.threeyes.alivecursor.sdk": {
-      "version": "3.2.2",
+      "version": "3.2.3",
       "depth": 0,
       "source": "registry",
       "dependencies": {

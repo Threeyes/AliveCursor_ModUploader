@@ -1,28 +1,35 @@
-using UnityEngine;
 using System.Collections;
+using System.Collections.Generic;
 using Threeyes.Coroutine;
+using UnityEngine;
 /// <summary>
-/// 功能：增加相对位置反向的力（以及横向的随机力，模拟摇摆的状态）
+/// Todo:
+/// -控制显隐，类似Liquid
 /// </summary>
-public class Billboard_ClothController : ComponentHelperBase<Cloth>
+public class CreeperController : MonoBehaviour
     , IAC_ModHandler
     , IAC_CommonSetting_IsAliveCursorActiveHandler
     , IAC_CursorState_ChangedHandler
     , IAC_CommonSetting_CursorSizeHandler
-    , IAC_SystemWindow_ChangedHandler
 {
-    public Vector3 relateWindForce = new Vector3(0, -1, 0);
-    Transform tfParent;
-
+    public CreeperGhostController creeperGhostController;
+    public Transform tfLegTargetGroup;
+  
     #region Callback
-    public void OnCursorSizeChanged(float value)
+    public void OnModInit()
     {
         Resize();
     }
+    public void OnModDeinit()
+    {
+    }
+
     public void OnIsAliveCursorActiveChanged(bool isActive)
     {
         if (isActive)
             Resize();
+        else
+            gameObject.SetActive(false);
     }
 
     bool isLastHidingState;
@@ -43,16 +50,11 @@ public class Billboard_ClothController : ComponentHelperBase<Cloth>
         isLastHidingState = isCurHidingState;
     }
 
-    public void OnModInit()
+    public void OnCursorSizeChanged(float value)
     {
         Resize();
     }
-    public void OnModDeinit() { }
-    public void OnWindowChanged(AC_WindowEventExtArgs e)
-    {
-        if (e.stateChange == AC_WindowEventExtArgs.StateChange.After)
-            Resize();
-    }
+    #endregion
 
     protected Coroutine cacheEnumResize;
     public void Resize()
@@ -60,7 +62,6 @@ public class Billboard_ClothController : ComponentHelperBase<Cloth>
         TryStopResizeCoroutine();
         cacheEnumResize = CoroutineManager.StartCoroutineEx(IEResize());
     }
-
     protected virtual void TryStopResizeCoroutine()
     {
         if (cacheEnumResize != null)
@@ -68,25 +69,19 @@ public class Billboard_ClothController : ComponentHelperBase<Cloth>
     }
     IEnumerator IEResize()
     {
-        //修复Bug: 缩放后，Y轴不同步缩放，因此需要重新激活该物体（已知问题，暂未修复 https://issuetracker.unity3d.com/issues/cloth-cloth-does-not-scale-when-in-play-mode）
+        //让Rig相关组件强制更新
         gameObject.SetActive(false);
-        yield return new WaitForSeconds(0.1f);//等待缩放不为0才能激活，否则会报错
+        tfLegTargetGroup.localScale = gameObject.transform.localScale = Vector3.one * AC_ManagerHolder.CommonSettingManager.CursorSize;
+        //更新关节
+        creeperGhostController.LegGroupForceTweenMove();
+        //yield return new WaitForSeconds(0.1f);//等待缩放不为0才能激活，否则会报错
+        yield return null;
         gameObject.SetActive(true);
     }
-    #endregion
-
-    private void Start()
-    {
-        tfParent = transform.parent;
-    }
-    void Update()
-    {
-        Comp.externalAcceleration = tfParent.TransformDirection(relateWindForce);//基于父物体的朝向
-    }
-
 
     static bool IsHidingState(AC_CursorState cursorState)//（ToUpdate：改为通用方法）
     {
         return cursorState == AC_CursorState.Exit || cursorState == AC_CursorState.Hide || cursorState == AC_CursorState.StandBy;
     }
+
 }

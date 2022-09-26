@@ -13,14 +13,15 @@ MonoBehaviour:
   m_Name: WorkshopItemInfo
   m_EditorClassIdentifier: 
   title: Spider
-  description: 
-  texturePreview: {fileID: 0}
+  description: "Cute little spider doesn't know when to quit!\n\nDemonstrate: \n1.
+    Procedural creeper animal.\n\nAsset link:https://assetstore.unity.com/packages/3d/characters/robots/spider-orange-181154"
+  texturePreview: {fileID: 2800000, guid: 64c7a56dac43ffa46b5743cc492de1e7, type: 3}
   itemVisibility: 0
-  ageRatingType: 0
-  itemStyle: 0
+  ageRatingType: 1
+  itemStyle: 1
   itemGenre: 0
   itemReference: 0
   itemFeature: 0
-  itemSafety: 0
+  itemSafety: 1
   itemName: Spider
-  itemId: 0
+  itemId: 2868053102
