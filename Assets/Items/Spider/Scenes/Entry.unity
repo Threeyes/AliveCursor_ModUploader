@@ -171,15 +171,15 @@ MonoBehaviour:
   comps: []
   tfGhostLeg: {fileID: 111196538}
   legMaxDistance: 0.1
+  weightRange: {x: 0.5, y: 1}
   tweenDuration: 0.2
+  easeLegUp: 3
+  easeLegDown: 2
   tfSourceTarget: {fileID: 0}
   curDistance: 0
   isExcessive: 0
   isTweening: 0
   targetPos: {x: 0, y: 0, z: 0}
-  testWeightRange: {x: 0.5, y: 1}
-  easeExit: 3
-  easeEnter: 2
   settingCursorSize: 1
   gizmosRadius: 0.1
 --- !u!1 &268686329
@@ -409,7 +409,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &933781264
 GameObject:
@@ -590,15 +590,15 @@ MonoBehaviour:
   comps: []
   tfGhostLeg: {fileID: 1008289232}
   legMaxDistance: 0.1
+  weightRange: {x: 0.5, y: 1}
   tweenDuration: 0.2
+  easeLegUp: 3
+  easeLegDown: 2
   tfSourceTarget: {fileID: 0}
   curDistance: 0
   isExcessive: 0
   isTweening: 0
   targetPos: {x: 0, y: 0, z: 0}
-  testWeightRange: {x: 0.5, y: 1}
-  easeExit: 3
-  easeEnter: 2
   settingCursorSize: 1
   gizmosRadius: 0.1
 --- !u!1 &1319342894
@@ -735,15 +735,15 @@ MonoBehaviour:
   comps: []
   tfGhostLeg: {fileID: 1379526251}
   legMaxDistance: 0.1
+  weightRange: {x: 0.5, y: 1}
   tweenDuration: 0.2
+  easeLegUp: 3
+  easeLegDown: 2
   tfSourceTarget: {fileID: 0}
   curDistance: 0
   isExcessive: 0
   isTweening: 0
   targetPos: {x: 0, y: 0, z: 0}
-  testWeightRange: {x: 0.5, y: 1}
-  easeExit: 3
-  easeEnter: 2
   settingCursorSize: 1
   gizmosRadius: 0.1
 --- !u!1 &1406455787
@@ -831,8 +831,9 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 988000002}
+  - {fileID: 1799842586}
   m_Father: {fileID: 0}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: -90.00001, y: 0, z: -90.00001}
 --- !u!114 &1598879708
 MonoBehaviour:
@@ -877,6 +878,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   tfModelRoot: {fileID: 4989478024266276}
   bodyMoveSpeed: 5
+  bodyRotateSpeed: 1
+  maxBodyTurn: 90
   tfGhostBody: {fileID: 268686330}
   listLegController1:
   - {fileID: 1008289233}
@@ -889,7 +892,6 @@ MonoBehaviour:
   isGroup2Moving: 0
   lastMoveGroupIndex: -1
   lastMoveTime: 0
-  settingCursorSize: 1
   gizmosRadius: 0.1
 --- !u!4 &1622409357
 Transform:
@@ -944,7 +946,7 @@ Transform:
   - {fileID: 4989478024266276}
   - {fileID: 1952161945}
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: -90, y: 0, z: 0}
 --- !u!114 &1698562153
 MonoBehaviour:
@@ -1101,12 +1103,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1799842585}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: -2.333333, z: 0}
-  m_LocalScale: {x: 3.333333, y: 3.333333, z: 3.333333}
+  m_LocalPosition: {x: 0, y: -0.6999999, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1622409357}
-  m_Father: {fileID: 988000002}
+  m_Father: {fileID: 1598879702}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1952161944
@@ -1144,6 +1146,52 @@ Transform:
   m_Father: {fileID: 1698562152}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &2011203694
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2011203696}
+  - component: {fileID: 2011203695}
+  m_Layer: 0
+  m_Name: SceneController
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &2011203695
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2011203694}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 84ec0849506ecda4bb3a3ad6f5f69d35, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  creeperGhostController: {fileID: 1622409356}
+  rotationRange: {x: 5, y: 5, z: 5}
+--- !u!4 &2011203696
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2011203694}
+  m_LocalRotation: {x: 0.29336908, y: -0.45837075, z: -0.7017043, w: 0.4598281}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: -21.931, y: -63.93, z: -99.738}
 --- !u!1 &2130958919
 GameObject:
   m_ObjectHideFlags: 0
@@ -1192,15 +1240,15 @@ MonoBehaviour:
   comps: []
   tfGhostLeg: {fileID: 2130958920}
   legMaxDistance: 0.1
+  weightRange: {x: 0.5, y: 1}
   tweenDuration: 0.2
+  easeLegUp: 3
+  easeLegDown: 2
   tfSourceTarget: {fileID: 0}
   curDistance: 0
   isExcessive: 0
   isTweening: 0
   targetPos: {x: 0, y: 0, z: 0}
-  testWeightRange: {x: 0.5, y: 1}
-  easeExit: 3
-  easeEnter: 2
   settingCursorSize: 1
   gizmosRadius: 0.1
 --- !u!1 &1090898659484400
