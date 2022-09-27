@@ -1176,7 +1176,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   creeperGhostController: {fileID: 1622409356}
-  rotationRange: {x: 5, y: 5, z: 5}
+  rotationRange: {x: 10, y: 10, z: 10}
 --- !u!4 &2011203696
 Transform:
   m_ObjectHideFlags: 0

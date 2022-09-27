@@ -17,6 +17,7 @@ public class Spider_AudioVisualizer : MonoBehaviour
     //ToAdd：随机控制脚的Weight（可以是通过offset的形式，这样能保证移动时不出错）
     public void OnRawSampleDataChanged(float[] data)
     {
+        float volume = AC_ManagerHolder.SystemAudioManager.CalculateLoudness(data);
         //PS:因为data range: [-1.0, 1.0]，刚好适用于正负随机旋转值
         if (data.Length < 3)
             return;
@@ -29,8 +30,10 @@ public class Spider_AudioVisualizer : MonoBehaviour
             rotatePercent.y += data[i];
         for (int i = 2 * numPerSubArray; i != 3 * numPerSubArray; i++)
             rotatePercent.z += data[i];
-        rotatePercent /= numPerSubArray;
-
+        //Debug.Log(rotatePercent / numPerSubArray + "/" + volume+"="+ rotatePercent / numPerSubArray/ volume);
+        rotatePercent /= (numPerSubArray);
+        if (volume > 0)
+            rotatePercent /= volume;//消除音量大小造成的振幅衰减
         creeperGhostController.tfGhostBody.localEulerAngles = rotationRange.Multi(rotatePercent);
     }
     #endregion
