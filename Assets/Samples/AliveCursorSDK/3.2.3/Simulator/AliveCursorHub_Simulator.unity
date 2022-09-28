@@ -1229,8 +1229,8 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: ff2784a1d4c101c4291ab6db2946e866, type: 3}
-  m_PlayOnAwake: 0
+  m_audioClip: {fileID: 8300000, guid: 0efc458e3924f3a43bde870bb4cd56b8, type: 3}
+  m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
   Loop: 1
@@ -2100,7 +2100,7 @@ MonoBehaviour:
   isActive: 1
   canPlay: 1
   canStop: 1
-  isPlayOnAwake: 0
+  isPlayOnAwake: 1
   isPlayOnce: 0
   isReverse: 0
   listListener: []

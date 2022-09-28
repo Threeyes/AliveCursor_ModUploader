@@ -21,7 +21,7 @@ MonoBehaviour:
     ModelLink:https://skfb.ly/QPX8'
   texturePreview: {fileID: 2800000, guid: 878b4df91707ab9469ab5a7b2a0a8e4b, type: 3}
   itemVisibility: 0
-  ageRatingType: 0
+  ageRatingType: 1
   itemStyle: 32
   itemGenre: 2
   itemReference: 0

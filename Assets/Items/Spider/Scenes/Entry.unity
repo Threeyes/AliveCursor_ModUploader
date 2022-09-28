@@ -178,7 +178,7 @@ MonoBehaviour:
   tfSourceTarget: {fileID: 0}
   curDistance: 0
   isExcessive: 0
-  isTweening: 0
+  isMoving: 0
   targetPos: {x: 0, y: 0, z: 0}
   settingCursorSize: 1
   gizmosRadius: 0.1
@@ -597,7 +597,7 @@ MonoBehaviour:
   tfSourceTarget: {fileID: 0}
   curDistance: 0
   isExcessive: 0
-  isTweening: 0
+  isMoving: 0
   targetPos: {x: 0, y: 0, z: 0}
   settingCursorSize: 1
   gizmosRadius: 0.1
@@ -742,7 +742,7 @@ MonoBehaviour:
   tfSourceTarget: {fileID: 0}
   curDistance: 0
   isExcessive: 0
-  isTweening: 0
+  isMoving: 0
   targetPos: {x: 0, y: 0, z: 0}
   settingCursorSize: 1
   gizmosRadius: 0.1
@@ -888,8 +888,6 @@ MonoBehaviour:
   - {fileID: 111196539}
   - {fileID: 2130958921}
   moveLegIntervalTime: 0.1
-  isGroup1Moving: 0
-  isGroup2Moving: 0
   lastMoveGroupIndex: -1
   lastMoveTime: 0
   gizmosRadius: 0.1
@@ -1176,7 +1174,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   creeperGhostController: {fileID: 1622409356}
-  rotationRange: {x: 10, y: 10, z: 10}
+  listCreeperLegGhostController:
+  - {fileID: 1008289233}
+  - {fileID: 2130958921}
+  - {fileID: 111196539}
+  - {fileID: 1379526252}
+  config:
+    canBodyMove: 1
+    bodyMoveRange: {x: 1, y: 1, z: 1}
+    canBodyRotate: 0
+    bodyRotateRange: {x: 5, y: 5, z: 5}
+    canLegRaise: 1
+    legToRaise: 1
+  TestChainIKConstraint: {fileID: 1406455789}
 --- !u!4 &2011203696
 Transform:
   m_ObjectHideFlags: 0
@@ -1247,7 +1257,7 @@ MonoBehaviour:
   tfSourceTarget: {fileID: 0}
   curDistance: 0
   isExcessive: 0
-  isTweening: 0
+  isMoving: 0
   targetPos: {x: 0, y: 0, z: 0}
   settingCursorSize: 1
   gizmosRadius: 0.1

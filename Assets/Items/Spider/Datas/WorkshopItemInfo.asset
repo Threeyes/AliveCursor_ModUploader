@@ -21,7 +21,7 @@ MonoBehaviour:
   itemStyle: 1
   itemGenre: 0
   itemReference: 0
-  itemFeature: 0
+  itemFeature: 2
   itemSafety: 1
   itemName: Spider
   itemId: 2868053102

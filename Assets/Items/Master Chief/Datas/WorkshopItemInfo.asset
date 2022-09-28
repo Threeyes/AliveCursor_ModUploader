@@ -21,7 +21,7 @@ MonoBehaviour:
     https://skfb.ly/66Xww\n-Particles: https://assetstore.unity.com/packages/essentials/tutorial-projects/unity-particle-pack-127325"
   texturePreview: {fileID: 2800000, guid: 96d287f3ba9c33d448d43b33ad7d03b8, type: 3}
   itemVisibility: 0
-  ageRatingType: 0
+  ageRatingType: 2
   itemStyle: 64
   itemGenre: 2
   itemReference: 1

@@ -18,7 +18,7 @@ MonoBehaviour:
     Press middle mouse button to make him suffer."
   texturePreview: {fileID: 2800000, guid: 872a9d6e215abdf48bb6d3aaa5c95f72, type: 3}
   itemVisibility: 0
-  ageRatingType: 0
+  ageRatingType: 1
   itemStyle: 0
   itemGenre: 1024
   itemReference: 8

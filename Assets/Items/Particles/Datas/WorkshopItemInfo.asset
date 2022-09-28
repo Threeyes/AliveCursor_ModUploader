@@ -18,7 +18,7 @@ MonoBehaviour:
     and get ready to be shocked on bored state!"
   texturePreview: {fileID: 2800000, guid: d44b1ab6e15aa0441b99cfa8537206d9, type: 3}
   itemVisibility: 0
-  ageRatingType: 0
+  ageRatingType: 1
   itemStyle: 0
   itemGenre: 2
   itemReference: 0

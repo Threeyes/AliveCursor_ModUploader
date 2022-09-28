@@ -13,6 +13,8 @@ using Threeyes.Coroutine;
 /// </summary>
 public class CreeperGhostController : MonoBehaviour
 {
+    public bool IsLegsMoving { get { return listLegController1.Any(c => c.isMoving) || listLegController2.Any(c => c.isMoving); } }
+
     [Header("Body")]
     public Transform tfModelRoot;//模型躯干（根物体）
     public float bodyMoveSpeed = 5;
@@ -27,9 +29,6 @@ public class CreeperGhostController : MonoBehaviour
     public List<CreeperLegGhostController> listLegController2 = new List<CreeperLegGhostController>();
     public float moveLegIntervalTime = 0.2f;
     [Header("Runtime")]
-    public bool isGroup1Moving = false;
-    public bool isGroup2Moving = false;
-
     public int lastMoveGroupIndex = -1;
     public float lastMoveTime = 0;
 

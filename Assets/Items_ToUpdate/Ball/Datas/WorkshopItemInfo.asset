@@ -18,7 +18,7 @@ MonoBehaviour:
     modelLink: https://sketchfab.com/3d-models/golf-ball-b0b50a16aa5d431e8ed799c1a413025c\n"
   texturePreview: {fileID: 2800000, guid: df59596ed4ae30f47aa545c1487f4f5c, type: 3}
   itemVisibility: 0
-  ageRatingType: 0
+  ageRatingType: 1
   itemStyle: 128
   itemGenre: 0
   itemReference: 0

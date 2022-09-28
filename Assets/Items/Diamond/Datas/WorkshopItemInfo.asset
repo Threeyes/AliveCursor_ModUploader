@@ -16,7 +16,7 @@ MonoBehaviour:
   description: 
   texturePreview: {fileID: 0}
   itemVisibility: 0
-  ageRatingType: 0
+  ageRatingType: 1
   itemStyle: 0
   itemGenre: 0
   itemReference: 0

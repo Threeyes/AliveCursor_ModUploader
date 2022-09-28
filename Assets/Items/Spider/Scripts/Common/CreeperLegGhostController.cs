@@ -17,7 +17,7 @@ using System.Threading.Tasks;
 public class CreeperLegGhostController : ComponentHelperBase<ChainIKConstraint>
         , IAC_CommonSetting_CursorSizeHandler
 {
-    public bool NeedMove { get { return isExcessive && !isTweening; } }
+    public bool NeedMove { get { return isExcessive && !isMoving; } }
     public float CompWeight { get { return Comp.weight; } set { Comp.weight = value; } }
 
     public Transform tfGhostLeg;//脚的目标点
@@ -30,8 +30,8 @@ public class CreeperLegGhostController : ComponentHelperBase<ChainIKConstraint>
     [Header("Runtime")]
     public Transform tfSourceTarget;//运行时从chainIKConstraint中获取，注意要与模型分开摆放，否则会受其位置影响
     public float curDistance;
-    public bool isExcessive = false;//距离过长
-    public bool isTweening = false;
+    public bool isExcessive = false;//距离过长（需要移动）
+    public bool isMoving = false;//正在移动
     public Vector3 targetPos;
 
 
@@ -61,7 +61,7 @@ public class CreeperLegGhostController : ComponentHelperBase<ChainIKConstraint>
         if (!isExcessive)//不需要判断，强制更新位置
             return;
 
-        isTweening = true;
+        isMoving = true;
        
         /// 挪动操作（针对ChainIKConstraint：
         /// -将Weight设置为0
@@ -83,11 +83,11 @@ public class CreeperLegGhostController : ComponentHelperBase<ChainIKConstraint>
                 () =>
                 {
                     tfSourceTarget.position = targetPos;
-                    isTweening = false;
+                    isMoving = false;
                 };
             };
 
-        while (!isTweening)
+        while (!isMoving)
         {
             await Task.Yield();
         }
