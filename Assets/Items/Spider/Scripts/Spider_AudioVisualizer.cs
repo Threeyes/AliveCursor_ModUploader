@@ -11,11 +11,34 @@ public class Spider_AudioVisualizer : MonoBehaviour
     , IAC_SystemAudio_RawSampleDataChangedHandler
 //, IAC_SystemAudio_FFTDataChangedHandler
 {
+    //ToUpdate:等PersistentData_Object完善后改成其方案
+    public bool CanBodyMove { get { return config.canBodyMove; } set { config.canBodyMove = value; } }
+    public Vector3 BodyMoveRange { get { return config.bodyMoveRange; } set { config.bodyMoveRange = value; } }
+    public bool CanBodyRotate { get { return config.canBodyRotate; } set { config.canBodyRotate = value; } }
+    public Vector3 BodyRotateRange { get { return config.bodyRotateRange; } set { config.bodyRotateRange = value; } }
+    public bool CanLegRaise { get { return config.canLegRaise; } set { config.canLegRaise = value; } }
+    public ConfigInfo.LegType LegToRaise { get { return config.legToRaise; } set { config.legToRaise = value; } }//Todo:不行就用int转枚举
+    public float LegRaiseRange { get { return config.legRaiseRange; } set { config.legRaiseRange = value; } }
+
     public CreeperGhostController creeperGhostController;
     public List<CreeperLegGhostController> listCreeperLegGhostController = new List<CreeperLegGhostController>();//Follow enum LegType's order
     [SerializeField] protected ConfigInfo config;
 
     #region Callback
+
+    public void SetLegToRaise(int index)//通过PD调用，从1开始
+    {
+        ConfigInfo.LegType legToRaise = ConfigInfo.LegType.None;
+        if (index == 1)
+            legToRaise = ConfigInfo.LegType.FrontLeft;
+        else if (index == 2)
+            legToRaise = ConfigInfo.LegType.FrontRight;
+        else if (index == 3)
+            legToRaise = ConfigInfo.LegType.BackLeft;
+        else if (index == 4)
+            legToRaise = ConfigInfo.LegType.BackRight;
+        LegToRaise = legToRaise;
+    }
 
     public ChainIKConstraint TestChainIKConstraint;
     //ToAdd：随机控制脚的Weight（可以是通过offset的形式，这样能保证移动时不出错）
@@ -60,7 +83,7 @@ public class Spider_AudioVisualizer : MonoBehaviour
         {
             if (!c.isMoving)
             {
-                c.CompWeight = listDesireLegController.Contains(c) ? 1 - axisPercent.x * config.legRaiseRange : 1;
+                c.CompWeight = listDesireLegController.Contains(c) ? 1 - volume * config.legRaiseRange : 1;
             }
         });
 
@@ -105,16 +128,16 @@ public class Spider_AudioVisualizer : MonoBehaviour
     /// <summary>
     /// 
     /// ToUpdate:
-    /// -使用Callback，避免频繁判断及获取Leg等操作，，以及在切换Leg后重置其他Leg
+    /// -使用Callback，避免频繁判断及获取Leg等操作，以及在切换Leg后重置其他Leg
     /// </summary>
     [Serializable]
     public class ConfigInfo : AC_SerializableDataBase
     {
         //ToAdd:分别为Move和Rotate增加是否响应音频的开关
         public bool canBodyMove = true;
-        public Vector3 bodyMoveRange = new Vector3(1, 1, 1);
+        public Vector3 bodyMoveRange = new Vector3(1, 1, 0);
         public bool canBodyRotate = false;
-        public Vector3 bodyRotateRange = new Vector3(5, 5, 5);
+        public Vector3 bodyRotateRange = new Vector3(5, 0, 5);
         public bool canLegRaise = false;
         public LegType legToRaise = LegType.FrontLeft;
         [Range(0.1f, 1)] public float legRaiseRange = 0.5f;
