@@ -83,7 +83,7 @@ public class Spider_AudioVisualizer : MonoBehaviour
         {
             if (!c.isMoving)
             {
-                c.CompWeight = listDesireLegController.Contains(c) ? 1 - volume * config.legRaiseRange : 1;
+                c.CompWeight = listDesireLegController.Contains(c) ? volume * config.legRaiseRange + (1 - config.legRaiseRange) : 1;//volume reach max== Weight is 1 (模拟随着节拍跺脚，音量最大对应脚落下)
             }
         });
 

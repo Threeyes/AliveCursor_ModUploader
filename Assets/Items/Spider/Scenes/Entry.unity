@@ -169,7 +169,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   key: BodyMoveRange
   tooltip: 
-  defaultValue: {x: 1, y: 1, z: 0}
+  defaultValue: {x: 0.05, y: 0.05, z: 0}
   onUIChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -304,7 +304,8 @@ MonoBehaviour:
   comp: {fileID: 453865757}
   comps: []
   tfGhostLeg: {fileID: 111196538}
-  legMaxDistance: 0.1
+  updatePositionDistance: 0.1
+  maxReachDistance: 0.3
   weightRange: {x: 0.5, y: 1}
   tweenDuration: 0.2
   easeLegUp: 3
@@ -314,6 +315,8 @@ MonoBehaviour:
   isExcessive: 0
   isMoving: 0
   targetPos: {x: 0, y: 0, z: 0}
+  tfModelRoot: {fileID: 0}
+  localPivotPos: {x: 0, y: 0, z: 0}
   settingCursorSize: 1
   gizmosRadius: 0.1
 --- !u!1 &268686329
@@ -851,7 +854,8 @@ MonoBehaviour:
   comp: {fileID: 1406455789}
   comps: []
   tfGhostLeg: {fileID: 1008289232}
-  legMaxDistance: 0.1
+  updatePositionDistance: 0.1
+  maxReachDistance: 0.3
   weightRange: {x: 0.5, y: 1}
   tweenDuration: 0.2
   easeLegUp: 3
@@ -861,6 +865,8 @@ MonoBehaviour:
   isExcessive: 0
   isMoving: 0
   targetPos: {x: 0, y: 0, z: 0}
+  tfModelRoot: {fileID: 0}
+  localPivotPos: {x: 0, y: 0, z: 0}
   settingCursorSize: 1
   gizmosRadius: 0.1
 --- !u!1 &1054475121
@@ -1084,7 +1090,8 @@ MonoBehaviour:
   comp: {fileID: 1319342896}
   comps: []
   tfGhostLeg: {fileID: 1379526251}
-  legMaxDistance: 0.1
+  updatePositionDistance: 0.1
+  maxReachDistance: 0.3
   weightRange: {x: 0.5, y: 1}
   tweenDuration: 0.2
   easeLegUp: 3
@@ -1094,6 +1101,8 @@ MonoBehaviour:
   isExcessive: 0
   isMoving: 0
   targetPos: {x: 0, y: 0, z: 0}
+  tfModelRoot: {fileID: 0}
+  localPivotPos: {x: 0, y: 0, z: 0}
   settingCursorSize: 1
   gizmosRadius: 0.1
 --- !u!1 &1406455787
@@ -1333,6 +1342,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1622409357}
   - component: {fileID: 1622409356}
+  - component: {fileID: 1622409358}
   m_Layer: 0
   m_Name: Ghost Controller
   m_TagString: Untagged
@@ -1387,6 +1397,60 @@ Transform:
   m_Father: {fileID: 1799842586}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1622409358
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1622409355}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a862823d819b2434da07a9aff5488bef, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  onPlayStop:
+    m_PersistentCalls:
+      m_Calls: []
+  onPlay:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1622409356}
+        m_TargetAssemblyTypeName: CreeperGhostController, Assembly-CSharp
+        m_MethodName: LegGroupForceTweenMove
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  onStop:
+    m_PersistentCalls:
+      m_Calls: []
+  onActiveDeactive:
+    m_PersistentCalls:
+      m_Calls: []
+  isActive: 1
+  canPlay: 1
+  canStop: 1
+  isPlayOnAwake: 0
+  isPlayOnce: 0
+  isReverse: 0
+  listListener: []
+  isGroup: 0
+  isIncludeHide: 1
+  isRecursive: 0
+  id: 
+  isInvokeByID: 0
+  targetIDLocation: 1
+  targetId: 
+  isLogOnPlay: 0
+  isLogOnStop: 0
+  isPlayed: 0
+  state: -1
 --- !u!1 &1698562151
 GameObject:
   m_ObjectHideFlags: 0
@@ -1728,7 +1792,7 @@ MonoBehaviour:
   - {fileID: 1379526252}
   config:
     canBodyMove: 1
-    bodyMoveRange: {x: 1, y: 1, z: 0}
+    bodyMoveRange: {x: 0.05, y: 0.05, z: 0}
     canBodyRotate: 0
     bodyRotateRange: {x: 5, y: 0, z: 5}
     canLegRaise: 0
@@ -1797,7 +1861,8 @@ MonoBehaviour:
   comp: {fileID: 1708513205}
   comps: []
   tfGhostLeg: {fileID: 2130958920}
-  legMaxDistance: 0.1
+  updatePositionDistance: 0.1
+  maxReachDistance: 0.3
   weightRange: {x: 0.5, y: 1}
   tweenDuration: 0.2
   easeLegUp: 3
@@ -1807,6 +1872,8 @@ MonoBehaviour:
   isExcessive: 0
   isMoving: 0
   targetPos: {x: 0, y: 0, z: 0}
+  tfModelRoot: {fileID: 0}
+  localPivotPos: {x: 0, y: 0, z: 0}
   settingCursorSize: 1
   gizmosRadius: 0.1
 --- !u!1 &1090898659484400

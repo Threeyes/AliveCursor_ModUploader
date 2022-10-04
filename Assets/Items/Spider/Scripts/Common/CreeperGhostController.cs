@@ -18,7 +18,7 @@ public class CreeperGhostController : MonoBehaviour
     [Header("Body")]
     public Transform tfModelRoot;//模型躯干（根物体）
     public float bodyMoveSpeed = 5;
-    public float bodyRotateSpeed = 1;
+    public float bodyRotateSpeed = 0.5f;
     public float maxBodyTurn = 90;//躯干最大旋转值
     public Transform tfGhostBody;//躯干的目标点，控制躯体的位移及旋转（单独使用一个物体控制的好处是，对躯干的修改不会影响到脚）（更改该物体的位置、旋转可实现跳跃、蹲下、转身等动作）
 
@@ -32,7 +32,7 @@ public class CreeperGhostController : MonoBehaviour
     public int lastMoveGroupIndex = -1;
     public float lastMoveTime = 0;
 
-    private void Update()
+    private void LateUpdate()
     {
         //# Body
         //让模型根物体(躯干)跟该Ghost同步
@@ -42,8 +42,9 @@ public class CreeperGhostController : MonoBehaviour
         listLegController1.ForEach(com => centerPos += com.tfSourceTarget.position);
         listLegController2.ForEach(com => centerPos += com.tfSourceTarget.position);
         centerPos /= (listLegController1.Count + listLegController2.Count);
-        centerPos += tfGhostBody.localPosition;//相对坐标不需要乘以缩放值
         tfModelRoot.position = Vector3.Lerp(tfModelRoot.position, centerPos, Time.deltaTime * bodyMoveSpeed);// tfGhostBody.position;
+        tfModelRoot.position += tfGhostBody.localPosition;//相对坐标不需要乘以缩放值，因为Ghost与目标物体的缩放一致，因此位置单位也一致（音频响应要求即时同步） 
+
 
         //通过tfGhostBody控制躯干的旋转
         //Todo:限制最大旋转值
@@ -69,21 +70,25 @@ public class CreeperGhostController : MonoBehaviour
         {
             LegGroupTweenMove(2);
         }
+
+        //ToUpdate:在Spider静止一定时间后，强制同步GhostLegs的位置，避免强迫症患者觉得不对称
     }
 
     public void LegGroupForceTweenMove()
     {
-        LegGroupTweenMove(0, true);
-        LegGroupTweenMove(1, true);
+        //LegGroupTweenMove(0, true);
+        //LegGroupTweenMove(1, true);
+        listLegController1.ForEach(c => c.TweenMoveAsync(true));
+        listLegController2.ForEach(c => c.TweenMoveAsync(true));
     }
-    void LegGroupTweenMove(int index, bool forceUpdate = false)
+    void LegGroupTweenMove(int index)
     {
         if (Time.time - lastMoveTime < moveLegIntervalTime)//两次移动之间要有间隔，否则很假
         {
             return;
         }
         var listTarget = (index == 1 ? listLegController1 : listLegController2);
-        listTarget.ForEach(com => com.TweenMoveAsync(forceUpdate));
+        listTarget.ForEach(com => com.TweenMoveAsync());
         lastMoveGroupIndex = index;
         lastMoveTime = Time.time;
     }
