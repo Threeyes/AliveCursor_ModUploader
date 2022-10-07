@@ -32,6 +32,12 @@ public class CreeperGhostController : MonoBehaviour
     public int lastMoveGroupIndex = -1;
     public float lastMoveTime = 0;
 
+    public Vector3 baseBodyPosition;
+
+    private void Start()
+    {
+        baseBodyPosition = tfModelRoot.position;
+    }
     private void LateUpdate()
     {
         //# Body
@@ -42,8 +48,12 @@ public class CreeperGhostController : MonoBehaviour
         listLegController1.ForEach(com => centerPos += com.tfSourceTarget.position);
         listLegController2.ForEach(com => centerPos += com.tfSourceTarget.position);
         centerPos /= (listLegController1.Count + listLegController2.Count);
-        tfModelRoot.position = Vector3.Lerp(tfModelRoot.position, centerPos, Time.deltaTime * bodyMoveSpeed);// tfGhostBody.position;
-        tfModelRoot.position += tfGhostBody.localPosition;//相对坐标不需要乘以缩放值，因为Ghost与目标物体的缩放一致，因此位置单位也一致（音频响应要求即时同步） 
+        baseBodyPosition = Vector3.Lerp(baseBodyPosition, centerPos, Time.deltaTime * bodyMoveSpeed);// tfGhostBody.position;
+
+        //#计算GhostBody的世界轴偏移量
+        Vector3 worldOffset = tfGhostBody.parent.TransformDirection(tfGhostBody.localPosition);//转换为矢量
+        worldOffset *= AC_ManagerHolder.CommonSettingManager.CursorSize;//同步缩放（因为目标物体为缩放）
+        tfModelRoot.position = baseBodyPosition + worldOffset;//相对坐标不需要乘以缩放值，因为Ghost与目标物体的缩放一致，因此位置单位也一致（音频响应要求即时同步） 
 
 
         //通过tfGhostBody控制躯干的旋转

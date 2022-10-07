@@ -9,7 +9,6 @@ using UnityEngine.Animations.Rigging;
 /// </summary>
 public class Spider_AudioVisualizer : MonoBehaviour
     , IAC_SystemAudio_RawSampleDataChangedHandler
-//, IAC_SystemAudio_FFTDataChangedHandler
 {
     //ToUpdate:等PersistentData_Object完善后改成其方案
     public bool CanBodyMove { get { return config.canBodyMove; } set { config.canBodyMove = value; } }
@@ -24,8 +23,23 @@ public class Spider_AudioVisualizer : MonoBehaviour
     public List<CreeperLegGhostController> listCreeperLegGhostController = new List<CreeperLegGhostController>();//Follow enum LegType's order
     [SerializeField] protected ConfigInfo config;
 
-    #region Callback
+    private void LateUpdate()
+    {
+        //Reset if no audio input
+        if (!hasChangedInThisFrame)
+        {
+            creeperGhostController.tfGhostBody.localPosition = Vector3.zero;
+            creeperGhostController.tfGhostBody.localEulerAngles = Vector3.zero;
+            listCreeperLegGhostController.ForEach(c =>
+            {
+                if (!c.isMoving)
+                    c.CompWeight = 1;
+            });
+        }
+        hasChangedInThisFrame = false;//Reset
+    }
 
+    #region Callback
     public void SetLegToRaise(int index)//通过PD调用，从1开始
     {
         ConfigInfo.LegType legToRaise = ConfigInfo.LegType.None;
@@ -107,21 +121,6 @@ public class Spider_AudioVisualizer : MonoBehaviour
         }
         return listController;
     }
-    private void LateUpdate()
-    {
-        //Reset if no audio input
-        if (!hasChangedInThisFrame)
-        {
-            creeperGhostController.tfGhostBody.localPosition = Vector3.zero;
-            creeperGhostController.tfGhostBody.localEulerAngles = Vector3.zero;
-            listCreeperLegGhostController.ForEach(c =>
-            {
-                if (!c.isMoving)
-                    c.CompWeight = 1;
-            });
-        }
-        hasChangedInThisFrame = false;//Reset
-    }
     #endregion
 
     #region Define
@@ -156,5 +155,4 @@ public class Spider_AudioVisualizer : MonoBehaviour
         }
     }
     #endregion
-
 }
