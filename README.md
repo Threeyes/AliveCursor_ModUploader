@@ -1,5 +1,5 @@
 # AliveCursor_ModUploader
-I use this project to upload workshop items (you can find them [here](https://steamcommunity.com/profiles/76561199378980403/myworkshopfiles/?appid=1606490);) for my indie Steam App [AliveCursor](https://store.steampowered.com/app/1606490/_/) using [SDK](https://github.com/Threeyes/AliveCursorSDK).
+I use this project to upload workshop items (you can find them [here](https://steamcommunity.com/profiles/76561199378980403/myworkshopfiles/?appid=1606490)) for my indie Steam App [AliveCursor](https://store.steampowered.com/app/1606490/_/) using [SDK](https://github.com/Threeyes/AliveCursorSDK).
 This project aimed for demonstrating how to using Components or Scripts to bring diffenent kinds of models alive, and are for experimental purposes only. The items inside this project will get updated frequently, incompatible with old config data, so they may be imperfect for users. Think of this project as a tutorial, it won't cover every aspect but it will be a good start.
 
 ## Note
