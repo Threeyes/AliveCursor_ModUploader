@@ -97,7 +97,9 @@ public class Spider_AudioVisualizer : MonoBehaviour
         {
             if (!c.isMoving)
             {
-                c.CompWeight = listDesireLegController.Contains(c) ? volume * config.legRaiseRange + (1 - config.legRaiseRange) : 1;//volume reach max== Weight is 1 (模拟随着节拍跺脚，音量最大对应脚落下)
+                //c.CompWeight = listDesireLegController.Contains(c) ? volume * config.legRaiseRange + (1 - config.legRaiseRange) : 1;//volume reach max== Weight is 1 (模拟随着节拍跺脚，音量最大对应脚落下。缺点是暂停播放时脚一直抬着)
+
+                c.CompWeight = listDesireLegController.Contains(c) ? 1 - volume * config.legRaiseRange : 1;//volume reach min== Weight is 1
             }
         });
 

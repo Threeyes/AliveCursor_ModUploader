@@ -52,7 +52,7 @@ public class CreeperGhostController : MonoBehaviour
 
         //#计算GhostBody的世界轴偏移量
         Vector3 worldOffset = tfGhostBody.parent.TransformDirection(tfGhostBody.localPosition);//转换为矢量
-        worldOffset *= AC_ManagerHolder.CommonSettingManager.CursorSize;//同步缩放（因为目标物体为缩放）
+        worldOffset *= AC_ManagerHolder.CommonSettingManager.CursorSize;//乘以光标缩放（因为目标物体同步了缩放）
         tfModelRoot.position = baseBodyPosition + worldOffset;//相对坐标不需要乘以缩放值，因为Ghost与目标物体的缩放一致，因此位置单位也一致（音频响应要求即时同步） 
 
 
