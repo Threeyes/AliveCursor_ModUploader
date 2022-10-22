@@ -12,7 +12,7 @@ public class CreeperController : MonoBehaviour
     , IAC_CursorState_ChangedHandler
     , IAC_CommonSetting_CursorSizeHandler
 {
-    public CreeperGhostController creeperGhostController;
+    public CreeperGhostControllerManager creeperGhostController;
     public Transform tfLegTargetGroup;
   
     #region Callback
@@ -69,11 +69,11 @@ public class CreeperController : MonoBehaviour
     }
     IEnumerator IEResize()
     {
-        //让Rig相关组件强制更新
+        //让Rig相关组件强制更新(缩放后需要重新显隐，否则RigBuilder不会更新)
         gameObject.SetActive(false);
         tfLegTargetGroup.localScale = gameObject.transform.localScale = Vector3.one * AC_ManagerHolder.CommonSettingManager.CursorSize;
         //更新关节
-        creeperGhostController.LegGroupForceTweenMove();
+        creeperGhostController.ForceAllLegControllerTweenMove();
         //yield return new WaitForSeconds(0.1f);//等待缩放不为0才能激活，否则会报错
         yield return null;
         gameObject.SetActive(true);

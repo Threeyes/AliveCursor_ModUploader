@@ -29,7 +29,7 @@ public class CreeperLegGhostController : ComponentHelperBase<ChainIKConstraint>
     public float updatePositionDistance = 0.1f;//检查是否需要移动(当脚与目标点的距离超过一定距离后更新脚位置)
     public float maxReachDistance = 0.3f;//脚能移动的最远距离
     public Vector2 weightRange = new Vector2(0, 1);
-    public float tweenDuration = 0.1f;
+    public float tweenDuration = 0.08f;
     public Ease easeLegUp = Ease.Linear;
     public Ease easeLegDown = Ease.Linear;
 
@@ -41,7 +41,7 @@ public class CreeperLegGhostController : ComponentHelperBase<ChainIKConstraint>
     public Vector3 targetPos;
 
     //Pivot
-    CreeperGhostController creeperGhostController;
+    CreeperGhostControllerManager creeperGhostController;
     public Transform tfModelRoot;
     public Vector3 localPivotPos;//脚移动的轴心（相对于躯干的局部位置，注意因为缩放同步，因此不需要乘以光标尺寸）
     private void Awake()
@@ -53,7 +53,7 @@ public class CreeperLegGhostController : ComponentHelperBase<ChainIKConstraint>
         settingCursorSize = AC_ManagerHolder.CommonSettingManager.CursorSize;
 
         //以脚末端及躯干的中点作为脚的锚点
-        creeperGhostController = transform.GetComponentInParent<CreeperGhostController>(true);
+        creeperGhostController = transform.GetComponentInParent<CreeperGhostControllerManager>(true);
         tfModelRoot = creeperGhostController.tfModelRoot;
         localPivotPos = tfModelRoot.InverseTransformPoint((tfModelRoot.position + tfSourceTarget.position) / 2);
     }

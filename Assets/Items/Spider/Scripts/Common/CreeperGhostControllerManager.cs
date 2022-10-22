@@ -2,8 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using System.Linq;
-using Threeyes.Coroutine;
 /// <summary>
+/// 控制Ghost父物体的移动
 /// 
 /// Todo:
 /// -完善后整合到SDK中
@@ -11,9 +11,9 @@ using Threeyes.Coroutine;
 /// 功能：
 /// -决定根模型的位置/旋转
 /// </summary>
-public class CreeperGhostController : MonoBehaviour
+public class CreeperGhostControllerManager : MonoBehaviour
 {
-    public bool IsLegsMoving { get { return listLegController1.Any(c => c.isMoving) || listLegController2.Any(c => c.isMoving); } }
+    public bool IsLegsMoving { get { return listAllLegController.Any(c => c.isMoving); } }
 
     [Header("Body")]
     public Transform tfModelRoot;//模型躯干（根物体）
@@ -23,31 +23,38 @@ public class CreeperGhostController : MonoBehaviour
     public Transform tfGhostBody;//躯干的目标点，控制躯体的位移及旋转（单独使用一个物体控制的好处是，对躯干的修改不会影响到脚）（更改该物体的位置、旋转可实现跳跃、蹲下、转身等动作）
 
     [Header("Legs")]
-    //ToUpdate：封装为数据类，方便后续拓展
     //PS:脚需要分组（如左上对右下），每次只能移动一组脚，长途奔袭时两组脚交错移动【兼容其他爬虫的行走】
-    public List<CreeperLegGhostController> listLegController1 = new List<CreeperLegGhostController>();
-    public List<CreeperLegGhostController> listLegController2 = new List<CreeperLegGhostController>();
-    public float moveLegIntervalTime = 0.2f;
+    public List<LegControllerGroup> listLegControllerGroup = new List<LegControllerGroup>();
+    public float moveLegIntervalTime = 0.1f;//Warning：要比CreeperLegGhostController.tweenDuration值大，否则某个Leg会频繁移动
+
+
     [Header("Runtime")]
     public int lastMoveGroupIndex = -1;
     public float lastMoveTime = 0;
-
     public Vector3 baseBodyPosition;
-
+    List<CreeperLegGhostController> listAllLegController = new List<CreeperLegGhostController>();
     private void Start()
     {
+        //ToAdd：在程序开始时或开始前记录默认的位移，因为有些躯干不在正中心【如Hand】
         baseBodyPosition = tfModelRoot.position;
+
+        //缓存所有Leg
+        listAllLegController.Clear();
+        foreach (var lcg in listLegControllerGroup)
+        {
+            foreach (var lc in lcg.listLegController)
+                listAllLegController.Add(lc);
+        }
     }
     private void LateUpdate()
     {
         //# Body
         //让模型根物体(躯干)跟该Ghost同步
 
-        //躯干应该是动态根据脚的位置计算的
+        //计算躯干的中心位置：从脚的中心位置计算得出
         Vector3 centerPos = Vector3.zero;
-        listLegController1.ForEach(com => centerPos += com.tfSourceTarget.position);
-        listLegController2.ForEach(com => centerPos += com.tfSourceTarget.position);
-        centerPos /= (listLegController1.Count + listLegController2.Count);
+        listAllLegController.ForEach(com => centerPos += com.tfSourceTarget.position);
+        centerPos /= listAllLegController.Count;
         baseBodyPosition = Vector3.Lerp(baseBodyPosition, centerPos, Time.deltaTime * bodyMoveSpeed);// tfGhostBody.position;
 
         //#计算GhostBody的世界轴偏移量
@@ -60,49 +67,74 @@ public class CreeperGhostController : MonoBehaviour
         //Todo:限制最大旋转值
         Quaternion targetRotation = tfGhostBody.rotation;
         //tfModelRoot.rotation = Quaternion.Lerp(tfModelRoot.rotation, targetRotation, Time.deltaTime * bodyRotateSpeed);
-        tfModelRoot.rotation = targetRotation;
+        tfModelRoot.rotation = targetRotation;//直接同步，便于及时响应音频
 
         //# Legs
+
         ///-检查哪一组需要更新位置且偏移量最大，如果是就先更新该组；同时只能有一组进行移动
-        bool shouldGroup1Move = listLegController1.Any(com => com.NeedMove);
-        bool shouldGroup2Move = listLegController2.Any(com => com.NeedMove);
-        if (shouldGroup1Move && shouldGroup2Move)
+        float maxGroupDistance = 0;//记录所有组中总距离最大的
+        int needMoveGroupIndex = -1;
+        for (int i = 0; i != listLegControllerGroup.Count; i++)
         {
-            ///-记录上次移动的组，如果已经移动了且本次2组都需要移动，则上一组就无法连续移动，改为另一组先移动
-            int curMoveIndex = lastMoveGroupIndex == 1 ? 2 : 1;
-            LegGroupTweenMove(curMoveIndex);
+            if (lastMoveGroupIndex == i)//防止同一组连续移动
+                continue;
+            var lcg = listLegControllerGroup[i];
+            if (lcg.NeedMove && lcg.TotalDistance > maxGroupDistance)
+            {
+                needMoveGroupIndex = i;
+                maxGroupDistance = lcg.TotalDistance;
+            }
         }
-        if (shouldGroup1Move)
+        if (needMoveGroupIndex >= 0)
         {
-            LegGroupTweenMove(1);
-        }
-        else if (shouldGroup2Move)
-        {
-            LegGroupTweenMove(2);
+            if (!(Time.time - lastMoveTime < moveLegIntervalTime))//两次移动之间要有间隔，否则很假
+                Debug.Log(" " + needMoveGroupIndex + ": " + maxGroupDistance);
+            LegGroupTweenMoveNew(needMoveGroupIndex);
         }
 
         //ToUpdate:在Spider静止一定时间后，强制同步GhostLegs的位置，避免强迫症患者觉得不对称
     }
-
-    public void LegGroupForceTweenMove()
-    {
-        //LegGroupTweenMove(0, true);
-        //LegGroupTweenMove(1, true);
-        listLegController1.ForEach(c => c.TweenMoveAsync(true));
-        listLegController2.ForEach(c => c.TweenMoveAsync(true));
-    }
-    void LegGroupTweenMove(int index)
+    void LegGroupTweenMoveNew(int index)
     {
         if (Time.time - lastMoveTime < moveLegIntervalTime)//两次移动之间要有间隔，否则很假
         {
             return;
         }
-        var listTarget = (index == 1 ? listLegController1 : listLegController2);
+        var listTarget = listLegControllerGroup[index].listLegController;
         listTarget.ForEach(com => com.TweenMoveAsync());
         lastMoveGroupIndex = index;
         lastMoveTime = Time.time;
     }
 
+    /// <summary>
+    /// 立刻移动所有Leg到指定位置
+    /// </summary>
+    public void ForceAllLegControllerTweenMove()
+    {
+        listAllLegController.ForEach(c => c.TweenMoveAsync(true));
+    }
+
+    #region Define
+    [System.Serializable]
+    public class LegControllerGroup
+    {
+        public bool NeedMove { get { return listLegController.Any(com => com.NeedMove); } }
+        public float TotalDistance
+        {
+            get
+            {
+                _totalDistance = 0;
+                listLegController.ForEach(c => _totalDistance += c.curDistance);
+                return _totalDistance;
+            }
+        }//总位移
+        float _totalDistance;
+        public List<CreeperLegGhostController> listLegController = new List<CreeperLegGhostController>();
+    }
+    #endregion
+
+
+    #region Editor
     [Header("Editor")]
     public float gizmosRadius = 0.1f;
     private void OnDrawGizmos()
@@ -117,4 +149,5 @@ public class CreeperGhostController : MonoBehaviour
             Gizmos.DrawLine(tfGhostBody.position, tfGhostBody.position + tfGhostBody.forward * gizmosRadius);
         }
     }
+    #endregion
 }

@@ -307,7 +307,7 @@ MonoBehaviour:
   updatePositionDistance: 0.1
   maxReachDistance: 0.3
   weightRange: {x: 0.5, y: 1}
-  tweenDuration: 0.2
+  tweenDuration: 0.08
   easeLegUp: 3
   easeLegDown: 2
   tfSourceTarget: {fileID: 0}
@@ -857,7 +857,7 @@ MonoBehaviour:
   updatePositionDistance: 0.1
   maxReachDistance: 0.3
   weightRange: {x: 0.5, y: 1}
-  tweenDuration: 0.2
+  tweenDuration: 0.08
   easeLegUp: 3
   easeLegDown: 2
   tfSourceTarget: {fileID: 0}
@@ -1093,7 +1093,7 @@ MonoBehaviour:
   updatePositionDistance: 0.1
   maxReachDistance: 0.3
   weightRange: {x: 0.5, y: 1}
-  tweenDuration: 0.2
+  tweenDuration: 0.08
   easeLegUp: 3
   easeLegDown: 2
   tfSourceTarget: {fileID: 0}
@@ -1367,15 +1367,19 @@ MonoBehaviour:
   bodyRotateSpeed: 1
   maxBodyTurn: 90
   tfGhostBody: {fileID: 268686330}
-  listLegController1:
-  - {fileID: 1008289233}
-  - {fileID: 1379526252}
-  listLegController2:
-  - {fileID: 111196539}
-  - {fileID: 2130958921}
+  listLegControllerGroup:
+  - listLegController:
+    - {fileID: 1008289233}
+  - listLegController:
+    - {fileID: 111196539}
+  - listLegController:
+    - {fileID: 2130958921}
+  - listLegController:
+    - {fileID: 1379526252}
   moveLegIntervalTime: 0.1
   lastMoveGroupIndex: -1
   lastMoveTime: 0
+  baseBodyPosition: {x: 0, y: 0, z: 0}
   gizmosRadius: 0.1
 --- !u!4 &1622409357
 Transform:
@@ -1460,8 +1464,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1698562152}
-  - component: {fileID: 1698562153}
-  - component: {fileID: 1698562154}
   m_Layer: 0
   m_Name: Root
   m_TagString: Untagged
@@ -1486,82 +1488,6 @@ Transform:
   m_Father: {fileID: 2140890674}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: -90, y: 0, z: 0}
---- !u!114 &1698562153
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1698562151}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 05f9bbca5de24ec479d5ade46c196b21, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  onLog:
-    m_PersistentCalls:
-      m_Calls: []
-  logType: 3
-  withName: 0
-  format: 
-  tips: "\u7F29\u653E\u540E\u9700\u8981\u91CD\u65B0\u663E\u9690\uFF0C\u5426\u5219RigBuilder\u4E0D\u4F1A\u66F4\u65B0"
-  isLogOnConsole: 1
---- !u!114 &1698562154
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1698562151}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 81f0bffed1804b2429d7c4158f1d2381, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  onPlayStop:
-    m_PersistentCalls:
-      m_Calls: []
-  onPlay:
-    m_PersistentCalls:
-      m_Calls: []
-  onStop:
-    m_PersistentCalls:
-      m_Calls: []
-  onActiveDeactive:
-    m_PersistentCalls:
-      m_Calls: []
-  isActive: 1
-  canPlay: 1
-  canStop: 1
-  isPlayOnAwake: 0
-  isPlayOnce: 0
-  isReverse: 0
-  listListener: []
-  isGroup: 0
-  isIncludeHide: 1
-  isRecursive: 0
-  id: 
-  isInvokeByID: 0
-  targetIDLocation: 1
-  targetId: 
-  isLogOnPlay: 0
-  isLogOnStop: 0
-  isPlayed: 0
-  state: -1
-  onPlayWithParam:
-    m_PersistentCalls:
-      m_Calls: []
-  onStopWithParam:
-    m_PersistentCalls:
-      m_Calls: []
-  isPlayWithParam: 0
-  isStopWithParam: 0
-  isDetectMatch: 0
-  goTarget: {fileID: 0}
-  soAction: {fileID: 0}
-  onAliveCursorActiveDeactive:
-    m_PersistentCalls:
-      m_Calls: []
 --- !u!1 &1708513203
 GameObject:
   m_ObjectHideFlags: 0
@@ -1864,7 +1790,7 @@ MonoBehaviour:
   updatePositionDistance: 0.1
   maxReachDistance: 0.3
   weightRange: {x: 0.5, y: 1}
-  tweenDuration: 0.2
+  tweenDuration: 0.08
   easeLegUp: 3
   easeLegDown: 2
   tfSourceTarget: {fileID: 0}

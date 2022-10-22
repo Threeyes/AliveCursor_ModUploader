@@ -6,11 +6,13 @@ using UnityEngine;
 using UnityEngine.Animations.Rigging;
 /// <summary>
 /// Response To Audio
+/// 
+/// Todo：
+/// -弄成更通用，不用枚举，而是通过序号确定指定的Leg
 /// </summary>
 public class Spider_AudioVisualizer : MonoBehaviour
     , IAC_SystemAudio_RawSampleDataChangedHandler
 {
-    //ToUpdate:等PersistentData_Object完善后改成其方案
     public bool CanBodyMove { get { return config.canBodyMove; } set { config.canBodyMove = value; } }
     public Vector3 BodyMoveRange { get { return config.bodyMoveRange; } set { config.bodyMoveRange = value; } }
     public bool CanBodyRotate { get { return config.canBodyRotate; } set { config.canBodyRotate = value; } }
@@ -19,7 +21,7 @@ public class Spider_AudioVisualizer : MonoBehaviour
     public ConfigInfo.LegType LegToRaise { get { return config.legToRaise; } set { config.legToRaise = value; } }//Todo:不行就用int转枚举
     public float LegRaiseRange { get { return config.legRaiseRange; } set { config.legRaiseRange = value; } }
 
-    public CreeperGhostController creeperGhostController;
+    public CreeperGhostControllerManager creeperGhostController;
     public List<CreeperLegGhostController> listCreeperLegGhostController = new List<CreeperLegGhostController>();//Follow enum LegType's order
     [SerializeField] protected ConfigInfo config;
 
