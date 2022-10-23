@@ -12,7 +12,7 @@ public class CreeperController : MonoBehaviour
     , IAC_CursorState_ChangedHandler
     , IAC_CommonSetting_CursorSizeHandler
 {
-    public CreeperGhostControllerManager creeperGhostController;
+    public CreeperGhostController creeperGhostController;
     public Transform tfLegTargetGroup;
   
     #region Callback

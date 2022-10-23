@@ -287,7 +287,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1622409357}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &111196539
 MonoBehaviour:
@@ -310,7 +310,6 @@ MonoBehaviour:
   tweenDuration: 0.08
   easeLegUp: 3
   easeLegDown: 2
-  tfSourceTarget: {fileID: 0}
   curDistance: 0
   isExcessive: 0
   isMoving: 0
@@ -319,6 +318,7 @@ MonoBehaviour:
   localPivotPos: {x: 0, y: 0, z: 0}
   settingCursorSize: 1
   gizmosRadius: 0.1
+  gizmosShowDistance: 0
 --- !u!1 &268686329
 GameObject:
   m_ObjectHideFlags: 0
@@ -860,7 +860,6 @@ MonoBehaviour:
   tweenDuration: 0.08
   easeLegUp: 3
   easeLegDown: 2
-  tfSourceTarget: {fileID: 0}
   curDistance: 0
   isExcessive: 0
   isMoving: 0
@@ -869,6 +868,7 @@ MonoBehaviour:
   localPivotPos: {x: 0, y: 0, z: 0}
   settingCursorSize: 1
   gizmosRadius: 0.1
+  gizmosShowDistance: 0
 --- !u!1 &1054475121
 GameObject:
   m_ObjectHideFlags: 0
@@ -1096,7 +1096,6 @@ MonoBehaviour:
   tweenDuration: 0.08
   easeLegUp: 3
   easeLegDown: 2
-  tfSourceTarget: {fileID: 0}
   curDistance: 0
   isExcessive: 0
   isMoving: 0
@@ -1105,6 +1104,7 @@ MonoBehaviour:
   localPivotPos: {x: 0, y: 0, z: 0}
   settingCursorSize: 1
   gizmosRadius: 0.1
+  gizmosShowDistance: 0
 --- !u!1 &1406455787
 GameObject:
   m_ObjectHideFlags: 0
@@ -1362,11 +1362,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2d4edc03063c52f46a586045a40caa0a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isIncludeHide: 1
+  isRecursive: 1
+  includeSelf: 0
+  listExtraComp: []
   tfModelRoot: {fileID: 4989478024266276}
   bodyMoveSpeed: 10
   bodyRotateSpeed: 1
   maxBodyTurn: 90
+  bodyOffsetToCenter: {x: 0, y: 0, z: 0}
   tfGhostBody: {fileID: 268686330}
+  moveLegIntervalTime: 0.1
+  alignAfterHaltDelayTime: 5
   listLegControllerGroup:
   - listLegController:
     - {fileID: 1008289233}
@@ -1376,10 +1383,10 @@ MonoBehaviour:
     - {fileID: 2130958921}
   - listLegController:
     - {fileID: 1379526252}
-  moveLegIntervalTime: 0.1
   lastMoveGroupIndex: -1
   lastMoveTime: 0
   baseBodyPosition: {x: 0, y: 0, z: 0}
+  hasAligned: 0
   gizmosRadius: 0.1
 --- !u!4 &1622409357
 Transform:
@@ -1395,8 +1402,8 @@ Transform:
   m_Children:
   - {fileID: 268686330}
   - {fileID: 1008289232}
-  - {fileID: 111196538}
   - {fileID: 2130958920}
+  - {fileID: 111196538}
   - {fileID: 1379526251}
   m_Father: {fileID: 1799842586}
   m_RootOrder: 0
@@ -1621,7 +1628,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   key: RaiseLegIndex
   tooltip: 
-  defaultValue: 2
+  defaultValue: 1
   onUIChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -1629,8 +1636,8 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 2011203695}
-        m_TargetAssemblyTypeName: Spider_AudioVisualizer, Assembly-CSharp
-        m_MethodName: SetLegToRaise
+        m_TargetAssemblyTypeName: Creeper_AudioVisualizer, Assembly-CSharp
+        m_MethodName: set_RaiseLegIndex
         m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1644,8 +1651,8 @@ MonoBehaviour:
   persistentValue: 0
   dataOption:
     useRange: 1
-    minValue: 1
-    maxValue: 4
+    minValue: 0
+    maxValue: 3
 --- !u!1 &1952161944
 GameObject:
   m_ObjectHideFlags: 0
@@ -1711,20 +1718,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   creeperGhostController: {fileID: 1622409356}
-  listCreeperLegGhostController:
-  - {fileID: 1008289233}
-  - {fileID: 2130958921}
-  - {fileID: 111196539}
-  - {fileID: 1379526252}
   config:
     canBodyMove: 1
     bodyMoveRange: {x: 0.05, y: 0.05, z: 0}
     canBodyRotate: 0
     bodyRotateRange: {x: 5, y: 0, z: 5}
     canLegRaise: 0
-    legToRaise: 1
+    raiseLegIndex: 0
     legRaiseRange: 0.5
-  TestChainIKConstraint: {fileID: 1406455789}
 --- !u!4 &2011203696
 Transform:
   m_ObjectHideFlags: 0
@@ -1770,7 +1771,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1622409357}
-  m_RootOrder: 3
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &2130958921
 MonoBehaviour:
@@ -1793,7 +1794,6 @@ MonoBehaviour:
   tweenDuration: 0.08
   easeLegUp: 3
   easeLegDown: 2
-  tfSourceTarget: {fileID: 0}
   curDistance: 0
   isExcessive: 0
   isMoving: 0
@@ -1802,6 +1802,7 @@ MonoBehaviour:
   localPivotPos: {x: 0, y: 0, z: 0}
   settingCursorSize: 1
   gizmosRadius: 0.1
+  gizmosShowDistance: 0
 --- !u!1 &2140890673
 GameObject:
   m_ObjectHideFlags: 0

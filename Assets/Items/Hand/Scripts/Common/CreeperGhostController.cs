@@ -11,7 +11,7 @@ using System.Linq;
 /// 功能：
 /// -决定根模型的位置/旋转
 /// </summary>
-public class CreeperGhostControllerManager : ComponentGroupBase<CreeperLegGhostController>
+public class CreeperGhostController : ComponentGroupBase<CreeperLegGhostController>
 {
     public bool IsLegsMoving { get { return ListComp.Any(c => c.isMoving); } }
 
@@ -25,6 +25,8 @@ public class CreeperGhostControllerManager : ComponentGroupBase<CreeperLegGhostC
 
     [Header("Legs")]
     public float moveLegIntervalTime = 0.1f;//Warning：要比CreeperLegGhostController.tweenDuration值大，否则某个Leg会因此提前Tween完成而再次移动，从而出现某个脚频繁移动的问题
+    public float alignAfterHaltDelayTime = 5;//停下后，多久开始脚对齐，大于0有效
+
     //PS:脚需要分组（如左上对右下），每次只能移动一组脚，长途奔袭时两组脚交错移动【兼容其他爬虫的行走】
     public List<LegControllerGroup> listLegControllerGroup = new List<LegControllerGroup>();
 
@@ -33,6 +35,7 @@ public class CreeperGhostControllerManager : ComponentGroupBase<CreeperLegGhostC
     public int lastMoveGroupIndex = -1;
     public float lastMoveTime = 0;
     public Vector3 baseBodyPosition;
+    public bool hasAligned = false;//在本次停下后是否已经对齐
     void Start()
     {
         //ToAdd：在程序开始时或开始前记录默认的位移，因为有些躯干不在正中心【如Hand】
@@ -82,20 +85,28 @@ public class CreeperGhostControllerManager : ComponentGroupBase<CreeperLegGhostC
             if (lastMoveGroupIndex == i)//防止同一组连续移动
                 continue;
             var lcg = listLegControllerGroup[i];
-            if (lcg.NeedMove && lcg.TotalDistance > maxGroupDistance)
+            if (lcg.NeedMove && lcg.AverageDistance > maxGroupDistance)
             {
                 needMoveGroupIndex = i;
-                maxGroupDistance = lcg.TotalDistance;
+                maxGroupDistance = lcg.AverageDistance;
             }
         }
-        if (needMoveGroupIndex >= 0)
+        if (needMoveGroupIndex >= 0)//任意脚需要移动
         {
-            if (!(Time.time - lastMoveTime < moveLegIntervalTime))//两次移动之间要有间隔，否则很假
-                Debug.Log(" " + needMoveGroupIndex + ": " + maxGroupDistance);
+            //if (!(Time.time - lastMoveTime < moveLegIntervalTime))//两次移动之间要有间隔，否则很假
+            //    Debug.Log(" " + needMoveGroupIndex + ": " + maxGroupDistance);
             LegGroupTweenMoveNew(needMoveGroupIndex);
         }
+        else//所有脚都不需要移动
+        {
+            //在停止移动一定时间后，强制对齐所有GhostLegs的位置，避免强迫症患者（如本人）觉得不对称
+            if (!hasAligned && alignAfterHaltDelayTime > 0 && Time.time - lastMoveTime > alignAfterHaltDelayTime)
+            {
+                ForceAllLegControllerTweenMove();               
+                hasAligned = true;//标记为已对齐，避免重复进入
+            }
+        }
 
-        //ToUpdate:在Spider静止一定时间后，强制同步GhostLegs的位置，避免强迫症患者觉得不对称
     }
     void LegGroupTweenMoveNew(int index)
     {
@@ -107,6 +118,7 @@ public class CreeperGhostControllerManager : ComponentGroupBase<CreeperLegGhostC
         listTarget.ForEach(com => com.TweenMoveAsync());
         lastMoveGroupIndex = index;
         lastMoveTime = Time.time;
+        hasAligned = false;
     }
 
     /// <summary>
@@ -122,16 +134,18 @@ public class CreeperGhostControllerManager : ComponentGroupBase<CreeperLegGhostC
     public class LegControllerGroup
     {
         public bool NeedMove { get { return listLegController.Any(com => com.NeedMove); } }
-        public float TotalDistance
+        public float AverageDistance
         {
             get
             {
-                _totalDistance = 0;
-                listLegController.ForEach(c => _totalDistance += c.curDistance);
-                return _totalDistance;
+                //ToUpdate：应该是只统计需要移动的脚的距离
+                _averageDistance = 0;
+                listLegController.ForEach(c => _averageDistance += c.curDistance);
+                _averageDistance /= listLegController.Count;
+                return _averageDistance;
             }
         }//总位移
-        float _totalDistance;
+        float _averageDistance;
         public List<CreeperLegGhostController> listLegController = new List<CreeperLegGhostController>();
     }
     #endregion

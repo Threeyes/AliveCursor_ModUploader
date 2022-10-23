@@ -13,14 +13,17 @@ MonoBehaviour:
   m_Name: WorkshopItemInfo
   m_EditorClassIdentifier: 
   title: Hand
-  description: Asset link:https://assetstore.unity.com/packages/3d/characters/stylized-simple-hands-221297
-  texturePreview: {fileID: 0}
+  description: 'Hands up!
+
+
+    Asset link:https://assetstore.unity.com/packages/3d/characters/stylized-simple-hands-221297'
+  texturePreview: {fileID: 2800000, guid: f041982f6183e6f4aadce2431aa98b39, type: 3}
   itemVisibility: 0
   ageRatingType: 1
-  itemStyle: 0
-  itemGenre: 0
+  itemStyle: 2
+  itemGenre: 4
   itemReference: 0
-  itemFeature: 0
-  itemSafety: 0
+  itemFeature: 2
+  itemSafety: 1
   itemName: Hand
-  itemId: 0
+  itemId: 2879016434

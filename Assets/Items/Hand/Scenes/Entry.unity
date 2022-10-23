@@ -420,6 +420,161 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 270789179}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &304926501
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 304926502}
+  - component: {fileID: 304926503}
+  m_Layer: 0
+  m_Name: Vector3PD BodyRotateRange
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &304926502
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 304926501}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1871782319}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &304926503
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 304926501}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eb01d6cba29116b42b4cd03e5d0bce7d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  key: BodyRotateRange
+  tooltip: 
+  defaultValue: {x: 5, y: 0, z: 5}
+  onUIChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  onValueChanged:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1763492741}
+        m_TargetAssemblyTypeName: Spider_AudioVisualizer, Assembly-CSharp
+        m_MethodName: set_BodyRotateRange
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  hasSetValue: 0
+  persistentValue: {x: 0, y: 0, z: 0}
+--- !u!1 &498950897
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 498950898}
+  - component: {fileID: 498950900}
+  - component: {fileID: 498950899}
+  m_Layer: 0
+  m_Name: BoolPD BodyMoveWithRhythm
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &498950898
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 498950897}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1871782319}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &498950899
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 498950897}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 05f9bbca5de24ec479d5ade46c196b21, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  onLog:
+    m_PersistentCalls:
+      m_Calls: []
+  logType: 3
+  withName: 0
+  format: 
+  tips: "Key\u53D6\u540D\u53EA\u662F\u4E3A\u4E86\u65B9\u4FBF\u7528\u6237\u7406\u89E3\uFF0C\u540E\u7EED\u5C01\u88C5\u4E3A\u7C7B\u5C31\u4E0D\u9700\u8981Rhythm"
+  isLogOnConsole: 1
+--- !u!114 &498950900
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 498950897}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ee08135daacb4e3468ebd5c12e996a92, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  key: BodyMoveWithRhythm
+  tooltip: 
+  defaultValue: 0
+  onUIChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  onValueChanged:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1763492741}
+        m_TargetAssemblyTypeName: Spider_AudioVisualizer, Assembly-CSharp
+        m_MethodName: set_CanBodyMove
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  hasSetValue: 0
+  persistentValue: 0
 --- !u!1 &511059329
 GameObject:
   m_ObjectHideFlags: 0
@@ -444,7 +599,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 511059329}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.107, y: 0, z: -0.486}
+  m_LocalPosition: {x: 0.093, y: -0, z: -0.402}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -483,7 +638,7 @@ Transform:
   - {fileID: 270789180}
   - {fileID: 2003175611}
   m_Father: {fileID: 0}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: -90.00001, y: 0, z: -90.00001}
 --- !u!114 &557360116
 MonoBehaviour:
@@ -593,6 +748,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1080754496}
   - component: {fileID: 1080754497}
+  - component: {fileID: 1080754498}
   m_Layer: 0
   m_Name: GhostLeg_0
   m_TagString: Untagged
@@ -607,7 +763,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1080754495}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -644,6 +800,27 @@ MonoBehaviour:
   localPivotPos: {x: 0, y: 0, z: 0}
   settingCursorSize: 1
   gizmosRadius: 0.1
+  gizmosShowDistance: 1
+--- !u!114 &1080754498
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1080754495}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 05f9bbca5de24ec479d5ade46c196b21, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  onLog:
+    m_PersistentCalls:
+      m_Calls: []
+  logType: 3
+  withName: 0
+  format: 
+  tips: "Warning\uFF1A\u62C7\u6307\u53CA\u5C3E\u6307\u7684\u79FB\u52A8\u8303\u56F4\u4E0D\u80FD\u8FC7\u5927\uFF0C\u5426\u5219\u4F1A\u51FA\u73B0\u6A21\u578B\u6495\u88C2"
+  isLogOnConsole: 1
 --- !u!1 &1199918621
 GameObject:
   m_ObjectHideFlags: 0
@@ -695,8 +872,79 @@ Transform:
   m_Children:
   - {fileID: 1740733416}
   m_Father: {fileID: 0}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 90, y: -90, z: 90}
+--- !u!1 &1234965650
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1234965651}
+  - component: {fileID: 1234965652}
+  m_Layer: 0
+  m_Name: IntPD RaiseLegIndex
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1234965651
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1234965650}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1871782319}
+  m_RootOrder: 5
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1234965652
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1234965650}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 79bb91bbdef79d8429d0ed58a5317b61, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  key: RaiseLegIndex
+  tooltip: 
+  defaultValue: 1
+  onUIChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  onValueChanged:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1763492741}
+        m_TargetAssemblyTypeName: Creeper_AudioVisualizer, Assembly-CSharp
+        m_MethodName: set_RaiseLegIndex
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  hasSetValue: 0
+  persistentValue: 0
+  dataOption:
+    useRange: 1
+    minValue: 0
+    maxValue: 4
 --- !u!1 &1290701026
 GameObject:
   m_ObjectHideFlags: 0
@@ -758,6 +1006,7 @@ MonoBehaviour:
   localPivotPos: {x: 0, y: 0, z: 0}
   settingCursorSize: 1
   gizmosRadius: 0.1
+  gizmosShowDistance: 0
 --- !u!1 &1341595710
 GameObject:
   m_ObjectHideFlags: 0
@@ -871,9 +1120,10 @@ MonoBehaviour:
   bodyMoveSpeed: 10
   bodyRotateSpeed: 1
   maxBodyTurn: 90
-  bodyOffsetToCenter: {x: -0.07959999, y: -0.35779998, z: 0.000000029802322}
+  bodyOffsetToCenter: {x: -0.039799996, y: -0.17889997, z: 0.000000023841856}
   tfGhostBody: {fileID: 1932800887}
   moveLegIntervalTime: 0.1
+  alignAfterHaltDelayTime: 5
   listLegControllerGroup:
   - listLegController:
     - {fileID: 1080754497}
@@ -886,6 +1136,7 @@ MonoBehaviour:
   lastMoveGroupIndex: -1
   lastMoveTime: 0
   baseBodyPosition: {x: 0, y: 0, z: 0}
+  hasAligned: 0
   gizmosRadius: 0.1
 --- !u!1 &1416430156
 GameObject:
@@ -948,6 +1199,7 @@ MonoBehaviour:
   localPivotPos: {x: 0, y: 0, z: 0}
   settingCursorSize: 1
   gizmosRadius: 0.1
+  gizmosShowDistance: 0
 --- !u!1 &1432143378
 GameObject:
   m_ObjectHideFlags: 0
@@ -1009,6 +1261,7 @@ MonoBehaviour:
   localPivotPos: {x: 0, y: 0, z: 0}
   settingCursorSize: 1
   gizmosRadius: 0.1
+  gizmosShowDistance: 0
 --- !u!1 &1472720471
 GameObject:
   m_ObjectHideFlags: 0
@@ -1032,14 +1285,81 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1472720471}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.292, y: 0, z: -0.428}
+  m_LocalRotation: {x: -0, y: 0.089599684, z: -0.000000007450581, w: 0.9959779}
+  m_LocalPosition: {x: -0.2776, y: 0, z: -0.351}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 209483485}
   m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 10.281, z: 0}
+--- !u!1 &1498272004
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1498272005}
+  - component: {fileID: 1498272006}
+  m_Layer: 0
+  m_Name: Vector3PD BodyMoveRange
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1498272005
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1498272004}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1871782319}
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1498272006
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1498272004}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eb01d6cba29116b42b4cd03e5d0bce7d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  key: BodyMoveRange
+  tooltip: 
+  defaultValue: {x: 0.05, y: 0.05, z: 0}
+  onUIChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  onValueChanged:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1763492741}
+        m_TargetAssemblyTypeName: Spider_AudioVisualizer, Assembly-CSharp
+        m_MethodName: set_BodyMoveRange
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  hasSetValue: 0
+  persistentValue: {x: 0, y: 0, z: 0}
 --- !u!1 &1512863148
 GameObject:
   m_ObjectHideFlags: 0
@@ -1086,6 +1406,7 @@ MonoBehaviour:
   localPivotPos: {x: 0, y: 0, z: 0}
   settingCursorSize: 1
   gizmosRadius: 0.1
+  gizmosShowDistance: 0
 --- !u!4 &1512863150
 Transform:
   m_ObjectHideFlags: 0
@@ -1093,7 +1414,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1512863148}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -1125,7 +1446,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1596290021}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.283, y: 0, z: -0.303}
+  m_LocalPosition: {x: 0.232, y: 0, z: -0.255}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1186,7 +1507,7 @@ MonoBehaviour:
     m_MaxIterations: 15
     m_Tolerance: 0.0001
     m_MaintainTargetPositionOffset: 0
-    m_MaintainTargetRotationOffset: 1
+    m_MaintainTargetRotationOffset: 0
 --- !u!1 &1684046308
 GameObject:
   m_ObjectHideFlags: 0
@@ -1242,6 +1563,77 @@ MonoBehaviour:
     m_Tolerance: 0.0001
     m_MaintainTargetPositionOffset: 0
     m_MaintainTargetRotationOffset: 0
+--- !u!1 &1722844245
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1722844246}
+  - component: {fileID: 1722844247}
+  m_Layer: 0
+  m_Name: FloatPD LegRaiseRange
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1722844246
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1722844245}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1871782319}
+  m_RootOrder: 6
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1722844247
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1722844245}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 630345259ab308643bec38dfd582a206, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  key: LegRaiseRange
+  tooltip: 
+  defaultValue: 1
+  onUIChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  onValueChanged:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1763492741}
+        m_TargetAssemblyTypeName: Spider_AudioVisualizer, Assembly-CSharp
+        m_MethodName: set_LegRaiseRange
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  hasSetValue: 0
+  persistentValue: 0
+  dataOption:
+    useRange: 1
+    minValue: 0
+    maxValue: 1
 --- !u!1 &1740733415
 GameObject:
   m_ObjectHideFlags: 0
@@ -1251,6 +1643,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1740733416}
+  - component: {fileID: 1740733417}
   m_Layer: 0
   m_Name: Root
   m_TagString: Untagged
@@ -1266,8 +1659,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1740733415}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: -0, z: 0.733}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0.65}
+  m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 5508321572758712641}
@@ -1275,6 +1668,205 @@ Transform:
   m_Father: {fileID: 1199918623}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1740733417
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1740733415}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 05f9bbca5de24ec479d5ade46c196b21, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  onLog:
+    m_PersistentCalls:
+      m_Calls: []
+  logType: 3
+  withName: 0
+  format: 
+  tips: -Scale the hand model
+  isLogOnConsole: 1
+--- !u!1 &1763492740
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1763492742}
+  - component: {fileID: 1763492741}
+  m_Layer: 0
+  m_Name: SceneController
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1763492741
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1763492740}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 84ec0849506ecda4bb3a3ad6f5f69d35, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  creeperGhostController: {fileID: 1341595713}
+  config:
+    canBodyMove: 0
+    bodyMoveRange: {x: 0.05, y: 0.05, z: 0}
+    canBodyRotate: 0
+    bodyRotateRange: {x: 5, y: 0, z: 5}
+    canLegRaise: 1
+    raiseLegIndex: 1
+    legRaiseRange: 1
+--- !u!4 &1763492742
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1763492740}
+  m_LocalRotation: {x: 0.29336908, y: -0.45837075, z: -0.7017043, w: 0.4598281}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: -21.931, y: -63.93, z: -99.738}
+--- !u!1 &1871782318
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1871782319}
+  m_Layer: 0
+  m_Name: PD Group
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1871782319
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1871782318}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 498950898}
+  - {fileID: 1498272005}
+  - {fileID: 1885102874}
+  - {fileID: 304926502}
+  - {fileID: 1951796305}
+  - {fileID: 1234965651}
+  - {fileID: 1722844246}
+  m_Father: {fileID: 0}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1885102873
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1885102874}
+  - component: {fileID: 1885102876}
+  - component: {fileID: 1885102875}
+  m_Layer: 0
+  m_Name: BoolPD BodyRotateWithRhythm
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1885102874
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1885102873}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1871782319}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1885102875
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1885102873}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 05f9bbca5de24ec479d5ade46c196b21, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  onLog:
+    m_PersistentCalls:
+      m_Calls: []
+  logType: 3
+  withName: 0
+  format: 
+  tips: "Key\u53D6\u540D\u53EA\u662F\u4E3A\u4E86\u65B9\u4FBF\u7528\u6237\u7406\u89E3\uFF0C\u540E\u7EED\u5C01\u88C5\u4E3A\u7C7B\u5C31\u4E0D\u9700\u8981Rhythm"
+  isLogOnConsole: 1
+--- !u!114 &1885102876
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1885102873}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ee08135daacb4e3468ebd5c12e996a92, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  key: BodyRotateWithRhythm
+  tooltip: 
+  defaultValue: 0
+  onUIChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  onValueChanged:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1763492741}
+        m_TargetAssemblyTypeName: Spider_AudioVisualizer, Assembly-CSharp
+        m_MethodName: set_CanBodyRotate
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  hasSetValue: 0
+  persistentValue: 0
 --- !u!1 &1932800886
 GameObject:
   m_ObjectHideFlags: 0
@@ -1330,13 +1922,101 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1945003508}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.083, y: -0, z: -0.574}
+  m_LocalPosition: {x: -0.081, y: -0, z: -0.49}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 209483485}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1951796304
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1951796305}
+  - component: {fileID: 1951796307}
+  - component: {fileID: 1951796306}
+  m_Layer: 0
+  m_Name: BoolPD LegRaiseWithRhythm
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1951796305
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1951796304}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1871782319}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1951796306
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1951796304}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 05f9bbca5de24ec479d5ade46c196b21, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  onLog:
+    m_PersistentCalls:
+      m_Calls: []
+  logType: 3
+  withName: 0
+  format: 
+  tips: "Key\u53D6\u540D\u53EA\u662F\u4E3A\u4E86\u65B9\u4FBF\u7528\u6237\u7406\u89E3\uFF0C\u540E\u7EED\u5C01\u88C5\u4E3A\u7C7B\u5C31\u4E0D\u9700\u8981Rhythm"
+  isLogOnConsole: 1
+--- !u!114 &1951796307
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1951796304}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ee08135daacb4e3468ebd5c12e996a92, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  key: LegRaiseWithRhythm
+  tooltip: 
+  defaultValue: 1
+  onUIChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  onValueChanged:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1763492741}
+        m_TargetAssemblyTypeName: Spider_AudioVisualizer, Assembly-CSharp
+        m_MethodName: set_CanLegRaise
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  hasSetValue: 0
+  persistentValue: 0
 --- !u!1 &2003175610
 GameObject:
   m_ObjectHideFlags: 0
@@ -1376,7 +2056,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6234124285372483053}
-  m_LocalRotation: {x: 0.9636401, y: 0.05646561, z: 0.1041219, w: 0.23951636}
+  m_LocalRotation: {x: 0.99614894, y: -0.07327126, z: -0.024987113, w: 0.04116031}
   m_LocalPosition: {x: -0, y: 0.8288895, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -1391,7 +2071,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 813814674313976600}
-  m_LocalRotation: {x: 0.92607343, y: 0.027946994, z: 0.036607366, w: 0.37452224}
+  m_LocalRotation: {x: 0.98361653, y: 0.008208366, z: 0.0007293711, w: 0.18008535}
   m_LocalPosition: {x: -0, y: 1.30322, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -1455,7 +2135,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1252820412907770452}
-  m_LocalRotation: {x: 0.93753874, y: -0.03138381, z: -0.15835664, w: 0.30815473}
+  m_LocalRotation: {x: 0.99690485, y: -0.025229108, z: -0.025035128, w: 0.07012471}
   m_LocalPosition: {x: -0, y: 1.0337291, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -1551,7 +2231,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3399325842093336554}
-  m_LocalRotation: {x: -0.4238899, y: -0.059827488, z: 0.06534375, w: 0.90137017}
+  m_LocalRotation: {x: -0.70233214, y: -0.009114504, z: 0.047361284, w: 0.7102137}
   m_LocalPosition: {x: 0.00000005960475, y: 0.9982743, z: 2.842171e-14}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -1583,7 +2263,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6266107433504729056}
-  m_LocalRotation: {x: -0.091340594, y: 0.001530237, z: -0.021840313, w: 0.995579}
+  m_LocalRotation: {x: -0.030113447, y: -0.0052826474, z: 0.014769529, w: 0.9994234}
   m_LocalPosition: {x: 7.9269924e-14, y: 0.5955269, z: 7.81597e-14}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -1599,7 +2279,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1112135660839467250}
-  m_LocalRotation: {x: -0.41429293, y: -0.01357883, z: 0.029577017, w: 0.9095615}
+  m_LocalRotation: {x: -0.68240774, y: 0.006924264, z: 0.018173002, w: 0.73071295}
   m_LocalPosition: {x: 0.000000003725362, y: 1.2687398, z: 1.4210855e-14}
   m_LocalScale: {x: 1, y: 0.99999994, z: 1}
   m_ConstrainProportionsScale: 0
@@ -1615,7 +2295,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4219291648884498065}
-  m_LocalRotation: {x: 0.020351687, y: -0.00018987471, z: -0.009092374, w: 0.9997515}
+  m_LocalRotation: {x: 0.19832882, y: -0.001751869, z: -0.011311186, w: 0.9800687}
   m_LocalPosition: {x: -0.000000014901069, y: 0.912638, z: -2.842171e-14}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -1648,7 +2328,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4236812735546795195}
-  m_LocalRotation: {x: 0.02717428, y: -0.00090571493, z: -0.027532045, w: -0.99925107}
+  m_LocalRotation: {x: 0.0667968, y: 0.003546373, z: 0.025709769, w: 0.997429}
   m_LocalPosition: {x: 0.00000005960473, y: 0.8326527, z: -5.684342e-14}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -1759,7 +2439,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8638996725352055993}
-  m_LocalRotation: {x: 0.9262143, y: -0.03680865, z: -0.037542023, w: 0.37331325}
+  m_LocalRotation: {x: 0.98554033, y: -0.01594007, z: -0.0033738094, w: 0.16865566}
   m_LocalPosition: {x: -0, y: 1.3025336, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -1790,7 +2470,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1235599981958683030}
-  m_LocalRotation: {x: 0.00027910055, y: -0.0000002971389, z: -0.0010646296, w: -0.99999934}
+  m_LocalRotation: {x: 0.0048583974, y: 0.0000045024053, z: -0.0013335588, w: -0.9999873}
   m_LocalPosition: {x: -0.4576359, y: 3.1805692, z: 7.1054274e-15}
   m_LocalScale: {x: 0.99999994, y: 0.99999994, z: 1}
   m_ConstrainProportionsScale: 0
@@ -1900,7 +2580,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3618682541527070267}
-  m_LocalRotation: {x: 0.014808967, y: -0.0000410165, z: -0.004884782, w: 0.9998784}
+  m_LocalRotation: {x: 0.13960658, y: -0.00047762145, z: -0.008239901, w: 0.9901726}
   m_LocalPosition: {x: 0.000000019557865, y: 1.083207, z: -1.4210855e-14}
   m_LocalScale: {x: 1, y: 0.99999994, z: 1}
   m_ConstrainProportionsScale: 0
@@ -2154,7 +2834,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2255932532418167110}
-  m_LocalRotation: {x: -0.0005156103, y: 0.000014049291, z: -0.023603288, w: 0.9997213}
+  m_LocalRotation: {x: -0.011769184, y: 0.0002800761, z: -0.022980047, w: 0.9996665}
   m_LocalPosition: {x: 0.43475413, y: 3.1576872, z: 3.5527137e-14}
   m_LocalScale: {x: 0.99999994, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -2233,7 +2913,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 892368381869560657}
-  m_LocalRotation: {x: -0.40818402, y: -0.006925943, z: -0.015415888, w: 0.9127432}
+  m_LocalRotation: {x: -0.7113267, y: -0.020537406, z: 0.026152074, w: 0.70207447}
   m_LocalPosition: {x: 0.000000029802347, y: 0.92755497, z: 7.1054274e-15}
   m_LocalScale: {x: 1, y: 0.99999994, z: 1}
   m_ConstrainProportionsScale: 0
@@ -2301,7 +2981,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4024488365593799711}
-  m_LocalRotation: {x: -0.42014465, y: -0.0034978576, z: -0.042561095, w: 0.9064517}
+  m_LocalRotation: {x: -0.6428888, y: 0.0015046895, z: 0.10646288, w: 0.7585231}
   m_LocalPosition: {x: -0.00000011920932, y: 0.7369416, z: -3.5527137e-14}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0

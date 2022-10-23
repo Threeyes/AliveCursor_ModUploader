@@ -7,10 +7,10 @@ using UnityEngine.Animations.Rigging;
 /// <summary>
 /// Response To Audio
 /// 
-/// Todo：
-/// -弄成更通用，不用枚举，而是通过序号确定指定的Leg
+/// 功能：
+/// 通过序号确定指定响应音频的Leg
 /// </summary>
-public class Spider_AudioVisualizer : MonoBehaviour
+public class Creeper_AudioVisualizer : MonoBehaviour
     , IAC_SystemAudio_RawSampleDataChangedHandler
 {
     public bool CanBodyMove { get { return config.canBodyMove; } set { config.canBodyMove = value; } }
@@ -18,11 +18,11 @@ public class Spider_AudioVisualizer : MonoBehaviour
     public bool CanBodyRotate { get { return config.canBodyRotate; } set { config.canBodyRotate = value; } }
     public Vector3 BodyRotateRange { get { return config.bodyRotateRange; } set { config.bodyRotateRange = value; } }
     public bool CanLegRaise { get { return config.canLegRaise; } set { config.canLegRaise = value; } }
-    public ConfigInfo.LegType LegToRaise { get { return config.legToRaise; } set { config.legToRaise = value; } }//Todo:不行就用int转枚举
+    public int RaiseLegIndex { get { return config.raiseLegIndex; } set { config.raiseLegIndex = value; } }
     public float LegRaiseRange { get { return config.legRaiseRange; } set { config.legRaiseRange = value; } }
 
-    public CreeperGhostControllerManager creeperGhostController;
-    public List<CreeperLegGhostController> listCreeperLegGhostController = new List<CreeperLegGhostController>();//Follow enum LegType's order
+    public CreeperGhostController creeperGhostController;
+    public List<CreeperLegGhostController> listCreeperLegGhostController { get { return creeperGhostController.ListComp; } }
     [SerializeField] protected ConfigInfo config;
 
     private void LateUpdate()
@@ -42,21 +42,6 @@ public class Spider_AudioVisualizer : MonoBehaviour
     }
 
     #region Callback
-    public void SetLegToRaise(int index)//通过PD调用，从1开始
-    {
-        ConfigInfo.LegType legToRaise = ConfigInfo.LegType.None;
-        if (index == 1)
-            legToRaise = ConfigInfo.LegType.FrontLeft;
-        else if (index == 2)
-            legToRaise = ConfigInfo.LegType.FrontRight;
-        else if (index == 3)
-            legToRaise = ConfigInfo.LegType.BackLeft;
-        else if (index == 4)
-            legToRaise = ConfigInfo.LegType.BackRight;
-        LegToRaise = legToRaise;
-    }
-
-    public ChainIKConstraint TestChainIKConstraint;
     //ToAdd：随机控制脚的Weight（可以是通过offset的形式，这样能保证移动时不出错）
 
     /// <summary>
@@ -88,42 +73,37 @@ public class Spider_AudioVisualizer : MonoBehaviour
         if (volume > 0)
             axisPercent /= volume;//消除音量大小造成的振幅衰减
 
-        //Body
+        ///Body
+        ///-Sync with rhythm
         creeperGhostController.tfGhostBody.localPosition = config.canBodyMove ? config.bodyMoveRange.Multi(axisPercent) : Vector3.zero;
         creeperGhostController.tfGhostBody.localEulerAngles = config.canBodyRotate ? config.bodyRotateRange.Multi(axisPercent) : Vector3.zero;
 
-        //Todo：只有任意脚不在移动时才能更改该值
-        //Legs
-        var listDesireLegController = GetDesireLegControllers();
+        ///Legs       
+        ///-Raise Leg
+        var legControllerToRaise = GetLegControllerToRaise();//获取需要抬脚的Controller
         listCreeperLegGhostController.ForEach(c =>
         {
-            if (!c.isMoving)
+            if (!c.isMoving)//只有脚不移动时才能更改该值
             {
-                //c.CompWeight = listDesireLegController.Contains(c) ? volume * config.legRaiseRange + (1 - config.legRaiseRange) : 1;//volume reach max== Weight is 1 (模拟随着节拍跺脚，音量最大对应脚落下。缺点是暂停播放时脚一直抬着)
+                //c.CompWeight = listDesireLegController.Contains(c) ? volume * config.legRaiseRange + (1 - config.legRaiseRange) : 1;//volume reach max== Weight is 1 (模拟随着节拍跺脚，音量最大对应脚落下。缺点是暂停播放时脚一直抬着，弃用。)
 
-                c.CompWeight = listDesireLegController.Contains(c) ? 1 - volume * config.legRaiseRange : 1;//volume reach min== Weight is 1
+                c.CompWeight = legControllerToRaise == c ? 1 - volume * config.legRaiseRange : 1;//volume reach min== Weight is 1
             }
         });
 
         hasChangedInThisFrame = true;//Mark as changed
     }
 
-    List<CreeperLegGhostController> GetDesireLegControllers()
+    CreeperLegGhostController GetLegControllerToRaise()
     {
-        List<CreeperLegGhostController> listController = new List<CreeperLegGhostController>();
-        if (config.canLegRaise)
+        if (CanLegRaise)
         {
-            var legType = config.legToRaise;
-            if (legType.Has(ConfigInfo.LegType.FrontLeft))
-                listController.Add(listCreeperLegGhostController[0]);
-            if (legType.Has(ConfigInfo.LegType.FrontRight))
-                listController.Add(listCreeperLegGhostController[1]);
-            if (legType.Has(ConfigInfo.LegType.BackLeft))
-                listController.Add(listCreeperLegGhostController[2]);
-            if (legType.Has(ConfigInfo.LegType.BackRight))
-                listController.Add(listCreeperLegGhostController[3]);
+            if (RaiseLegIndex >= 0 && RaiseLegIndex < listCreeperLegGhostController.Count)
+            {
+                return listCreeperLegGhostController[RaiseLegIndex];
+            }
         }
-        return listController;
+        return null;
     }
     #endregion
 
@@ -142,21 +122,8 @@ public class Spider_AudioVisualizer : MonoBehaviour
         public bool canBodyRotate = false;
         public Vector3 bodyRotateRange = new Vector3(5, 0, 5);
         public bool canLegRaise = false;
-        public LegType legToRaise = LegType.FrontLeft;
+        public int raiseLegIndex = 0;//Which leg to raise
         [Range(0.1f, 1)] public float legRaiseRange = 0.5f;
-
-        [Flags]
-        public enum LegType//PS:因为每个脚的数量都不一样，因此由Modder自行定义枚举
-        {
-            None = 0,
-
-            FrontLeft = 1 << 0,
-            FrontRight = 1 << 1,
-            BackLeft = 1 << 2,
-            BackRight = 1 << 3,
-
-            All = ~0//-1
-        }
     }
     #endregion
 }

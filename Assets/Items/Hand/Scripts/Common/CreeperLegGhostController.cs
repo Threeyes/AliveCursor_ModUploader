@@ -4,6 +4,7 @@ using UnityEngine;
 using UnityEngine.Animations.Rigging;
 using DG.Tweening;
 using System.Threading.Tasks;
+using System.Linq;
 /// <summary>
 /// 功能：
 /// -标注Spider单个脚的落脚点，某个脚与落脚点的距离过大时，就开始挪动操作
@@ -27,6 +28,7 @@ public class CreeperLegGhostController : ComponentHelperBase<ChainIKConstraint>
     public Transform tfGhostLeg;//脚的目标点
     public float updatePositionDistance = 0.1f;//检查是否需要移动(当脚与目标点的距离超过一定距离后更新脚位置)
     public float maxReachDistance = 0.3f;//脚能移动的最远距离
+    //ToAdd：限制关节旋转轴向，比如手指中段只能沿着单个轴向旋转
     public Vector2 weightRange = new Vector2(0, 1);
     public float tweenDuration = 0.08f;
     public Ease easeLegUp = Ease.Linear;
@@ -39,8 +41,8 @@ public class CreeperLegGhostController : ComponentHelperBase<ChainIKConstraint>
     public Vector3 targetPos;
 
     //Pivot
-    CreeperGhostControllerManager creeperGhostController;
-    public Transform tfModelRoot;
+    CreeperGhostController creeperGhostController;
+    public Transform tfModelRoot;//模型躯干
     public Vector3 localPivotPos;//脚移动的轴心（相对于躯干的局部位置，注意因为缩放同步，因此不需要乘以光标尺寸）
     private void Awake()
     {
@@ -52,7 +54,7 @@ public class CreeperLegGhostController : ComponentHelperBase<ChainIKConstraint>
         settingCursorSize = AC_ManagerHolder.CommonSettingManager.CursorSize;
 
         //以脚末端及躯干的中点作为脚的锚点
-        creeperGhostController = transform.GetComponentInParent<CreeperGhostControllerManager>(true);
+        creeperGhostController = transform.GetComponentInParent<CreeperGhostController>(true);
         tfModelRoot = creeperGhostController.tfModelRoot;
         localPivotPos = tfModelRoot.InverseTransformPoint((tfModelRoot.position + tfSourceTarget.position) / 2);
     }
@@ -124,11 +126,14 @@ public class CreeperLegGhostController : ComponentHelperBase<ChainIKConstraint>
     }
     #endregion
 
+#if UNITY_EDITOR
+    #region Editor
     [Header("Editor")]
     public float gizmosRadius = 0.1f;
+    public bool gizmosShowDistance = false;
     private void OnDrawGizmos()
     {
-        //Pivot
+        //绘制Pivot
         if (tfModelRoot)
         {
             Gizmos.color = Color.cyan;
@@ -150,7 +155,13 @@ public class CreeperLegGhostController : ComponentHelperBase<ChainIKConstraint>
             float distancePercent = Vector3.Distance(targetPos, tfSourceTarget.position) / MaxReachDistanceFinal;
             Color color = Color.Lerp(Color.green, Color.red, distancePercent);
             Gizmos.color = color;
+            if (gizmosShowDistance)
+            {
+                UnityEditor.Handles.Label(transform.position, $"{(int)(distancePercent * 100)}%");//绘制当前距离
+            }
             Gizmos.DrawLine(targetPos, tfSourceTarget.position);
         }
     }
+    #endregion
+#endif
 }
