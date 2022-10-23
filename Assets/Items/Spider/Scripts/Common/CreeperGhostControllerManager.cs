@@ -11,54 +11,57 @@ using System.Linq;
 /// 功能：
 /// -决定根模型的位置/旋转
 /// </summary>
-public class CreeperGhostControllerManager : MonoBehaviour
+public class CreeperGhostControllerManager : ComponentGroupBase<CreeperLegGhostController>
 {
-    public bool IsLegsMoving { get { return listAllLegController.Any(c => c.isMoving); } }
+    public bool IsLegsMoving { get { return ListComp.Any(c => c.isMoving); } }
 
     [Header("Body")]
     public Transform tfModelRoot;//模型躯干（根物体）
     public float bodyMoveSpeed = 5;
     public float bodyRotateSpeed = 0.5f;
     public float maxBodyTurn = 90;//躯干最大旋转值
+    public Vector3 bodyOffsetToCenter;//躯干相对于脚中心的默认全局位移（在运行前通过调用菜单”SaveBodyCenterOffset“进行设置）
     public Transform tfGhostBody;//躯干的目标点，控制躯体的位移及旋转（单独使用一个物体控制的好处是，对躯干的修改不会影响到脚）（更改该物体的位置、旋转可实现跳跃、蹲下、转身等动作）
 
     [Header("Legs")]
+    public float moveLegIntervalTime = 0.1f;//Warning：要比CreeperLegGhostController.tweenDuration值大，否则某个Leg会因此提前Tween完成而再次移动，从而出现某个脚频繁移动的问题
     //PS:脚需要分组（如左上对右下），每次只能移动一组脚，长途奔袭时两组脚交错移动【兼容其他爬虫的行走】
     public List<LegControllerGroup> listLegControllerGroup = new List<LegControllerGroup>();
-    public float moveLegIntervalTime = 0.1f;//Warning：要比CreeperLegGhostController.tweenDuration值大，否则某个Leg会频繁移动
 
 
     [Header("Runtime")]
     public int lastMoveGroupIndex = -1;
     public float lastMoveTime = 0;
     public Vector3 baseBodyPosition;
-    List<CreeperLegGhostController> listAllLegController = new List<CreeperLegGhostController>();
-    private void Start()
+    void Start()
     {
         //ToAdd：在程序开始时或开始前记录默认的位移，因为有些躯干不在正中心【如Hand】
         baseBodyPosition = tfModelRoot.position;
+    }
 
-        //缓存所有Leg
-        listAllLegController.Clear();
-        foreach (var lcg in listLegControllerGroup)
-        {
-            foreach (var lc in lcg.listLegController)
-                listAllLegController.Add(lc);
-        }
+    [ContextMenu("SaveBodyOffsetToCenter")]
+    void SaveBodyOffsetToCenter()
+    {
+        Vector3 legsCenterPos = GetLegsCenterPos();
+        bodyOffsetToCenter = tfModelRoot.position - legsCenterPos;
+    }
+
+    Vector3 GetLegsCenterPos()
+    {
+        Vector3 centerPos = Vector3.zero;
+        ListComp.ForEach(com => centerPos += com.tfSourceTarget.position);
+        centerPos /= ListComp.Count;
+        return centerPos;
     }
     private void LateUpdate()
     {
         //# Body
-        //让模型根物体(躯干)跟该Ghost同步
+        //1.从所有脚的中心位置计算得出躯干的目标位置
+        Vector3 bodyTargetPos = GetLegsCenterPos() + bodyOffsetToCenter * AC_ManagerHolder.CommonSettingManager.CursorSize;
+        baseBodyPosition = Vector3.Lerp(baseBodyPosition, bodyTargetPos, Time.deltaTime * bodyMoveSpeed);//躯干的目标位置（与移动相关）
 
-        //计算躯干的中心位置：从脚的中心位置计算得出
-        Vector3 centerPos = Vector3.zero;
-        listAllLegController.ForEach(com => centerPos += com.tfSourceTarget.position);
-        centerPos /= listAllLegController.Count;
-        baseBodyPosition = Vector3.Lerp(baseBodyPosition, centerPos, Time.deltaTime * bodyMoveSpeed);// tfGhostBody.position;
-
-        //#计算GhostBody的世界轴偏移量
-        Vector3 worldOffset = tfGhostBody.parent.TransformDirection(tfGhostBody.localPosition);//转换为矢量
+        //2.计算GhostBody的世界轴偏移量，并用其影响躯干位置（因为与音频等即时响应相关，因此不能用Lerp）
+        Vector3 worldOffset = tfGhostBody.parent.TransformDirection(tfGhostBody.localPosition);//计算tfGhostBody的局部位移，并转换为全局矢量
         worldOffset *= AC_ManagerHolder.CommonSettingManager.CursorSize;//乘以光标缩放（因为目标物体同步了缩放）
         tfModelRoot.position = baseBodyPosition + worldOffset;//相对坐标不需要乘以缩放值，因为Ghost与目标物体的缩放一致，因此位置单位也一致（音频响应要求即时同步） 
 
@@ -111,7 +114,7 @@ public class CreeperGhostControllerManager : MonoBehaviour
     /// </summary>
     public void ForceAllLegControllerTweenMove()
     {
-        listAllLegController.ForEach(c => c.TweenMoveAsync(true));
+        ListComp.ForEach(c => c.TweenMoveAsync(true));
     }
 
     #region Define

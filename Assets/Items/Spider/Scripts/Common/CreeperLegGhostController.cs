@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Animations.Rigging;
 using DG.Tweening;
-using DG.Tweening.Plugins.Options;
 using System.Threading.Tasks;
 /// <summary>
 /// 功能：
@@ -24,7 +23,7 @@ public class CreeperLegGhostController : ComponentHelperBase<ChainIKConstraint>
     public float CompWeight { get { return Comp.weight; } set { Comp.weight = value; } }
     public float MaxReachDistanceFinal { get { return maxReachDistance * settingCursorSize; } }//乘以光标缩放值
     public float UpdatePositionDistanceFinal { get { return updatePositionDistance * settingCursorSize; } }
-
+    public Transform tfSourceTarget { get { return Comp.data.target; } }//运行时从chainIKConstraint中获取，注意要与模型分开摆放，否则会受其位置影响
     public Transform tfGhostLeg;//脚的目标点
     public float updatePositionDistance = 0.1f;//检查是否需要移动(当脚与目标点的距离超过一定距离后更新脚位置)
     public float maxReachDistance = 0.3f;//脚能移动的最远距离
@@ -34,7 +33,6 @@ public class CreeperLegGhostController : ComponentHelperBase<ChainIKConstraint>
     public Ease easeLegDown = Ease.Linear;
 
     [Header("Runtime")]
-    public Transform tfSourceTarget;//运行时从chainIKConstraint中获取，注意要与模型分开摆放，否则会受其位置影响
     public float curDistance;
     public bool isExcessive = false;//距离过长（需要移动）
     public bool isMoving = false;//正在移动
@@ -46,7 +44,8 @@ public class CreeperLegGhostController : ComponentHelperBase<ChainIKConstraint>
     public Vector3 localPivotPos;//脚移动的轴心（相对于躯干的局部位置，注意因为缩放同步，因此不需要乘以光标尺寸）
     private void Awake()
     {
-        tfSourceTarget = Comp.data.target;
+        //Init
+        //tfSourceTarget = Comp.data.target;
         tfGhostLeg.position = tfSourceTarget.position = Comp.data.tip.position;//同步初始位置
 
         targetPos = tfGhostLeg.position;
@@ -57,7 +56,6 @@ public class CreeperLegGhostController : ComponentHelperBase<ChainIKConstraint>
         tfModelRoot = creeperGhostController.tfModelRoot;
         localPivotPos = tfModelRoot.InverseTransformPoint((tfModelRoot.position + tfSourceTarget.position) / 2);
     }
-
     private void Update()
     {
         curDistance = Vector3.Distance(tfSourceTarget.position, tfGhostLeg.position);

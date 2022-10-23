@@ -4,7 +4,7 @@ using Threeyes.Coroutine;
 using UnityEngine;
 /// <summary>
 /// Func:
-/// -Sync Cursor Scale
+/// -Receive Cursor callback 
 /// </summary>
 public class CreeperController : MonoBehaviour
     , IAC_ModHandler
