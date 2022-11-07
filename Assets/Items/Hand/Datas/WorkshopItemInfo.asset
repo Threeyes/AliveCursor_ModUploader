@@ -22,8 +22,8 @@ MonoBehaviour:
   ageRatingType: 1
   itemStyle: 2
   itemGenre: 4
-  itemReference: 0
+  itemReference: 64
   itemFeature: 2
-  itemSafety: 1
+  itemSafety: 0
   itemName: Hand
   itemId: 2879016434

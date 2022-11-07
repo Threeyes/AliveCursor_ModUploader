@@ -20,8 +20,8 @@ MonoBehaviour:
   ageRatingType: 1
   itemStyle: 1
   itemGenre: 0
-  itemReference: 0
+  itemReference: 64
   itemFeature: 2
-  itemSafety: 1
+  itemSafety: 0
   itemName: Spider
   itemId: 2868053102

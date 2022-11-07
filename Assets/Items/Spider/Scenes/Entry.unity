@@ -123,140 +123,6 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
---- !u!1 &8663502
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 8663503}
-  - component: {fileID: 8663504}
-  m_Layer: 0
-  m_Name: Vector3PD BodyMoveRange
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &8663503
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8663502}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 1600069540}
-  m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &8663504
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8663502}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: eb01d6cba29116b42b4cd03e5d0bce7d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  key: BodyMoveRange
-  tooltip: 
-  defaultValue: {x: 0.05, y: 0.05, z: 0}
-  onUIChanged:
-    m_PersistentCalls:
-      m_Calls: []
-  onValueChanged:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 2011203695}
-        m_TargetAssemblyTypeName: Spider_AudioVisualizer, Assembly-CSharp
-        m_MethodName: set_BodyMoveRange
-        m_Mode: 0
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-  hasSetValue: 0
-  persistentValue: {x: 0, y: 0, z: 0}
---- !u!1 &40325150
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 40325151}
-  - component: {fileID: 40325152}
-  m_Layer: 0
-  m_Name: Vector3PD BodyRotateRange
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &40325151
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 40325150}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 1600069540}
-  m_RootOrder: 3
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &40325152
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 40325150}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: eb01d6cba29116b42b4cd03e5d0bce7d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  key: BodyRotateRange
-  tooltip: 
-  defaultValue: {x: 5, y: 0, z: 5}
-  onUIChanged:
-    m_PersistentCalls:
-      m_Calls: []
-  onValueChanged:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 2011203695}
-        m_TargetAssemblyTypeName: Spider_AudioVisualizer, Assembly-CSharp
-        m_MethodName: set_BodyRotateRange
-        m_Mode: 0
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-  hasSetValue: 0
-  persistentValue: {x: 0, y: 0, z: 0}
 --- !u!1 &111196537
 GameObject:
   m_ObjectHideFlags: 0
@@ -266,9 +132,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 111196538}
-  - component: {fileID: 111196539}
   m_Layer: 0
-  m_Name: GhostLeg_L1
+  m_Name: Leg_L1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -287,38 +152,8 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1622409357}
-  m_RootOrder: 3
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &111196539
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 111196537}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 650e4965d97192845b8ed3b2c875169b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  comp: {fileID: 453865757}
-  comps: []
-  tfGhostLeg: {fileID: 111196538}
-  updatePositionDistance: 0.1
-  maxReachDistance: 0.3
-  weightRange: {x: 0.5, y: 1}
-  tweenDuration: 0.08
-  easeLegUp: 3
-  easeLegDown: 2
-  curDistance: 0
-  isExcessive: 0
-  isMoving: 0
-  targetPos: {x: 0, y: 0, z: 0}
-  tfModelRoot: {fileID: 0}
-  localPivotPos: {x: 0, y: 0, z: 0}
-  settingCursorSize: 1
-  gizmosRadius: 0.1
-  gizmosShowDistance: 0
 --- !u!1 &268686329
 GameObject:
   m_ObjectHideFlags: 0
@@ -329,7 +164,7 @@ GameObject:
   m_Component:
   - component: {fileID: 268686330}
   m_Layer: 0
-  m_Name: GhostBody
+  m_Name: BodyMixer
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -359,6 +194,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 302994957}
+  - component: {fileID: 302994958}
   m_Layer: 0
   m_Name: Leg_R1
   m_TagString: Untagged
@@ -380,6 +216,67 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1952161945}
   m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &302994958
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 302994956}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 650e4965d97192845b8ed3b2c875169b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  comp: {fileID: 1319342896}
+  comps: []
+  tfEndPoint: {fileID: 1379526251}
+  moveThreshold: 0.1
+  maxReachDistance: 0.2
+  weightRange: {x: 0.5, y: 1}
+  tweenDuration: 0.08
+  easeLegUp: 3
+  easeLegDown: 2
+  curDistance: 0
+  isExcessive: 0
+  isMoving: 0
+  targetPos: {x: 0, y: 0, z: 0}
+  tfModelBody: {fileID: 0}
+  localPivotPos: {x: 0, y: 0, z: 0}
+  settingCursorSize: 1
+  gizmosRadius: 0.1
+  gizmosShowDistance: 0
+--- !u!1 &416972832
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 416972833}
+  m_Layer: 0
+  m_Name: BodyEndPoint
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &416972833
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 416972832}
+  m_LocalRotation: {x: -0.70710677, y: -0, z: -0, w: 0.7071069}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1799842586}
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &453865755
 GameObject:
@@ -436,77 +333,6 @@ MonoBehaviour:
     m_Tolerance: 0.0001
     m_MaintainTargetPositionOffset: 0
     m_MaintainTargetRotationOffset: 0
---- !u!1 &586118847
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 586118848}
-  - component: {fileID: 586118849}
-  m_Layer: 0
-  m_Name: FloatPD LegRaiseRange
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &586118848
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 586118847}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 1600069540}
-  m_RootOrder: 6
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &586118849
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 586118847}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 630345259ab308643bec38dfd582a206, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  key: LegRaiseRange
-  tooltip: 
-  defaultValue: 0.5
-  onUIChanged:
-    m_PersistentCalls:
-      m_Calls: []
-  onValueChanged:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 2011203695}
-        m_TargetAssemblyTypeName: Spider_AudioVisualizer, Assembly-CSharp
-        m_MethodName: set_LegRaiseRange
-        m_Mode: 0
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-  hasSetValue: 0
-  persistentValue: 0
-  dataOption:
-    useRange: 1
-    minValue: 0
-    maxValue: 1
 --- !u!1 &599786073
 GameObject:
   m_ObjectHideFlags: 0
@@ -566,6 +392,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 599853277}
+  - component: {fileID: 599853278}
   m_Layer: 0
   m_Name: Leg_L0
   m_TagString: Untagged
@@ -588,94 +415,36 @@ Transform:
   m_Father: {fileID: 1952161945}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &660880754
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 660880755}
-  - component: {fileID: 660880757}
-  - component: {fileID: 660880756}
-  m_Layer: 0
-  m_Name: BoolPD BodyRotateWithRhythm
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &660880755
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 660880754}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 1600069540}
-  m_RootOrder: 2
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &660880756
+--- !u!114 &599853278
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 660880754}
+  m_GameObject: {fileID: 599853276}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 05f9bbca5de24ec479d5ade46c196b21, type: 3}
+  m_Script: {fileID: 11500000, guid: 650e4965d97192845b8ed3b2c875169b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  onLog:
-    m_PersistentCalls:
-      m_Calls: []
-  logType: 3
-  withName: 0
-  format: 
-  tips: "Key\u53D6\u540D\u53EA\u662F\u4E3A\u4E86\u65B9\u4FBF\u7528\u6237\u7406\u89E3\uFF0C\u540E\u7EED\u5C01\u88C5\u4E3A\u7C7B\u5C31\u4E0D\u9700\u8981Rhythm"
-  isLogOnConsole: 1
---- !u!114 &660880757
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 660880754}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ee08135daacb4e3468ebd5c12e996a92, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  key: BodyRotateWithRhythm
-  tooltip: 
-  defaultValue: 0
-  onUIChanged:
-    m_PersistentCalls:
-      m_Calls: []
-  onValueChanged:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 2011203695}
-        m_TargetAssemblyTypeName: Spider_AudioVisualizer, Assembly-CSharp
-        m_MethodName: set_CanBodyRotate
-        m_Mode: 0
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-  hasSetValue: 0
-  persistentValue: 0
+  comp: {fileID: 1406455789}
+  comps: []
+  tfEndPoint: {fileID: 1008289232}
+  moveThreshold: 0.1
+  maxReachDistance: 0.2
+  weightRange: {x: 0.5, y: 1}
+  tweenDuration: 0.08
+  easeLegUp: 3
+  easeLegDown: 2
+  curDistance: 0
+  isExcessive: 0
+  isMoving: 0
+  targetPos: {x: 0, y: 0, z: 0}
+  tfModelBody: {fileID: 0}
+  localPivotPos: {x: 0, y: 0, z: 0}
+  settingCursorSize: 1
+  gizmosRadius: 0.1
+  gizmosShowDistance: 0
 --- !u!1 &933781264
 GameObject:
   m_ObjectHideFlags: 0
@@ -685,6 +454,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 933781265}
+  - component: {fileID: 933781266}
   m_Layer: 0
   m_Name: Leg_L1
   m_TagString: Untagged
@@ -705,8 +475,94 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1952161945}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &933781266
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 933781264}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 650e4965d97192845b8ed3b2c875169b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  comp: {fileID: 453865757}
+  comps: []
+  tfEndPoint: {fileID: 111196538}
+  moveThreshold: 0.1
+  maxReachDistance: 0.2
+  weightRange: {x: 0.5, y: 1}
+  tweenDuration: 0.08
+  easeLegUp: 3
+  easeLegDown: 2
+  curDistance: 0
+  isExcessive: 0
+  isMoving: 0
+  targetPos: {x: 0, y: 0, z: 0}
+  tfModelBody: {fileID: 0}
+  localPivotPos: {x: 0, y: 0, z: 0}
+  settingCursorSize: 1
+  gizmosRadius: 0.1
+  gizmosShowDistance: 0
+--- !u!1 &983930474
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 983930475}
+  - component: {fileID: 983930476}
+  m_Layer: 0
+  m_Name: SOPD CreeperTransformControllerConfig
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &983930475
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 983930474}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1600069540}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &983930476
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 983930474}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7235b0ac84ec79d48bbd5b8d669c1fb6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  key: CreeperTransformControllerConfig
+  tooltip: 
+  defaultValue: {fileID: 0}
+  onUIChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  onValueChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  hasSetValue: 0
+  persistentValue: {fileID: 0}
+  targetValue: {fileID: 11400000, guid: c72e92090323ce34fa0ab72a477cf376, type: 2}
 --- !u!1001 &988000001
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -816,9 +672,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1008289232}
-  - component: {fileID: 1008289233}
   m_Layer: 0
-  m_Name: GhostLeg_L0
+  m_Name: Leg_L0
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -839,124 +694,6 @@ Transform:
   m_Father: {fileID: 1622409357}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1008289233
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1008289231}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 650e4965d97192845b8ed3b2c875169b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  comp: {fileID: 1406455789}
-  comps: []
-  tfGhostLeg: {fileID: 1008289232}
-  updatePositionDistance: 0.1
-  maxReachDistance: 0.3
-  weightRange: {x: 0.5, y: 1}
-  tweenDuration: 0.08
-  easeLegUp: 3
-  easeLegDown: 2
-  curDistance: 0
-  isExcessive: 0
-  isMoving: 0
-  targetPos: {x: 0, y: 0, z: 0}
-  tfModelRoot: {fileID: 0}
-  localPivotPos: {x: 0, y: 0, z: 0}
-  settingCursorSize: 1
-  gizmosRadius: 0.1
-  gizmosShowDistance: 0
---- !u!1 &1054475121
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1054475122}
-  - component: {fileID: 1054475124}
-  - component: {fileID: 1054475123}
-  m_Layer: 0
-  m_Name: BoolPD LegRaiseWithRhythm
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1054475122
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1054475121}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 1600069540}
-  m_RootOrder: 4
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1054475123
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1054475121}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 05f9bbca5de24ec479d5ade46c196b21, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  onLog:
-    m_PersistentCalls:
-      m_Calls: []
-  logType: 3
-  withName: 0
-  format: 
-  tips: "Key\u53D6\u540D\u53EA\u662F\u4E3A\u4E86\u65B9\u4FBF\u7528\u6237\u7406\u89E3\uFF0C\u540E\u7EED\u5C01\u88C5\u4E3A\u7C7B\u5C31\u4E0D\u9700\u8981Rhythm"
-  isLogOnConsole: 1
---- !u!114 &1054475124
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1054475121}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ee08135daacb4e3468ebd5c12e996a92, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  key: LegRaiseWithRhythm
-  tooltip: 
-  defaultValue: 0
-  onUIChanged:
-    m_PersistentCalls:
-      m_Calls: []
-  onValueChanged:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 2011203695}
-        m_TargetAssemblyTypeName: Spider_AudioVisualizer, Assembly-CSharp
-        m_MethodName: set_CanLegRaise
-        m_Mode: 0
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-  hasSetValue: 0
-  persistentValue: 0
 --- !u!1 &1319342894
 GameObject:
   m_ObjectHideFlags: 0
@@ -1021,6 +758,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1378866383}
+  - component: {fileID: 1378866384}
   m_Layer: 0
   m_Name: Leg_R0
   m_TagString: Untagged
@@ -1041,8 +779,38 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1952161945}
-  m_RootOrder: 2
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1378866384
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1378866382}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 650e4965d97192845b8ed3b2c875169b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  comp: {fileID: 1708513205}
+  comps: []
+  tfEndPoint: {fileID: 2130958920}
+  moveThreshold: 0.1
+  maxReachDistance: 0.2
+  weightRange: {x: 0.5, y: 1}
+  tweenDuration: 0.08
+  easeLegUp: 3
+  easeLegDown: 2
+  curDistance: 0
+  isExcessive: 0
+  isMoving: 0
+  targetPos: {x: 0, y: 0, z: 0}
+  tfModelBody: {fileID: 0}
+  localPivotPos: {x: 0, y: 0, z: 0}
+  settingCursorSize: 1
+  gizmosRadius: 0.1
+  gizmosShowDistance: 0
 --- !u!1 &1379526250
 GameObject:
   m_ObjectHideFlags: 0
@@ -1052,9 +820,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1379526251}
-  - component: {fileID: 1379526252}
   m_Layer: 0
-  m_Name: GhostLeg_R1
+  m_Name: Leg_R1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1075,36 +842,6 @@ Transform:
   m_Father: {fileID: 1622409357}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1379526252
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1379526250}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 650e4965d97192845b8ed3b2c875169b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  comp: {fileID: 1319342896}
-  comps: []
-  tfGhostLeg: {fileID: 1379526251}
-  updatePositionDistance: 0.1
-  maxReachDistance: 0.3
-  weightRange: {x: 0.5, y: 1}
-  tweenDuration: 0.08
-  easeLegUp: 3
-  easeLegDown: 2
-  curDistance: 0
-  isExcessive: 0
-  isMoving: 0
-  targetPos: {x: 0, y: 0, z: 0}
-  tfModelRoot: {fileID: 0}
-  localPivotPos: {x: 0, y: 0, z: 0}
-  settingCursorSize: 1
-  gizmosRadius: 0.1
-  gizmosShowDistance: 0
 --- !u!1 &1406455787
 GameObject:
   m_ObjectHideFlags: 0
@@ -1160,94 +897,6 @@ MonoBehaviour:
     m_Tolerance: 0.0001
     m_MaintainTargetPositionOffset: 0
     m_MaintainTargetRotationOffset: 0
---- !u!1 &1407972788
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1407972789}
-  - component: {fileID: 1407972790}
-  - component: {fileID: 1407972791}
-  m_Layer: 0
-  m_Name: BoolPD BodyMoveWithRhythm
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1407972789
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1407972788}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 1600069540}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1407972790
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1407972788}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ee08135daacb4e3468ebd5c12e996a92, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  key: BodyMoveWithRhythm
-  tooltip: 
-  defaultValue: 1
-  onUIChanged:
-    m_PersistentCalls:
-      m_Calls: []
-  onValueChanged:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 2011203695}
-        m_TargetAssemblyTypeName: Spider_AudioVisualizer, Assembly-CSharp
-        m_MethodName: set_CanBodyMove
-        m_Mode: 0
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-  hasSetValue: 0
-  persistentValue: 0
---- !u!114 &1407972791
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1407972788}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 05f9bbca5de24ec479d5ade46c196b21, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  onLog:
-    m_PersistentCalls:
-      m_Calls: []
-  logType: 3
-  withName: 0
-  format: 
-  tips: "Key\u53D6\u540D\u53EA\u662F\u4E3A\u4E86\u65B9\u4FBF\u7528\u6237\u7406\u89E3\uFF0C\u540E\u7EED\u5C01\u88C5\u4E3A\u7C7B\u5C31\u4E0D\u9700\u8981Rhythm"
-  isLogOnConsole: 1
 --- !u!1 &1598879701
 GameObject:
   m_ObjectHideFlags: 0
@@ -1322,13 +971,8 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 1407972789}
-  - {fileID: 8663503}
-  - {fileID: 660880755}
-  - {fileID: 40325151}
-  - {fileID: 1054475122}
-  - {fileID: 1898280335}
-  - {fileID: 586118848}
+  - {fileID: 1890812256}
+  - {fileID: 983930475}
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1341,53 +985,13 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1622409357}
-  - component: {fileID: 1622409356}
-  - component: {fileID: 1622409358}
   m_Layer: 0
-  m_Name: Ghost Controller
+  m_Name: GhostBody
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1622409356
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1622409355}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2d4edc03063c52f46a586045a40caa0a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  isIncludeHide: 1
-  isRecursive: 1
-  includeSelf: 0
-  listExtraComp: []
-  tfModelRoot: {fileID: 4989478024266276}
-  bodyMoveSpeed: 10
-  bodyRotateSpeed: 1
-  maxBodyTurn: 90
-  bodyOffsetToCenter: {x: 0, y: 0, z: 0}
-  tfGhostBody: {fileID: 268686330}
-  moveLegIntervalTime: 0.1
-  alignAfterHaltDelayTime: 5
-  listLegControllerGroup:
-  - listLegController:
-    - {fileID: 1008289233}
-  - listLegController:
-    - {fileID: 111196539}
-  - listLegController:
-    - {fileID: 2130958921}
-  - listLegController:
-    - {fileID: 1379526252}
-  lastMoveGroupIndex: -1
-  lastMoveTime: 0
-  baseBodyPosition: {x: 0, y: 0, z: 0}
-  hasAligned: 0
-  gizmosRadius: 0.1
 --- !u!4 &1622409357
 Transform:
   m_ObjectHideFlags: 0
@@ -1395,73 +999,19 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1622409355}
-  m_LocalRotation: {x: -0.70710677, y: -0, z: -0, w: 0.7071069}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: -0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 268686330}
   - {fileID: 1008289232}
-  - {fileID: 2130958920}
   - {fileID: 111196538}
+  - {fileID: 2130958920}
   - {fileID: 1379526251}
-  m_Father: {fileID: 1799842586}
+  m_Father: {fileID: 1698562152}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1622409358
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1622409355}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a862823d819b2434da07a9aff5488bef, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  onPlayStop:
-    m_PersistentCalls:
-      m_Calls: []
-  onPlay:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1622409356}
-        m_TargetAssemblyTypeName: CreeperGhostController, Assembly-CSharp
-        m_MethodName: LegGroupForceTweenMove
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-  onStop:
-    m_PersistentCalls:
-      m_Calls: []
-  onActiveDeactive:
-    m_PersistentCalls:
-      m_Calls: []
-  isActive: 1
-  canPlay: 1
-  canStop: 1
-  isPlayOnAwake: 0
-  isPlayOnce: 0
-  isReverse: 0
-  listListener: []
-  isGroup: 0
-  isIncludeHide: 1
-  isRecursive: 0
-  id: 
-  isInvokeByID: 0
-  targetIDLocation: 1
-  targetId: 
-  isLogOnPlay: 0
-  isLogOnStop: 0
-  isPlayed: 0
-  state: -1
 --- !u!1 &1698562151
 GameObject:
   m_ObjectHideFlags: 0
@@ -1471,6 +1021,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1698562152}
+  - component: {fileID: 1698562153}
   m_Layer: 0
   m_Name: Root
   m_TagString: Untagged
@@ -1485,16 +1036,37 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1698562151}
-  m_LocalRotation: {x: 0.000000119209275, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: -0.70000005}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
+  - {fileID: 1622409357}
   - {fileID: 4989478024266276}
   - {fileID: 1952161945}
   m_Father: {fileID: 2140890674}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: -90, y: 0, z: 0}
+--- !u!114 &1698562153
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1698562151}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 05f9bbca5de24ec479d5ade46c196b21, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  onLog:
+    m_PersistentCalls:
+      m_Calls: []
+  logType: 3
+  withName: 0
+  format: 
+  tips: -Reposition
+  isLogOnConsole: 1
 --- !u!1 &1708513203
 GameObject:
   m_ObjectHideFlags: 0
@@ -1578,11 +1150,11 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 1622409357}
+  - {fileID: 416972833}
   m_Father: {fileID: 1598879702}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1898280334
+--- !u!1 &1890812255
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1590,69 +1162,54 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 1898280335}
-  - component: {fileID: 1898280336}
+  - component: {fileID: 1890812256}
+  - component: {fileID: 1890812257}
   m_Layer: 0
-  m_Name: IntPD RaiseLegIndex
+  m_Name: SOPD CreeperAudioVisualizerConfig
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &1898280335
+--- !u!4 &1890812256
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1898280334}
+  m_GameObject: {fileID: 1890812255}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1600069540}
-  m_RootOrder: 5
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1898280336
+--- !u!114 &1890812257
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1898280334}
+  m_GameObject: {fileID: 1890812255}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 79bb91bbdef79d8429d0ed58a5317b61, type: 3}
+  m_Script: {fileID: 11500000, guid: 7235b0ac84ec79d48bbd5b8d669c1fb6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  key: RaiseLegIndex
+  key: CreeperAudioVisualizerConfig
   tooltip: 
-  defaultValue: 1
+  defaultValue: {fileID: 0}
   onUIChanged:
     m_PersistentCalls:
       m_Calls: []
   onValueChanged:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 2011203695}
-        m_TargetAssemblyTypeName: Creeper_AudioVisualizer, Assembly-CSharp
-        m_MethodName: set_RaiseLegIndex
-        m_Mode: 0
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
   hasSetValue: 0
-  persistentValue: 0
-  dataOption:
-    useRange: 1
-    minValue: 0
-    maxValue: 3
+  persistentValue: {fileID: 0}
+  targetValue: {fileID: 11400000, guid: 6b0dd9868f5cf994d8418625471fed1f, type: 2}
 --- !u!1 &1952161944
 GameObject:
   m_ObjectHideFlags: 0
@@ -1662,8 +1219,10 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1952161945}
+  - component: {fileID: 1952161946}
+  - component: {fileID: 1952161947}
   m_Layer: 0
-  m_Name: Leg Target
+  m_Name: TransformController
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1682,12 +1241,113 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 599853277}
-  - {fileID: 933781265}
   - {fileID: 1378866383}
+  - {fileID: 933781265}
   - {fileID: 302994957}
   m_Father: {fileID: 1698562152}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1952161946
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1952161944}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2d4edc03063c52f46a586045a40caa0a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  defaultConfig:
+    bodyMoveSpeed: 3
+    ghostBodyMoveSpeed: 1.3
+    ghostBodyRotateSpeed: 1
+    legMoveIntervalTime: 0.1
+    legRealignDelayTime: 5
+  soOverrideConfig: {fileID: 11400000, guid: c72e92090323ce34fa0ab72a477cf376, type: 2}
+  creeperModelController: {fileID: 95204186203305684}
+  tfEndPoint: {fileID: 416972833}
+  tfGhostBody: {fileID: 1622409357}
+  tfBodyMixer: {fileID: 268686330}
+  ghostBodyMoveSpeed: 1.3
+  bodyMoveSpeed: 3
+  ghostBodyRotateSpeed: 1
+  listLegController:
+  - {fileID: 599853278}
+  - {fileID: 1378866384}
+  - {fileID: 933781266}
+  - {fileID: 302994958}
+  legMoveIntervalTime: 0.1
+  legRealignDelayTime: 5
+  listLegControllerGroup:
+  - listLegController:
+    - {fileID: 599853278}
+  - listLegController:
+    - {fileID: 933781266}
+  - listLegController:
+    - {fileID: 1378866384}
+  - listLegController:
+    - {fileID: 302994958}
+  lastMoveGroupIndex: -1
+  lastMoveTime: 0
+  baseBodyPosition: {x: 0, y: 0, z: 0}
+  hasAligned: 0
+  gizmosRadius: 0.1
+--- !u!114 &1952161947
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1952161944}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a862823d819b2434da07a9aff5488bef, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  onPlayStop:
+    m_PersistentCalls:
+      m_Calls: []
+  onPlay:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1952161946}
+        m_TargetAssemblyTypeName: AC_CreeperTransformController, Threeyes.AliveCursor.SDK
+        m_MethodName: Teleport
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  onStop:
+    m_PersistentCalls:
+      m_Calls: []
+  onActiveDeactive:
+    m_PersistentCalls:
+      m_Calls: []
+  isActive: 1
+  canPlay: 1
+  canStop: 1
+  isPlayOnAwake: 0
+  isPlayOnce: 0
+  isReverse: 0
+  listListener: []
+  isGroup: 0
+  isIncludeHide: 1
+  isRecursive: 0
+  id: 
+  isInvokeByID: 0
+  targetIDLocation: 1
+  targetId: 
+  isLogOnPlay: 0
+  isLogOnStop: 0
+  isPlayed: 0
+  state: -1
 --- !u!1 &2011203694
 GameObject:
   m_ObjectHideFlags: 0
@@ -1699,7 +1359,7 @@ GameObject:
   - component: {fileID: 2011203696}
   - component: {fileID: 2011203695}
   m_Layer: 0
-  m_Name: SceneController
+  m_Name: CreeperAudioVisualizer
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1717,15 +1377,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 84ec0849506ecda4bb3a3ad6f5f69d35, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  creeperGhostController: {fileID: 1622409356}
-  config:
+  defaultConfig:
     canBodyMove: 1
     bodyMoveRange: {x: 0.05, y: 0.05, z: 0}
     canBodyRotate: 0
     bodyRotateRange: {x: 5, y: 0, z: 5}
     canLegRaise: 0
-    raiseLegIndex: 0
-    legRaiseRange: 0.5
+    legRaiseRange: 1
+    legRaiseIndex: 0
+    totalLegCount: 0
+  soOverrideConfig: {fileID: 11400000, guid: 6b0dd9868f5cf994d8418625471fed1f, type: 2}
+  creeperGhostController: {fileID: 1952161946}
 --- !u!4 &2011203696
 Transform:
   m_ObjectHideFlags: 0
@@ -1750,9 +1412,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2130958920}
-  - component: {fileID: 2130958921}
   m_Layer: 0
-  m_Name: GhostLeg_R0
+  m_Name: Leg_R0
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1771,38 +1432,8 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1622409357}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &2130958921
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2130958919}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 650e4965d97192845b8ed3b2c875169b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  comp: {fileID: 1708513205}
-  comps: []
-  tfGhostLeg: {fileID: 2130958920}
-  updatePositionDistance: 0.1
-  maxReachDistance: 0.3
-  weightRange: {x: 0.5, y: 1}
-  tweenDuration: 0.08
-  easeLegUp: 3
-  easeLegDown: 2
-  curDistance: 0
-  isExcessive: 0
-  isMoving: 0
-  targetPos: {x: 0, y: 0, z: 0}
-  tfModelRoot: {fileID: 0}
-  localPivotPos: {x: 0, y: 0, z: 0}
-  settingCursorSize: 1
-  gizmosRadius: 0.1
-  gizmosShowDistance: 0
 --- !u!1 &2140890673
 GameObject:
   m_ObjectHideFlags: 0
@@ -2882,7 +2513,7 @@ Transform:
   - {fileID: 4292917717475654}
   - {fileID: 599786075}
   m_Father: {fileID: 1698562152}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!95 &95204186203305682
 Animator:
@@ -2932,8 +2563,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 45a0bb5d179ea074aaccfbdd194661d2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  creeperGhostController: {fileID: 1622409356}
-  tfLegTargetGroup: {fileID: 1952161945}
+  tfParent: {fileID: 1698562152}
+  creeperTransformController: {fileID: 1952161946}
 --- !u!137 &137042680613226360
 SkinnedMeshRenderer:
   m_ObjectHideFlags: 0
