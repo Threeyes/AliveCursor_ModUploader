@@ -602,11 +602,17 @@ PlayerSettings:
   scriptingDefineSymbols:
     : UNITY_POST_PROCESSING_STACK_V2
     Android: UNITY_POST_PROCESSING_STACK_V2;UNITY_PIPELINE_URP
+    CloudRendering: 
+    EmbeddedLinux: 
+    GameCoreXboxOne: 
     Lumin: UNITY_POST_PROCESSING_STACK_V2
     Nintendo Switch: UNITY_POST_PROCESSING_STACK_V2
     PS4: UNITY_POST_PROCESSING_STACK_V2
+    PS5: 
+    Stadia: 
     Standalone: USE_DOTween;USE_NaughtyAttributes;USE_JsonDotNet;Threeyes_UnityGifDecoder;UNITY_PIPELINE_URP;Threeyes_Timeline;Threeyes_VideoPlayer;Threeyes_BezierSolution
     WebGL: UNITY_POST_PROCESSING_STACK_V2
+    Windows Store Apps: 
     XboxOne: UNITY_POST_PROCESSING_STACK_V2
     tvOS: UNITY_POST_PROCESSING_STACK_V2
   additionalCompilerArguments: {}

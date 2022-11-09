@@ -23,7 +23,7 @@ MonoBehaviour:
   itemStyle: 0
   itemGenre: 0
   itemReference: 0
-  itemFeature: 0
-  itemSafety: 0
+  itemFeature: 2
+  itemSafety: 1
   itemName: Computer Mouse
   itemId: 2885717090
