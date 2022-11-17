@@ -21,15 +21,23 @@ public class Hairy_Controller : MonoBehaviour
         hairInstanceController.Config.globalPositionInfluence = value;
         hairInstanceController.UpdateSetting();
     }
+
+    bool isBoredState = false;
     public void OnCursorStateChanged(AC_CursorStateInfo cursorStateInfo)
     {
         //PS：Wander时重力变小
         if (cursorStateInfo.cursorState == AC_CursorState.Bored)
         {
             if (cursorStateInfo.stateChange == AC_CursorStateInfo.StateChange.Enter)
+            {
                 hairInstanceController.Config.gravity = 0;
+                isBoredState = true;
+            }
             else
+            {
                 hairInstanceController.Config.gravity = 1;
+                isBoredState = false;
+            }
 
             hairInstanceController.UpdateSetting();
         }
@@ -37,23 +45,28 @@ public class Hairy_Controller : MonoBehaviour
     }
     #endregion
 
-    //ToAdd:Working时根据方向设置重力
-    //Transform tfParent;
-    //private void Start()
-    //{
-    //    tfParent = hairInstanceController.transform.parent;
-    //}
-    //public float UpdateConfigFrequence = 1;
-    //float lastUpdateConfigTime = 0;
-    //void Update()
-    //{
-    //    if (Time.time - lastUpdateConfigTime < UpdateConfigFrequence)
-    //        return;
+    Transform tfParent;
+    private void Start()
+    {
+        tfParent = hairInstanceController.transform.parent;
+    }
+    public float updateConfigFrequence = 1;
+    float lastUpdateConfigTime = 0;
+    void Update()
+    {
+        if (isBoredState)
+            return;
 
-    //    //Warning：可能有性能问题，要减少更新频率，且只有在Working状态下有效
-    //    hairInstanceController.Config.gravityRotation = tfParent.TransformDirection(relateWindForce);//基于父物体的朝向
-    //    hairInstanceController.UpdateSetting();
-    //    lastUpdateConfigTime = Time.time;
-    //}
+        if (Time.time - lastUpdateConfigTime < updateConfigFrequence)
+            return;
+
+        //非Bored时根据方向设置重力，主要用于自由旋转的状态
+
+        //PS：为了避免性能问题，要减少更新频率，且只有在Working状态下有效
+        hairInstanceController.Config.gravityRotation =
+            tfParent.eulerAngles;
+        hairInstanceController.UpdateSetting();
+        lastUpdateConfigTime = Time.time;
+    }
 
 }
