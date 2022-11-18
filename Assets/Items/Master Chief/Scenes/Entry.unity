@@ -884,7 +884,7 @@ GameObject:
   - component: {fileID: 1156548585}
   - component: {fileID: 1156548586}
   m_Layer: 0
-  m_Name: Canvas
+  m_Name: RootCanvas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1441,6 +1441,7 @@ MonoBehaviour:
   cursorInputBehaviour_Left: {fileID: 1430714745}
   cursorInputBehaviour_Right: {fileID: 336609456}
   tfGrenadeThrowPoint: {fileID: 1906981427}
+  goRootCanvas: {fileID: 1156548580}
   preHumanPistolMuzzle: {fileID: 74887394270666754, guid: 3118bda45023bda4f813aba59877284a,
     type: 3}
   preHumanGrenade: {fileID: 5792858610048419779, guid: 4224115e874ae804e9ec57790e05e93a,
@@ -1448,7 +1449,7 @@ MonoBehaviour:
   attackType: 0
   grenadeConfig:
     explodeDelayTime: 2
-  grenadeThrowPower: 1
+  grenadeThrowPower: 1.5
 --- !u!4 &1673623834
 Transform:
   m_ObjectHideFlags: 0

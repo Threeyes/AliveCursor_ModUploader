@@ -2,8 +2,12 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+/// <summary>
+/// 
+/// Bored:Middle Click
+/// </summary>
 public class MasterChief_Controller : MonoBehaviour
+    , IAC_CursorState_ChangedHandler
 {
     //通过cursorInputBehaviourCollection_Attack统一控制其他AC_CursorInputBehaviour的调用，便于ModifyKeys的统一设置
     public AC_CursorInputBehaviourCollection cursorInputBehaviourCollection_Attack;
@@ -12,6 +16,7 @@ public class MasterChief_Controller : MonoBehaviour
 
     [Header("Scene Setup")]
     public Transform tfGrenadeThrowPoint;
+    public GameObject goRootCanvas;
 
     [Header("Prefabs")]
     public GameObject preHumanPistolMuzzle;
@@ -96,6 +101,28 @@ public class MasterChief_Controller : MonoBehaviour
             cursorInputBehaviour_Right.Stop();
 
     }
+
+    #region Callback
+    public void OnCursorStateChanged(AC_CursorStateInfo cursorStateInfo)
+    {
+        ///Bored：
+        ///-持续的追踪
+        ///-临时隐藏UI，更加沉浸
+        if (cursorStateInfo.cursorState == AC_CursorState.Bored)
+        {
+            if (cursorStateInfo.stateChange == AC_CursorStateInfo.StateChange.Enter)
+            {
+                goRootCanvas.SetActive(false);
+                OnRightButtonDownUp(true);
+            }
+            else
+            {
+                goRootCanvas.SetActive(true);
+                OnRightButtonDownUp(false);
+            }
+        }
+    }
+    #endregion
 
     public enum AttackType
     {
