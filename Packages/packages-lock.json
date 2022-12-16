@@ -142,7 +142,7 @@
       "url": "https://packages.unity.com"
     },
     "com.unity.demoteam.hair": {
-      "version": "https://github.com/Threeyes/com.unity.demoteam.hair.git",
+      "version": "https://github.com/Unity-Technologies/com.unity.demoteam.hair.git",
       "depth": 0,
       "source": "git",
       "dependencies": {
@@ -152,7 +152,7 @@
         "com.unity.render-pipelines.core": "10.2.2",
         "com.unity.shadergraph": "10.2.2"
       },
-      "hash": "958f2bce1f4c045b3bc6df9107afa839c1c7e888"
+      "hash": "2705381483e8a9e91d4afcf3936b8180fcae193c"
     },
     "com.unity.ext.nunit": {
       "version": "1.0.6",
