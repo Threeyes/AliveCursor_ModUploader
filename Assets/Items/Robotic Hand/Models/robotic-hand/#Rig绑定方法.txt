@@ -1,0 +1,1 @@
+参考StylizedHand，按照层级进行绑定后，删掉Hand与各指关节连接的Bone
