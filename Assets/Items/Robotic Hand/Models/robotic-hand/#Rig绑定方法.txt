@@ -1,1 +1,4 @@
-参考StylizedHand，按照层级进行绑定后，删掉Hand与各指关节连接的Bone
+参考StylizedHand:
+-按照层级进行绑定后，删掉Hand与各指关节连接的Bone
+-选择模型+bone后，Ctrl+P-Armature deform-with empty groups
+-为每个模型增加Armature修改器，然后切换到“WeightPaint"模式，右侧选择”Object Data Properties“，在VertexGroups选择对应Bones，然后绘制权重
