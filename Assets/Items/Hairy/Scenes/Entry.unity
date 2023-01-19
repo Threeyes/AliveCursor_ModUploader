@@ -276,6 +276,88 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &742342946
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 742342947}
+  - component: {fileID: 742342949}
+  - component: {fileID: 742342948}
+  m_Layer: 0
+  m_Name: HairEmission
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &742342947
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 742342946}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 2130198595}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &742342948
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 742342946}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 05f9bbca5de24ec479d5ade46c196b21, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  onLog:
+    m_PersistentCalls:
+      m_Calls: []
+  logType: 3
+  withName: 0
+  format: 
+  tips: "Todo\uFF1A\u7814\u7A76\u5982\u4F55\u5C06Action\u5E94\u7528\u5230Project\u91CC\u7684Material"
+  isLogOnConsole: 1
+--- !u!114 &742342949
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 742342946}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6c446e0cf225b264493332a282cd8908, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  soActionCollection: {fileID: 11400000, guid: 2d041f1cb8dfead46992d45a20d0cca3, type: 2}
+  actionTargetContent: {fileID: 0}
+  actionTargetContentParent: {fileID: 0}
+  soActionContentParent: {fileID: 11400000, guid: c1489f3ea56d4da4bb7c8e4569dcf38a,
+    type: 2}
+  soCursorAppearanceInfoCollection: {fileID: 11400000, guid: 85ae22d6782e7ed4bb43067ed48842f2,
+    type: 2}
+  onShowHide:
+    m_PersistentCalls:
+      m_Calls: []
+  onAppearanceTextureChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  onAppearanceColorChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  isShowing: 0
 --- !u!1 &899099734
 GameObject:
   m_ObjectHideFlags: 0
@@ -1051,7 +1133,8 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 742342947}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1067,7 +1150,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c80505712085101468098c6d3ddbcc0c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  relateWindForce: {x: 0, y: -1, z: 0}
   hairInstanceController: {fileID: 1860796528}
+  updateConfigFrequence: 1
 --- !u!1 &955969843797199636
 GameObject:
   m_ObjectHideFlags: 0

@@ -14,8 +14,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   title: Billboard
   description: "Post your own ADs!\n\nHowto:\n1.Edit BillboardText to change the
-    display content (You can also use the Rich Text Tags, see more detail here: https://docs.unity3d.com/Packages/com.unity.textmeshpro@3.2/manual/RichText.html)\n\nDemonstrate:
-    \n1. Project UI content on mesh surface with Cloth+TextMeshPro module."
+    display content (You can also use the Rich Text Tags, see more detail here: https://docs.unity3d.com/Packages/com.unity.textmeshpro@3.2/manual/RichText.html)\n2.The
+    texture should be right landscape.\n \nDemonstrate: \n1. Project UI content on
+    mesh surface with Cloth+TextMeshPro module."
   texturePreview: {fileID: 2800000, guid: f300a7c9b5179c0418b4b2514bae33b5, type: 3}
   itemVisibility: 0
   ageRatingType: 1

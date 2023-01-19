@@ -712,7 +712,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   key: Billboard Text
   tooltip: 
-  defaultValue: "\u5E7F\u544A\u4F4D\u62DB\u79DF"
+  defaultValue: "<rotate=\"90\">\u5E7F\u544A\u4F4D\u62DB\u79DF</rotate>"
   onUIChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -792,7 +792,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "\u5E7F\u544A\u4F4D\u62DB\u79DF"
+  m_text: "<rotate=\"90\">\u5E7F\u544A\u4F4D\u62DB\u79DF</rotate>"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 2f4a665ba77389040a044af547208248, type: 2}
   m_sharedMaterial: {fileID: -7134182397075662040, guid: 2f4a665ba77389040a044af547208248,
@@ -5005,7 +5005,6 @@ MonoBehaviour:
   comp: {fileID: 1674334858}
   comps: []
   relateWindForce: {x: 0, y: -10, z: 0}
-  textAsset: {fileID: 4900000, guid: 6e99ffe296a2ad949bd29b514bf86882, type: 3}
 --- !u!114 &1674334863
 MonoBehaviour:
   m_ObjectHideFlags: 0
