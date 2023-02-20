@@ -51,7 +51,7 @@ The items inside this project will get updated frequently, incompatible with old
 <a href="https://steamcommunity.com/sharedfiles/filedetails/?id=2847245294"><img src="https://github.com/Threeyes/AliveCursor_ModUploader/wiki/images/readme/Spider.gif" height="256" width="256" ></a>
 <a href="https://steamcommunity.com/sharedfiles/filedetails/?id=2847245294"><img src="https://github.com/Threeyes/AliveCursor_ModUploader/wiki/images/readme/Hand.gif" height="256" width="256" ></a>
 
-* **Master Chief**: Using something fun models (such as crosshair or knife) to replace cursor.
+* **Master Chief**: Using other fun models (such as crosshair or knife) to replace cursor.
 
 <a href="https://steamcommunity.com/sharedfiles/filedetails/?id=2847245294"><img src="https://github.com/Threeyes/AliveCursor_ModUploader/wiki/images/readme/Master Chief.gif" height="256" width="256" ></a>
 
