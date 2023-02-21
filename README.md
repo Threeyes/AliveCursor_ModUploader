@@ -22,7 +22,7 @@ The items inside this project will get updated frequently, incompatible with old
 <a href="https://steamcommunity.com/sharedfiles/filedetails/?id=2847244998"><img src="https://github.com/Threeyes/AliveCursor_ModUploader/wiki/images/readme/2D Clock.gif" height="256" width="256" ></a>
 <a href="https://steamcommunity.com/sharedfiles/filedetails/?id=2847244998"><img src="https://github.com/Threeyes/AliveCursor_ModUploader/wiki/images/readme/HourGlass Clock.gif" height="256" width="256" ></a>
 
-* **IcoSphere AudioVisualizer**: System audio visualization.
+* **IcoSphere AudioVisualizer**: Create audio visualization.
 
 <a href="https://steamcommunity.com/sharedfiles/filedetails/?id=2847246006"><img src="https://github.com/Threeyes/AliveCursor_ModUploader/wiki/images/readme/IcoSphere AudioVisualizer.gif" height="256" width="256" ></a>
 
@@ -46,10 +46,11 @@ The items inside this project will get updated frequently, incompatible with old
 
 <a href="https://steamcommunity.com/sharedfiles/filedetails/?id=2847245294"><img src="https://github.com/Threeyes/AliveCursor_ModUploader/wiki/images/readme/Snake.gif" height="256" width="256" ></a>
 
-* **Spider**: Create procedural spider-like creature such as ghost hand, which can response to system audio.
+* **Spider/Hand/Robotic Hand**: Create procedural spider-like creature such as ghost hand, which can response to system audio.
 
 <a href="https://steamcommunity.com/sharedfiles/filedetails/?id=2847245294"><img src="https://github.com/Threeyes/AliveCursor_ModUploader/wiki/images/readme/Spider.gif" height="256" width="256" ></a>
 <a href="https://steamcommunity.com/sharedfiles/filedetails/?id=2847245294"><img src="https://github.com/Threeyes/AliveCursor_ModUploader/wiki/images/readme/Hand.gif" height="256" width="256" ></a>
+<a href="https://steamcommunity.com/sharedfiles/filedetails/?id=2847245294"><img src="https://github.com/Threeyes/AliveCursor_ModUploader/wiki/images/readme/Robotic Hand.gif" height="256" width="256" ></a>
 
 * **Master Chief**: Using other fun models (such as crosshair or knife) to replace cursor.
 
