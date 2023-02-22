@@ -16,13 +16,14 @@ The items inside this project will get updated frequently, incompatible with old
 * **Space Ship**: Simulate tilting object such as SpaceShip/HoverCar.
 
 <a href="https://steamcommunity.com/sharedfiles/filedetails/?id=2847247854"><img src="https://github.com/Threeyes/AliveCursor_ModUploader/wiki/images/readme/SpaceShip.gif" height="256" width="256" ></a>
+<a href="https://steamcommunity.com/sharedfiles/filedetails/?id=2847247854"><img src="https://github.com/Threeyes/AliveCursor_ModUploader/wiki/images/readme/SpaceShip_Liquid.gif" height="256" width="256" ></a>
 
 * **2D Clock/HourGlass Clock**: Display system time in different ways.
 
 <a href="https://steamcommunity.com/sharedfiles/filedetails/?id=2847244998"><img src="https://github.com/Threeyes/AliveCursor_ModUploader/wiki/images/readme/2D Clock.gif" height="256" width="256" ></a>
 <a href="https://steamcommunity.com/sharedfiles/filedetails/?id=2847244998"><img src="https://github.com/Threeyes/AliveCursor_ModUploader/wiki/images/readme/HourGlass Clock.gif" height="256" width="256" ></a>
 
-* **IcoSphere AudioVisualizer**: Create audio visualization.
+* **IcoSphere AudioVisualizer**: Audio visualization.
 
 <a href="https://steamcommunity.com/sharedfiles/filedetails/?id=2847246006"><img src="https://github.com/Threeyes/AliveCursor_ModUploader/wiki/images/readme/IcoSphere AudioVisualizer.gif" height="256" width="256" ></a>
 
@@ -32,7 +33,7 @@ The items inside this project will get updated frequently, incompatible with old
 
 * **Golden Hoop**: Using [SplineMesh](https://github.com/methusalah/SplineMesh) plugin to create runtime Splite.
 
-<a href="https://steamcommunity.com/sharedfiles/filedetails/?id=2847245294"><img src="https://github.com/Threeyes/AliveCursor_ModUploader/wiki/images/readme/Golden Hoop.png" height="256" width="256" ></a>
+<a href="https://steamcommunity.com/sharedfiles/filedetails/?id=2847245294"><img src="https://github.com/Threeyes/AliveCursor_ModUploader/wiki/images/readme/Golden Hoop.gif" height="256" width="256" ></a>
 
 * **Hairy**: Using [Unity hair system](https://github.com/Unity-Technologies/com.unity.demoteam.hair) plugin to create realistic strand-based hair.
 
