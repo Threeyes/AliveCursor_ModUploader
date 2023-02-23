@@ -169,6 +169,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8cfdf606c891e72449cdf679d831a961, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  tfSpawnTarget: {fileID: 1026390704}
   _vfx: {fileID: 958318}
 --- !u!73398921 &958317
 VFXRenderer:
@@ -253,6 +254,93 @@ VisualEffect:
       m_Array: []
     m_Bool:
       m_Array: []
+--- !u!1 &11565592
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 11565593}
+  - component: {fileID: 11565595}
+  - component: {fileID: 11565594}
+  m_Layer: 0
+  m_Name: FloatPD PyroParticleSize
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &11565593
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 11565592}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1932362251}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &11565594
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 11565592}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e4ed40840cb9854448e36740a390251c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  comp: {fileID: 958318}
+  comps: []
+  propertyName: Particle Size
+--- !u!114 &11565595
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 11565592}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 630345259ab308643bec38dfd582a206, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  key: PyroParticleSize
+  tooltip: 
+  defaultValue: 0.5
+  onUIChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  onValueChanged:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 11565594}
+        m_TargetAssemblyTypeName: AC_VisualEffectHelper, Threeyes.AliveCursor.SDK
+        m_MethodName: SetFloat
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  hasSetValue: 0
+  persistentValue: 0
+  dataOption:
+    useRange: 1
+    minValue: 0.1
+    maxValue: 10
 --- !u!1 &53713959
 GameObject:
   m_ObjectHideFlags: 0
@@ -711,8 +799,7 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 1062105405}
+  m_Children: []
   m_Father: {fileID: 901864193}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -774,9 +861,9 @@ MonoBehaviour:
   onButtonDownUp:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1062105406}
-        m_TargetAssemblyTypeName: Threeyes.EventPlayer.EventPlayer, Threeyes.Plugin.Core
-        m_MethodName: Play
+      - m_Target: {fileID: 958316}
+        m_TargetAssemblyTypeName: PyroLauncher, Assembly-CSharp
+        m_MethodName: OnButtonDownUp
         m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -826,7 +913,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1932362251}
-  m_RootOrder: 1
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &826731876
 MonoBehaviour:
@@ -914,7 +1001,7 @@ Transform:
   m_Father: {fileID: 425183094}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1062105404
+--- !u!1 &999197871
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -922,52 +1009,71 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 1062105405}
-  - component: {fileID: 1062105406}
+  - component: {fileID: 999197872}
+  - component: {fileID: 999197874}
+  - component: {fileID: 999197873}
   m_Layer: 0
-  m_Name: EPG OnDownUp
+  m_Name: FloatPD PyroParticleSpeed
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &1062105405
+--- !u!4 &999197872
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1062105404}
+  m_GameObject: {fileID: 999197871}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 591582438}
-  m_RootOrder: 0
+  m_Father: {fileID: 1932362251}
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1062105406
+--- !u!114 &999197873
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1062105404}
+  m_GameObject: {fileID: 999197871}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a862823d819b2434da07a9aff5488bef, type: 3}
+  m_Script: {fileID: 11500000, guid: e4ed40840cb9854448e36740a390251c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  onPlayStop:
+  comp: {fileID: 958318}
+  comps: []
+  propertyName: Particle Speed
+--- !u!114 &999197874
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 999197871}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 630345259ab308643bec38dfd582a206, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  key: PyroParticleSpeed
+  tooltip: 
+  defaultValue: 0.5
+  onUIChanged:
     m_PersistentCalls:
       m_Calls: []
-  onPlay:
+  onValueChanged:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 958316}
-        m_TargetAssemblyTypeName: PyroLauncher, Assembly-CSharp
-        m_MethodName: Launch
-        m_Mode: 1
+      - m_Target: {fileID: 999197873}
+        m_TargetAssemblyTypeName: AC_VisualEffectHelper, Threeyes.AliveCursor.SDK
+        m_MethodName: SetFloat
+        m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -976,30 +1082,43 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-  onStop:
-    m_PersistentCalls:
-      m_Calls: []
-  onActiveDeactive:
-    m_PersistentCalls:
-      m_Calls: []
-  isActive: 1
-  canPlay: 1
-  canStop: 1
-  isPlayOnAwake: 0
-  isPlayOnce: 0
-  isReverse: 0
-  listListener: []
-  isGroup: 1
-  isIncludeHide: 1
-  isRecursive: 0
-  id: 
-  isInvokeByID: 0
-  targetIDLocation: 1
-  targetId: 
-  isLogOnPlay: 0
-  isLogOnStop: 0
-  isPlayed: 0
-  state: -1
+  hasSetValue: 0
+  persistentValue: 0
+  dataOption:
+    useRange: 1
+    minValue: 0.1
+    maxValue: 10
+--- !u!1 &1026390703
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1026390704}
+  m_Layer: 0
+  m_Name: Pyro Spawn Target
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1026390704
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1026390703}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: -1, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 270789180}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1066642753
 GameObject:
   m_ObjectHideFlags: 0
@@ -1030,7 +1149,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1932362251}
-  m_RootOrder: 2
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1066642755
 MonoBehaviour:
@@ -1726,7 +1845,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1932362251}
-  m_RootOrder: 0
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1895059275
 MonoBehaviour:
@@ -1763,6 +1882,9 @@ MonoBehaviour:
         m_CallState: 2
   hasSetValue: 0
   persistentValue: {r: 0, g: 0, b: 0, a: 0}
+  dataOption:
+    useAlpha: 1
+    useHDR: 0
 --- !u!114 &1895059276
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1806,9 +1928,103 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
+  - {fileID: 11565593}
+  - {fileID: 999197872}
   - {fileID: 1895059274}
   - {fileID: 826731875}
   - {fileID: 1066642754}
   m_Father: {fileID: 0}
   m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &2028688339
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2028688341}
+  - component: {fileID: 2028688340}
+  m_Layer: 0
+  m_Name: Debug ReplayEP
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &2028688340
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2028688339}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aa341de36c1cc9340bbaf550539a75b2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  onPlayStop:
+    m_PersistentCalls:
+      m_Calls: []
+  onPlay:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 958316}
+        m_TargetAssemblyTypeName: PyroLauncher, Assembly-CSharp
+        m_MethodName: OnButtonDownUp
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
+  onStop:
+    m_PersistentCalls:
+      m_Calls: []
+  onActiveDeactive:
+    m_PersistentCalls:
+      m_Calls: []
+  isActive: 1
+  canPlay: 1
+  canStop: 1
+  isPlayOnAwake: 0
+  isPlayOnce: 0
+  isReverse: 0
+  listListener: []
+  isGroup: 0
+  isIncludeHide: 1
+  isRecursive: 0
+  id: 
+  isInvokeByID: 0
+  targetIDLocation: 1
+  targetId: 
+  isLogOnPlay: 0
+  isLogOnStop: 0
+  isPlayed: 0
+  state: 0
+  isIgnoreTimeScale: 0
+  isCoroutineRunning: 0
+  isPlayOnRepeatStart: 1
+  replayDeltaTime: 0.5
+  replayCount: -1
+  defaultDuration: -1
+--- !u!4 &2028688341
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2028688339}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0.020019412, y: 0.19003925, z: -0.5228544}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}

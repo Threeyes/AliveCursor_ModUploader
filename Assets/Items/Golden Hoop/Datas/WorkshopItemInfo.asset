@@ -16,7 +16,7 @@ MonoBehaviour:
   description: "\u72D7\u7684\u79BB\u5F00\u4E5F\u662F\u7231\u3002\n\nDemonstrate:
     \n1. Generate runtime Splite with SplineMesh plugin.\n\nHowto:\n1. [Working state]
     Press middle mouse button to make him suffer."
-  texturePreview: {fileID: 2800000, guid: 872a9d6e215abdf48bb6d3aaa5c95f72, type: 3}
+  texturePreview: {fileID: 2800000, guid: 337e21df0a5c2a04b97c07ed700bbc1b, type: 3}
   itemVisibility: 0
   ageRatingType: 1
   itemStyle: 0

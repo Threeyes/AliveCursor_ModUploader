@@ -20,7 +20,7 @@ MonoBehaviour:
     x: 38
     y: -369
     width: 2000
-    height: 2541
+    height: 2542
 --- !u!114 &114350483966674976
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1528,7 +1528,7 @@ MonoBehaviour:
   - {fileID: 8926484042661614643}
   - {fileID: 8926484042661614644}
   m_OutputSlots: []
-  m_Disabled: 0
+  m_Disabled: 1
   Mode: 1
   NoiseType: 0
 --- !u!114 &8926484042661614626

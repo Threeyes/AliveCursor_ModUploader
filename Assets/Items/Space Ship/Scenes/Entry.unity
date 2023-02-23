@@ -2401,15 +2401,15 @@ MonoBehaviour:
     decreaseSpeed: 0.1
     maxAngle: 20
     localDetectMovementAxis: {x: 1, y: 0, z: 0}
-    localTiltAxis: {x: 0, y: 1, z: 0}
+    localTiltAxis: {x: 0, y: -1, z: 0}
   soOverrideConfig: {fileID: 0}
   comp: {fileID: 0}
   updateMethodType: 2
   target: {fileID: 957079506}
-  sign: 0
-  curVelocity: {x: 0, y: 0, z: 0}
+  curTargetVelocity: {x: 0, y: 0, z: 0}
   velocityOnMovementAxis: {x: 0, y: 0, z: 0}
-  targetAngle: 0
+  sign: 0
+  destAngle: 0
 --- !u!1 &2079665019
 GameObject:
   m_ObjectHideFlags: 0
