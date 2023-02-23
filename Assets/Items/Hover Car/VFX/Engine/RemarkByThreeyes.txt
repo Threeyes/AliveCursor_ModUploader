@@ -1,0 +1,3 @@
+Source：https://github.com/dilmerv/UnityVFXMillionsOfParticles #FireRedCollisionsEffect
+Version：dcdf50fa8d47ed744e2391803db8b7d6405464ba
+License：UnKnown
