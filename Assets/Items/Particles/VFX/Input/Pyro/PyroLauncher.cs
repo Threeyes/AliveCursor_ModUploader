@@ -7,7 +7,7 @@ public class PyroLauncher : MonoBehaviour
 
     VFXEventAttribute _attrib;
 
-    //PS:UMod有识别事件错误的问题，因此只能通过唯一方法调用
+    //PS:UMod有识别事件错误的问题，因此只能通过定义方法调用
     public void OnButtonDownUp(bool isDown)
     {
         if (isDown)
