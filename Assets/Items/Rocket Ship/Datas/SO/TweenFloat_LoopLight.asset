@@ -17,7 +17,7 @@ MonoBehaviour:
   isActiveExit: 0
   enterConfig:
     endValue: 0.8
-    duration: 1
+    duration: 3
     delay: 0
     easeType: 37
     demonstrateEaseCurve:
