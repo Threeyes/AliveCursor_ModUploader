@@ -87,8 +87,8 @@ MonoBehaviour:
   isPlayWithParam: 0
   isStopWithParam: 0
   isDetectMatch: 0
-  soAction: {fileID: 11400000, guid: f0353a24985157b4098de22bb092af6a, type: 2}
   goTarget: {fileID: 0}
+  soAction: {fileID: 11400000, guid: f0353a24985157b4098de22bb092af6a, type: 2}
 --- !u!114 &411668883
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -443,8 +443,8 @@ MonoBehaviour:
   isPlayWithParam: 0
   isStopWithParam: 0
   isDetectMatch: 0
-  soAction: {fileID: 11400000, guid: f0353a24985157b4098de22bb092af6a, type: 2}
   goTarget: {fileID: 0}
+  soAction: {fileID: 11400000, guid: f0353a24985157b4098de22bb092af6a, type: 2}
 --- !u!114 &206566087
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1131,8 +1131,8 @@ MonoBehaviour:
   isPlayWithParam: 0
   isStopWithParam: 0
   isDetectMatch: 0
+  goTarget: {fileID: 3782662780704447913}
   soAction: {fileID: 11400000, guid: f0353a24985157b4098de22bb092af6a, type: 2}
-  goTarget: {fileID: 0}
 --- !u!114 &1495426530
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1992,8 +1992,8 @@ MonoBehaviour:
   isPlayWithParam: 0
   isStopWithParam: 0
   isDetectMatch: 0
-  soAction: {fileID: 11400000, guid: f0353a24985157b4098de22bb092af6a, type: 2}
   goTarget: {fileID: 0}
+  soAction: {fileID: 11400000, guid: f0353a24985157b4098de22bb092af6a, type: 2}
 --- !u!114 &6247761382220364127
 MonoBehaviour:
   m_ObjectHideFlags: 0

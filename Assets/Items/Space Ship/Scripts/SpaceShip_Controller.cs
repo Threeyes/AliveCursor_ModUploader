@@ -25,7 +25,9 @@ public class SpaceShip_Controller : MonoBehaviour
     /// <returns></returns>
     IEnumerator IETestExplosion(float time)
     {
-        ////Todo:增加一个onRapidClick的事件，然后做一个连环爆炸，朝向相机方向飞来，并且会散架（子物体detach，各自记录位置，然后加上刚体）
+        ////Todo:
+        ///-增加一个onRapidClick的事件，然后做一个连环爆炸，朝向相机方向飞来，并且会散架（实现：子物体detach，各自记录位置，然后加上刚体）
+        ///-为共享材质增加Emission闪烁的效果，然后再爆炸；复原后拷贝备份的Material值以便重置
         //_rigidbody.isKinematic = false;
         //_rigidbody.AddExplosionForce(testExplosionPower, _rigidbody.position + UnityEngine.Random.insideUnitSphere, testExplosionRadius);
         //_rigidbody.AddRelativeTorque(testTorquePower * UnityEngine.Random.insideUnitSphere, ForceMode.Force);

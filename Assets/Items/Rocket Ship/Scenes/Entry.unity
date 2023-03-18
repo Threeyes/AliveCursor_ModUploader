@@ -2254,6 +2254,7 @@ MonoBehaviour:
   meteorLifeTime: 60
   velocityPowerRange: {x: 3, y: 5}
   meteorSizeRange: {x: 0.5, y: 1}
+  boredGenerateIntervalRange: {x: 2, y: 10}
 --- !u!4 &1618580630
 Transform:
   m_ObjectHideFlags: 0
@@ -2529,7 +2530,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 45968578072108440a41d97e7f56d0f7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  key: ScrollModifyKeys
+  key: GenerateMeteorModifyKeys
   tooltip: 
   onUIChanged:
     m_PersistentCalls:
