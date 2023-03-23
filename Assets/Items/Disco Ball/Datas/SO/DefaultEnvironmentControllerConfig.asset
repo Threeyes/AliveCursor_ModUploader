@@ -24,7 +24,7 @@ MonoBehaviour:
       type: 2}
     panoramaSkyboxMaterial: {fileID: 2100000, guid: c70c5fc4263d61e4a97018b7622b3fae,
       type: 2}
-    defaultPanoramaTexture: {fileID: 2800000, guid: 50f0ed3a6d20a444eb93db1e83760750,
+    defaultPanoramaTexture: {fileID: 2800000, guid: 3c2edd4efc4e6cf45852a4a765ea3cc5,
       type: 3}
     externalPanoramaTexture: {fileID: 0}
     externalPanoramaTextureFilePath: 
