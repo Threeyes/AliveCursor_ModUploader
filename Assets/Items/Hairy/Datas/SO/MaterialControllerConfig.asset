@@ -15,14 +15,14 @@ MonoBehaviour:
   config:
     listTextureShaderProperty:
     - name: _Base_Texture
-      defaultTexture: {fileID: 0}
+      defaultTexture: {fileID: 2800000, guid: 49e8ce75207ae7f4c96948c4cb9ac19a, type: 3}
       externalTexture: {fileID: 0}
       externalTextureFilePath: 
       scale: {x: 0, y: 0}
       offset: {x: 0, y: 0}
       PersistentDirPath: 
     - name: _Emission_Texture
-      defaultTexture: {fileID: 0}
+      defaultTexture: {fileID: 2800000, guid: 49e8ce75207ae7f4c96948c4cb9ac19a, type: 3}
       externalTexture: {fileID: 0}
       externalTextureFilePath: 
       scale: {x: 0, y: 0}
@@ -35,9 +35,27 @@ MonoBehaviour:
         useAlpha: 0
         useHDR: 0
     - name: _Emisison
-      value: {r: 0, g: 0, b: 0, a: 1}
+      value: {r: 1, g: 1, b: 1, a: 1}
       dataOption_Color:
         useAlpha: 0
         useHDR: 1
     listIntShaderProperty: []
-    listFloatShaderProperty: []
+    listFloatShaderProperty:
+    - name: _Metallic
+      value: 0.3
+      dataOption_Float:
+        useRange: 1
+        minValue: 0
+        maxValue: 1
+    - name: _Smoothness
+      value: 0.5
+      dataOption_Float:
+        useRange: 1
+        minValue: 0
+        maxValue: 1
+    - name: _Ambient_Occlusion
+      value: 0.3
+      dataOption_Float:
+        useRange: 1
+        minValue: 0
+        maxValue: 1

@@ -14,8 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   title: Particles
   description: "Countless particles!\n\nDemonstrate: \n1. Configable VisualEffect.\n2.
-    Configable PostProcessing settings.\n\nHowto:\n1.Press middle mouse button to
-    emit firework! \n2.Use Black Desktop Background and get ready to be shocked on
+    Configable PostProcessing settings.\n2. Create Fancy Effect on Bored state.\nHowto:\n1.Press
+    middle mouse button to emit firework! \n2.Countless particles will show up  on
     bored state!"
   texturePreview: {fileID: 2800000, guid: cfc6fdca4e886fd46984a6cd35c7d297, type: 3}
   itemVisibility: 0

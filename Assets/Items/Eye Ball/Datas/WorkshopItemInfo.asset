@@ -22,7 +22,7 @@ MonoBehaviour:
   ageRatingType: 4
   itemStyle: 0
   itemGenre: 4
-  itemReference: 0
+  itemReference: 64
   itemFeature: 0
   itemSafety: 0
   itemName: Eye Ball

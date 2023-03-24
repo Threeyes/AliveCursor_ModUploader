@@ -23,7 +23,7 @@ MonoBehaviour:
   itemStyle: 16
   itemGenre: 2
   itemReference: 0
-  itemFeature: 0
+  itemFeature: 2
   itemSafety: 0
   itemName: Robotic Hand
   itemId: 2914862770
