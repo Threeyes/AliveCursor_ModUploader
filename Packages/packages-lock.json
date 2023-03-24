@@ -24,7 +24,7 @@
       "url": "https://package.openupm.com"
     },
     "com.threeyes.alivecursor.sdk": {
-      "version": "3.3.6",
+      "version": "3.3.7",
       "depth": 0,
       "source": "registry",
       "dependencies": {
@@ -142,7 +142,7 @@
       "url": "https://packages.unity.com"
     },
     "com.unity.demoteam.hair": {
-      "version": "https://github.com/Unity-Technologies/com.unity.demoteam.hair.git",
+      "version": "https://github.com/Unity-Technologies/com.unity.demoteam.hair.git#0.10.0-exp.1",
       "depth": 0,
       "source": "git",
       "dependencies": {
@@ -152,7 +152,7 @@
         "com.unity.render-pipelines.core": "10.2.2",
         "com.unity.shadergraph": "10.2.2"
       },
-      "hash": "2705381483e8a9e91d4afcf3936b8180fcae193c"
+      "hash": "1189211f0bfa018c57115867624a1d093adfa1da"
     },
     "com.unity.ext.nunit": {
       "version": "1.0.6",
