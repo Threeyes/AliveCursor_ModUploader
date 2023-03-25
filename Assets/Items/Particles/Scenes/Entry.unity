@@ -496,7 +496,7 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 4610157e5f6a03c4ab0616de3e16037c, type: 2}
+      objectReference: {fileID: 2100000, guid: bc795e746b231e646bd1280f366e6aed, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 343789124739c054385817d9dedd8abd, type: 3}
 --- !u!4 &270789180 stripped
@@ -2162,7 +2162,7 @@ VisualEffect:
         m_Overridden: 1
     m_Uint:
       m_Array:
-      - m_Value: 300
+      - m_Value: 100
         m_Name: Spawn Rate
         m_Overridden: 0
     m_Int:
