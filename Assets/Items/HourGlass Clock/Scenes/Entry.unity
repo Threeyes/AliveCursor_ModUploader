@@ -123,6 +123,62 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &52859745
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 52859746}
+  - component: {fileID: 52859747}
+  m_Layer: 0
+  m_Name: SOPD MinuteLiquidControllerConfig
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &52859746
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 52859745}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 256557294}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &52859747
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 52859745}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7235b0ac84ec79d48bbd5b8d669c1fb6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  key: MinuteLiquidControllerConfig
+  tooltip: 
+  defaultValue: {fileID: 0}
+  onUIChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  onValueChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  hasSetValue: 0
+  persistentValue: {fileID: 0}
+  targetValue: {fileID: 11400000, guid: 8e7c03caea9c87847bfb84dc807c6a65, type: 2}
 --- !u!1 &92975854
 GameObject:
   m_ObjectHideFlags: 0
@@ -208,6 +264,9 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 92975855}
+  - {fileID: 435078204}
+  - {fileID: 52859746}
+  - {fileID: 1092873559}
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -311,6 +370,62 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 262973238}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &435078203
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 435078204}
+  - component: {fileID: 435078205}
+  m_Layer: 0
+  m_Name: SOPD HourLiquidControllerConfig
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &435078204
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 435078203}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 256557294}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &435078205
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 435078203}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7235b0ac84ec79d48bbd5b8d669c1fb6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  key: HourLiquidControllerConfig
+  tooltip: 
+  defaultValue: {fileID: 0}
+  onUIChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  onValueChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  hasSetValue: 0
+  persistentValue: {fileID: 0}
+  targetValue: {fileID: 11400000, guid: 68a5f2971f04e7e419f6c9145ac45e94, type: 2}
 --- !u!1 &1027354031
 GameObject:
   m_ObjectHideFlags: 0
@@ -343,6 +458,62 @@ Transform:
   m_Father: {fileID: 1414243764}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1092873558
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1092873559}
+  - component: {fileID: 1092873560}
+  m_Layer: 0
+  m_Name: SOPD SecondLiquidControllerConfig
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1092873559
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1092873558}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 256557294}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1092873560
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1092873558}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7235b0ac84ec79d48bbd5b8d669c1fb6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  key: SecondLiquidControllerConfig
+  tooltip: 
+  defaultValue: {fileID: 0}
+  onUIChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  onValueChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  hasSetValue: 0
+  persistentValue: {fileID: 0}
+  targetValue: {fileID: 11400000, guid: 258891d90bb1c5a4d94de008e988aa79, type: 2}
 --- !u!1 &1414243763
 GameObject:
   m_ObjectHideFlags: 0
@@ -452,6 +623,12 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1966488958}
     m_Modifications:
+    - target: {fileID: 6734862187728306772, guid: 07e4effb8f34d2246817f3cc299aa029,
+        type: 3}
+      propertyPath: soOverrideConfig
+      value: 
+      objectReference: {fileID: 11400000, guid: 68a5f2971f04e7e419f6c9145ac45e94,
+        type: 2}
     - target: {fileID: 6734862188328791257, guid: 07e4effb8f34d2246817f3cc299aa029,
         type: 3}
       propertyPath: m_Name
@@ -528,5 +705,23 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6734862188457913533, guid: 07e4effb8f34d2246817f3cc299aa029,
+        type: 3}
+      propertyPath: soOverrideConfig
+      value: 
+      objectReference: {fileID: 11400000, guid: 258891d90bb1c5a4d94de008e988aa79,
+        type: 2}
+    - target: {fileID: 6734862189190797649, guid: 07e4effb8f34d2246817f3cc299aa029,
+        type: 3}
+      propertyPath: soOverrideConfig
+      value: 
+      objectReference: {fileID: 11400000, guid: 8e7c03caea9c87847bfb84dc807c6a65,
+        type: 2}
+    - target: {fileID: 6734862189277233850, guid: 07e4effb8f34d2246817f3cc299aa029,
+        type: 3}
+      propertyPath: soOverrideConfig
+      value: 
+      objectReference: {fileID: 11400000, guid: 258891d90bb1c5a4d94de008e988aa79,
+        type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 07e4effb8f34d2246817f3cc299aa029, type: 3}

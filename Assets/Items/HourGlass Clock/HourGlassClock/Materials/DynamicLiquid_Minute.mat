@@ -133,11 +133,11 @@ Material:
     m_Colors:
     - _BaseColor: {r: 1, g: 1, b: 1, a: 0.54509807}
     - _BottleColor: {r: 0.4481132, g: 1, b: 0.98395383, a: 1}
-    - _Color: {r: 0.5225451, g: 0.7657989, b: 0.8603976, a: 1}
+    - _Color: {r: 0.3223923, g: 0.5252487, b: 0.6037736, a: 1}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
     - _FoamColor: {r: 0.7764706, g: 0.9843137, b: 1, a: 1}
     - _RimColor: {r: 1, g: 1, b: 1, a: 1}
     - _SpecColor: {r: 0.19999996, g: 0.19999996, b: 0.19999996, a: 1}
     - _Tint: {r: 0.7490196, g: 0.88235295, b: 1, a: 1}
-    - _TopColor: {r: 0.8632076, g: 1, b: 0.9985881, a: 1}
+    - _TopColor: {r: 0.45525098, g: 0.75329304, b: 0.8679245, a: 1}
   m_BuildTextureStacks: []
