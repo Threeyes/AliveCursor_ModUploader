@@ -13,7 +13,8 @@ MonoBehaviour:
   m_Name: WorkshopItemInfo
   m_EditorClassIdentifier: 
   title: Sport Ball
-  description: "Keep rolling!\n\nBasketball\r modelLink: https://sketchfab.com/3d-models/basketball-e3c719662981472f8479031a074bc727\nFootball\r
+  description: "Keep rolling!\n\nDemonstrate: \n1. Rotate ball base on target offset.\n\nBasketball\r
+    modelLink: https://sketchfab.com/3d-models/basketball-e3c719662981472f8479031a074bc727\nFootball\r
     modelLink: https://sketchfab.com/3d-models/soccer-ball-0a96f1f19afc432bb22c3d74da546338\nGolfball\r
     modelLink: https://sketchfab.com/3d-models/golf-ball-b0b50a16aa5d431e8ed799c1a413025c\n"
   texturePreview: {fileID: 2800000, guid: be0d71be1d9b2a84d9ac32a7ab0d9192, type: 3}

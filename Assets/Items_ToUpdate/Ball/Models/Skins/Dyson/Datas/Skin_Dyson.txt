@@ -1,4 +1,0 @@
-Dyson
-
-Core VFX is from "SpaceShipDemo", cool effect:
-“https://github.com/Unity-Technologies/SpaceshipDemo”

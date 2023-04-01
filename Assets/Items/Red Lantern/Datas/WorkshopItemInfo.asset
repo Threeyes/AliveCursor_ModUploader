@@ -13,7 +13,8 @@ MonoBehaviour:
   m_Name: WorkshopItemInfo
   m_EditorClassIdentifier: 
   title: "\u7EA2\u706F\u7B3C"
-  description: "\u65B0\u5E74\u5FEB\u4E50\uFF01\n\nModel Link: https://skfb.ly/6YJXU"
+  description: "\u65B0\u5E74\u5FEB\u4E50\uFF01\n\nDemonstrate: \n1. Using physics
+    joints to create swing objects.\n\nModel Link: https://skfb.ly/6YJXU"
   texturePreview: {fileID: 2800000, guid: 7f6c79be7feae7f4d9dc1bc9c80c9f9e, type: 3}
   itemVisibility: 0
   ageRatingType: 1

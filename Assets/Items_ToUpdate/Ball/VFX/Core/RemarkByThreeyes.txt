@@ -1,2 +1,0 @@
-Source：https://github.com/Unity-Technologies/SpaceshipDemo
-License：https://github.com/Unity-Technologies/SpaceshipDemo/blob/master/LICENSE.md

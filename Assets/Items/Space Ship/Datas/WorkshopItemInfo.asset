@@ -13,12 +13,9 @@ MonoBehaviour:
   m_Name: WorkshopItemInfo
   m_EditorClassIdentifier: 
   title: Space Ship
-  description: 'Space space wanna go to space!
-
-
-    ModelProvider: Iggy-design
-
-    ModelLink:https://skfb.ly/QPX8'
+  description: "Space space wanna go to space!\n\nDemonstrate: \n1. Sync with current
+    system cursor's appearance.\n2. Response to mouse events.\n3.Tilt base on target
+    offset.\n\nModelProvider: Iggy-design\nModelLink:https://skfb.ly/QPX8"
   texturePreview: {fileID: 2800000, guid: 878b4df91707ab9469ab5a7b2a0a8e4b, type: 3}
   itemVisibility: 0
   ageRatingType: 1

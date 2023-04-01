@@ -19,7 +19,10 @@ MonoBehaviour:
     Howto:
 
     1.Press middle mouse button to
-    suck enemgy from planet.'
+    suck enemgy from planet.
+
+
+'
   texturePreview: {fileID: 2800000, guid: f88bffeedc3e8d54cb5b34c309264b4b, type: 3}
   itemVisibility: 0
   ageRatingType: 1

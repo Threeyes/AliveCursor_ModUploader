@@ -15,8 +15,8 @@ MonoBehaviour:
   title: Disco Ball
   description: "Rock and roll!\n\nDemonstrate: \n1. Configable  EnvironmentControllerConfig
     settings.\n\nHowto:\n1. Change EnvironmentConfig to get different outlook.\n\nModel
-    Link: \n-https://skfb.ly/6YL6s\n-https://skfb.ly/NyAH)\n\nSkyboxTexture Link:
-    https://polyhaven.com/zh/a/neon_photostudio"
+    Link: \n-https://skfb.ly/6YL6s\n-https://skfb.ly/NyAH\n-https://skfb.ly/6U9XL\n\nSkyboxTexture
+    Link: https://polyhaven.com/zh/a/neon_photostudio"
   texturePreview: {fileID: 2800000, guid: 36b85cc4492f0d64ab401b8fd7b647dd, type: 3}
   itemVisibility: 0
   ageRatingType: 1
