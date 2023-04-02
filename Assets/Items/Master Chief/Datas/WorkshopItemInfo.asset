@@ -14,10 +14,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   title: Master Chief
   description: "The Big-Head Green Monster!\n\nDemonstrate: \n1. Interact cursor
-    via Third-Person pov, useful to reference any fps game.\n2. Using ChainIKConstraint
-    from Animation Rigging to dynamically follow the cursor.\n\nHowto:\n1. Press
-    modify keys + Left/Right/Middle mouse button to attack.\n\nAsset link:\n-master-chief-high-poly:
-    https://skfb.ly/onDrz\n-Frag Grenade: https://skfb.ly/o9yNz\n-low-poly-knife:
+    via Third-Person pov, useful to reference any fps game character.\n2. Using ChainIKConstraint
+    from Animation Rigging to dynamically follow the cursor.\n3. Create dynamic collider
+    bounds.\nHowto:\n1. Press modify keys + Left/Right/Middle mouse button to attack.\n\nAsset
+    link:\n-master-chief-high-poly: https://skfb.ly/onDrz\n-Frag Grenade: https://skfb.ly/o9yNz\n-low-poly-knife:
     https://skfb.ly/66Xww\n-Particles: https://assetstore.unity.com/packages/essentials/tutorial-projects/unity-particle-pack-127325"
   texturePreview: {fileID: 2800000, guid: 96d287f3ba9c33d448d43b33ad7d03b8, type: 3}
   itemVisibility: 0
