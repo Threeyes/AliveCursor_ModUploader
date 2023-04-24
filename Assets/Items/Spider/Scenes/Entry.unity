@@ -1267,19 +1267,17 @@ MonoBehaviour:
     legRealignDelayTime: 5
   soOverrideConfig: {fileID: 11400000, guid: c72e92090323ce34fa0ab72a477cf376, type: 2}
   creeperModelController: {fileID: 95204186203305684}
-  tfEndPoint: {fileID: 416972833}
+  isSyncRotOrLookAt: 1
+  localBodyUp: {x: 0, y: 1, z: 0}
+  tfPosEndPoint: {fileID: 416972833}
+  tfLookEndPoint: {fileID: 416972833}
   tfGhostBody: {fileID: 1622409357}
   tfBodyMixer: {fileID: 268686330}
-  ghostBodyMoveSpeed: 1.3
-  bodyMoveSpeed: 3
-  ghostBodyRotateSpeed: 1
   listLegController:
   - {fileID: 599853278}
   - {fileID: 1378866384}
   - {fileID: 933781266}
   - {fileID: 302994958}
-  legMoveIntervalTime: 0.1
-  legRealignDelayTime: 5
   listLegControllerGroup:
   - listLegController:
     - {fileID: 599853278}
