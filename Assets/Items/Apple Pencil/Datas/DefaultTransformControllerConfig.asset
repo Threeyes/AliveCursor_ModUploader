@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: DefaultTransformControllerConfig
   m_EditorClassIdentifier: 
   config:
-    dimensionType: 1
+    dimensionType: 0
     commonMovementConfig:
       moveSpeed: 30
       rotateSpeed: 15
