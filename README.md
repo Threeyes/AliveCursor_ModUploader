@@ -61,6 +61,7 @@ The items inside this project are for experimental purposes only, which will get
 <a href="https://steamcommunity.com/sharedfiles/filedetails/?id=2847245294"><img src="https://github.com/Threeyes/AliveCursor_ModUploader/wiki/images/readme/Balloon.gif" height="256" width="256" ></a>
 
 ## Note
++ Always make sure that you have imported the latest simulator resources, see more info on [wiki](https://github.com/Threeyes/AliveCursorSDK/wiki/Setup-SDK).
 + **Don't** try to reupload any items using this project because them have been uploaded by me and their id is settled in `WorkshopItemInfo.asset`!
 + If you want to use or modify some items in this project, please create a new item in your project using `Item Manager` Window, then copy all assets under `Assets/Items/(DesireItemName)` folder to your project's new item dir except `WorkshopItemInfo.asset`. 
 + I will keep uploading different kinds of models and creating general-purpose scripts out of them, feel free to contact me and tell me what else you wanna see on screen.
