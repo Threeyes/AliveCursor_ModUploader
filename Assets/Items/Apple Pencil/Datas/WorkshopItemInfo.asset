@@ -21,6 +21,6 @@ MonoBehaviour:
   itemGenre: 0
   itemReference: 0
   itemFeature: 0
-  itemSafety: 1
+  itemSafety: 0
   itemName: Apple Pencil
-  itemId: 0
+  itemId: 2967916555
