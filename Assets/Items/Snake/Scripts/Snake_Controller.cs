@@ -18,14 +18,14 @@ public class Snake_Controller : MonoBehaviour
 
 
     [Header("Runtime")]
-    public float nextblinkIntervalDuration = 3;
+    public float nextBlinkIntervalDuration = 3;
     public float lastBlinkTime = 0;
     private void Update()
     {
-        if (Time.time - lastBlinkTime > nextblinkIntervalDuration)
+        if (Time.time - lastBlinkTime > nextBlinkIntervalDuration)
         {
             Blink();
-            nextblinkIntervalDuration = Random.Range(blinkIntervalDurationRange.x, blinkIntervalDurationRange.y);
+            nextBlinkIntervalDuration = Random.Range(blinkIntervalDurationRange.x, blinkIntervalDurationRange.y);
             lastBlinkTime = Time.time;
         }
     }
