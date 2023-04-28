@@ -210,6 +210,37 @@ Transform:
   m_Father: {fileID: 1622409357}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &154866386
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 154866387}
+  m_Layer: 0
+  m_Name: Look Target
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &154866387
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 154866386}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1598879702}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &268686329
 GameObject:
   m_ObjectHideFlags: 0
@@ -333,7 +364,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 655551929}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &372903991
 MonoBehaviour:
@@ -394,7 +425,8 @@ MonoBehaviour:
   logType: 3
   withName: 0
   format: 
-  tips: "Todo:\n+\u5934\u90E8\u671D\u5411\u9F20\u6807(\u4F7F\u7528Multi-Aim Constraint)\n+\u5C3E\u5DF4\u6709\u771F\u5B9E\u6447\u6643\u7269\u7406\u6548\u679C:\n\t-\u4F7F\u7528ChainIK\uFF0C\u671D\u5411\u4E00\u4E2A\u7269\u4F53,\u8BE5\u7269\u4F53\u901A\u8FC7Joint\u63A7\u5236\n\t+\u63A7\u5236\u6839\u90E8\u8FDB\u884C\u968F\u673A\u65CB\u8F6C+Damp\n\t-\u6216\u8005\u662F\u4E00\u4E2A\u901A\u8FC7\u811A\u672C\u63A7\u5236\u5728\u6B63\u65B9\u4F53\u533A\u57DF\u5185\u968F\u673A\u79FB\u52A8\u7684\u7269\u4F53)\u3010\u7ECF\u6D4B\u8BD5Damp\u65E0\u6548\u3011\n\u8033\u6735\u968F\u673AShake\uFF08\u4F7F\u7528SOTween\uFF09\n\u6BDB\u53D1"
+  tips: "Todo:\n+\u5934\u90E8\u671D\u5411\u9F20\u6807(\u4F7F\u7528Multi-Aim Constraint)\n+\u5C3E\u5DF4\u6709\u771F\u5B9E\u6447\u6643\u7269\u7406\u6548\u679C:\n\t-\u4F7F\u7528ChainIK\uFF0C\u671D\u5411\u4E00\u4E2A\u7269\u4F53,\u8BE5\u7269\u4F53\u901A\u8FC7Joint\u63A7\u5236\n\t+\u63A7\u5236\u6839\u90E8\u8FDB\u884C\u968F\u673A\u65CB\u8F6C+Damp\n\t-\u6216\u8005\u662F\u4E00\u4E2A\u901A\u8FC7\u811A\u672C\u63A7\u5236\u5728\u6B63\u65B9\u4F53\u533A\u57DF\u5185\u968F\u673A\u79FB\u52A8\u7684\u7269\u4F53)\u3010\u7ECF\u6D4B\u8BD5Damp\u65E0\u6548\u3011\nLook
+    Target\u53EF\u4EE5\u662F\u9644\u8FD1\u7684\u5E72\u6270\u7269\uFF0C\u53EA\u6709\u79FB\u52A8\u65F6\u5C06weight\u8BBE\u7F6E\u4E3A0\u5E76\u671D\u5411\u524D\u65B9\n\u8033\u6735\u968F\u673AShake\uFF08\u4F7F\u7528SOTween\uFF09\n\u6BDB\u53D1"
   isLogOnConsole: 1
 --- !u!4 &475646654
 Transform:
@@ -870,11 +902,11 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
+  - {fileID: 1929022463}
   - {fileID: 1628316388}
   - {fileID: 2137355921}
   - {fileID: 372903990}
   - {fileID: 1246859636}
-  - {fileID: 1929022463}
   - {fileID: 1848886323}
   - {fileID: 669981564}
   - {fileID: 709874003}
@@ -2072,7 +2104,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 655551929}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1246859637
 MonoBehaviour:
@@ -2252,6 +2284,7 @@ Transform:
   m_Children:
   - {fileID: 988000002}
   - {fileID: 1799842586}
+  - {fileID: 154866387}
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: -90.00001, y: 0, z: -90.00001}
@@ -2366,7 +2399,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 655551929}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1628316389
 MonoBehaviour:
@@ -2727,7 +2760,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 655551929}
-  m_RootOrder: 4
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1929022464
 MonoBehaviour:
@@ -2747,7 +2780,7 @@ MonoBehaviour:
     m_SourceObjects:
       m_Length: 1
       m_Item0:
-        transform: {fileID: 1598879702}
+        transform: {fileID: 154866387}
         weight: 1
       m_Item1:
         transform: {fileID: 0}
@@ -2956,7 +2989,7 @@ MonoBehaviour:
     canLegRaise: 0
     legRaiseRange: 1
     legRaiseIndex: 0
-    totalLegCount: 0
+    totalLegCount: 4
   soOverrideConfig: {fileID: 11400000, guid: cdbb28b095960d946b481c6e51a217aa, type: 2}
   creeperGhostController: {fileID: 1952161946}
 --- !u!4 &2011203696
@@ -3086,7 +3119,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 655551929}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &2137355922
 MonoBehaviour:

@@ -20,4 +20,4 @@ MonoBehaviour:
     canLegRaise: 0
     legRaiseRange: 1
     legRaiseIndex: 0
-    totalLegCount: 2
+    totalLegCount: 4
