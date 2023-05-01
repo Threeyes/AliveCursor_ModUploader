@@ -296,7 +296,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 302994956}
-  m_LocalRotation: {x: 0.00000013767878, y: -0.7071068, z: -0.7071068, w: -0.00000013767878}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -381,7 +381,7 @@ MonoBehaviour:
   m_Weight: 0
   m_Data:
     m_Root: {fileID: 504206103}
-    m_Tip: {fileID: 888588365}
+    m_Tip: {fileID: 504206105}
     m_Target: {fileID: 1378866383}
     m_ChainRotationWeight: 1
     m_TipRotationWeight: 1
@@ -776,7 +776,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 599853276}
-  m_LocalRotation: {x: 0.00000013767878, y: -0.7071068, z: -0.7071068, w: -0.00000013767878}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -1744,7 +1744,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 933781264}
-  m_LocalRotation: {x: 0.00000013767878, y: -0.7071068, z: -0.7071068, w: -0.00000013767878}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -2121,7 +2121,7 @@ MonoBehaviour:
   m_Weight: 0
   m_Data:
     m_Root: {fileID: 504206075}
-    m_Tip: {fileID: 888588360}
+    m_Tip: {fileID: 504206076}
     m_Target: {fileID: 302994957}
     m_ChainRotationWeight: 1
     m_TipRotationWeight: 1
@@ -2184,7 +2184,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1378866382}
-  m_LocalRotation: {x: 0.00000013767878, y: -0.7071068, z: -0.7071068, w: -0.00000013767878}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -2416,7 +2416,7 @@ MonoBehaviour:
   m_Weight: 0
   m_Data:
     m_Root: {fileID: 504206100}
-    m_Tip: {fileID: 888588363}
+    m_Tip: {fileID: 504206102}
     m_Target: {fileID: 599853277}
     m_ChainRotationWeight: 1
     m_TipRotationWeight: 1
@@ -3136,7 +3136,7 @@ MonoBehaviour:
   m_Weight: 0
   m_Data:
     m_Root: {fileID: 504206078}
-    m_Tip: {fileID: 888588367}
+    m_Tip: {fileID: 504206079}
     m_Target: {fileID: 933781265}
     m_ChainRotationWeight: 1
     m_TipRotationWeight: 1
