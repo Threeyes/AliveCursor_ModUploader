@@ -13,9 +13,9 @@ MonoBehaviour:
   m_Name: WorkshopItemInfo
   m_EditorClassIdentifier: 
   title: Apple Pencil
-  description: "Demonstrate: \n1. Drawing with whiteboard feature.\n\nHowto:\n1.
-    Press modify keys + middle mouse button to draw, use draggable toolbar to change
-    pen settings.\n\nModel Link: https://skfb.ly/6ZJA8"
+  description: "Demonstrate: \n1. Drawing with whiteboard feature.\n2. Create UI
+    in mods.\n\nHowto:\n1. Press modify keys + middle mouse button to draw, use draggable
+    toolbar to change pen settings.\n\nModel Link: https://skfb.ly/6ZJA8"
   texturePreview: {fileID: 2800000, guid: 51e7b701bad48194285224550f353f54, type: 3}
   itemVisibility: 0
   ageRatingType: 1

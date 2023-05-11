@@ -1,0 +1,27 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5695af25494a69147873bf0ff10072ea, type: 3}
+  m_Name: WorkshopItemInfo
+  m_EditorClassIdentifier: 
+  title: SpiderMan
+  description: "i'm gonna shoot some webs in your screen.\n\nDemonstrate: \n1. Random
+    Idle with Blend Tree\n\nModel Link: https://skfb.ly/osYus\nAnimation Link: https://www.mixamo.com/"
+  texturePreview: {fileID: 2800000, guid: 87ae6176d03a7534f95e20d140bccd31, type: 3}
+  itemVisibility: 0
+  ageRatingType: 1
+  itemStyle: 2
+  itemGenre: 1024
+  itemReference: 2
+  itemFeature: 0
+  itemSafety: 1
+  itemName: SpiderMan
+  itemId: 0
