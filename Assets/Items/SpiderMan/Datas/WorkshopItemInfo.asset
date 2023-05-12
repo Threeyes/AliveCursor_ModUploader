@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: WorkshopItemInfo
   m_EditorClassIdentifier: 
   title: SpiderMan
-  description: "i'm gonna shoot some webs in your screen.\n\nDemonstrate: \n1. Random
+  description: "i'm gonna shoot some webs to your screen.\n\nDemonstrate: \n1. Random
     Idle with Blend Tree\n\nModel Link: https://skfb.ly/osYus\nAnimation Link: https://www.mixamo.com/"
   texturePreview: {fileID: 2800000, guid: 87ae6176d03a7534f95e20d140bccd31, type: 3}
   itemVisibility: 0
@@ -24,4 +24,4 @@ MonoBehaviour:
   itemFeature: 0
   itemSafety: 1
   itemName: SpiderMan
-  itemId: 0
+  itemId: 2974472367
