@@ -35,6 +35,6 @@ MonoBehaviour:
       defaultValue: 1
       changeAtRuntime: 1
       changeOnMove: 1
-      changIntervalRange: {x: 5, y: 10}
+      changIntervalRange: {x: 10, y: 20}
       preciseValue: 1
-      transitionDuration: 0.2
+      transitionDuration: 0

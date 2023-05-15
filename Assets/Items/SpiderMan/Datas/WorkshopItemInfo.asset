@@ -13,9 +13,10 @@ MonoBehaviour:
   m_Name: WorkshopItemInfo
   m_EditorClassIdentifier: 
   title: SpiderMan
-  description: "i'm gonna shoot some webs to your screen.\n\nDemonstrate: \n1. Random
-    Idle/Move/Dance Animations with Blend Tree.\n2.Response with Animation Event.\n3.Follow
-    target point.\n\nModel Link: https://skfb.ly/osYus\nAnimation Link: https://www.mixamo.com/"
+  description: "i'm gonna shoot some webs to your screen.\n\nDemonstrate: \n1. Follow
+    target point.\n2. Random Idle/Move/Dance Animations with Blend Tree.\n3. Interact
+    with Animation Event.\n4. Translate Animation on audio input.\n\nModel Link:
+    https://skfb.ly/osYus\nAnimation Link: https://www.mixamo.com/"
   texturePreview: {fileID: 2800000, guid: 87ae6176d03a7534f95e20d140bccd31, type: 3}
   itemVisibility: 0
   ageRatingType: 1

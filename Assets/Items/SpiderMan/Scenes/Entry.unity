@@ -152,7 +152,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &81768434
 GameObject:
@@ -184,7 +184,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &81768436
 MonoBehaviour:
@@ -275,7 +275,7 @@ Transform:
   m_Children:
   - {fileID: 351688543}
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &189269692
 MonoBehaviour:
@@ -621,7 +621,7 @@ Transform:
   - {fileID: 1102962445}
   - {fileID: 275543147}
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &535719350
 GameObject:
@@ -773,39 +773,6 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 537875915}
   m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
---- !u!1 &741062930
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 741062931}
-  m_Layer: 0
-  m_Name: CIB Group
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &741062931
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 741062930}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 1025883103}
-  - {fileID: 867967023}
-  m_Father: {fileID: 0}
-  m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &772368181
 GameObject:
   m_ObjectHideFlags: 0
@@ -838,105 +805,6 @@ Transform:
   m_Father: {fileID: 1747419233}
   m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: -108.3, y: 0, z: 0}
---- !u!1 &867967022
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 867967023}
-  - component: {fileID: 867967024}
-  m_Layer: 0
-  m_Name: CIB ScrollBall
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &867967023
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 867967022}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 741062931}
-  m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &867967024
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 867967022}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8c1f6b796b37caf40be60b57da32cd8f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  onPlayStop:
-    m_PersistentCalls:
-      m_Calls: []
-  onPlay:
-    m_PersistentCalls:
-      m_Calls: []
-  onStop:
-    m_PersistentCalls:
-      m_Calls: []
-  onActiveDeactive:
-    m_PersistentCalls:
-      m_Calls: []
-  isActive: 1
-  canPlay: 1
-  canStop: 1
-  isPlayOnAwake: 0
-  isPlayOnce: 0
-  isReverse: 0
-  listListener: []
-  isGroup: 0
-  isIncludeHide: 1
-  isRecursive: 0
-  id: 
-  isInvokeByID: 0
-  targetIDLocation: 1
-  targetId: 
-  isLogOnPlay: 0
-  isLogOnStop: 0
-  isPlayed: 0
-  state: -1
-  onPlayWithParam:
-    m_PersistentCalls:
-      m_Calls: []
-  onStopWithParam:
-    m_PersistentCalls:
-      m_Calls: []
-  isPlayWithParam: 0
-  isStopWithParam: 0
-  isDetectMatch: 0
-  goTarget: {fileID: 0}
-  soAction: {fileID: 11400000, guid: 44998f38e1dd7f440813ed87921ec350, type: 2}
-  modifierKeys: 0
-  cursorInputType: 1024
-  onButtonDownUp:
-    m_PersistentCalls:
-      m_Calls: []
-  onWheelScrollDownUp:
-    m_PersistentCalls:
-      m_Calls: []
-  onMove:
-    m_PersistentCalls:
-      m_Calls: []
-  onDragStartFinish:
-    m_PersistentCalls:
-      m_Calls: []
 --- !u!1001 &988000001
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1037,105 +905,6 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 988000001}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &1025883102
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1025883103}
-  - component: {fileID: 1025883104}
-  m_Layer: 0
-  m_Name: CIB SqueezeBall
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1025883103
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1025883102}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 741062931}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1025883104
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1025883102}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8c1f6b796b37caf40be60b57da32cd8f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  onPlayStop:
-    m_PersistentCalls:
-      m_Calls: []
-  onPlay:
-    m_PersistentCalls:
-      m_Calls: []
-  onStop:
-    m_PersistentCalls:
-      m_Calls: []
-  onActiveDeactive:
-    m_PersistentCalls:
-      m_Calls: []
-  isActive: 1
-  canPlay: 1
-  canStop: 1
-  isPlayOnAwake: 0
-  isPlayOnce: 0
-  isReverse: 0
-  listListener: []
-  isGroup: 0
-  isIncludeHide: 1
-  isRecursive: 0
-  id: 
-  isInvokeByID: 0
-  targetIDLocation: 1
-  targetId: 
-  isLogOnPlay: 0
-  isLogOnStop: 0
-  isPlayed: 0
-  state: -1
-  onPlayWithParam:
-    m_PersistentCalls:
-      m_Calls: []
-  onStopWithParam:
-    m_PersistentCalls:
-      m_Calls: []
-  isPlayWithParam: 0
-  isStopWithParam: 0
-  isDetectMatch: 0
-  goTarget: {fileID: 1025883102}
-  soAction: {fileID: 11400000, guid: 3551161a245046b44a01c6d1104381af, type: 2}
-  modifierKeys: 0
-  cursorInputType: 4
-  onButtonDownUp:
-    m_PersistentCalls:
-      m_Calls: []
-  onWheelScrollDownUp:
-    m_PersistentCalls:
-      m_Calls: []
-  onMove:
-    m_PersistentCalls:
-      m_Calls: []
-  onDragStartFinish:
-    m_PersistentCalls:
-      m_Calls: []
 --- !u!1 &1102962443
 GameObject:
   m_ObjectHideFlags: 0
@@ -1320,7 +1089,7 @@ Transform:
   m_Children:
   - {fileID: 1503155525}
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1747419144
 PrefabInstance:

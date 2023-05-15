@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System.Linq;
 /// <summary>
 /// 功能：
 /// -当接收到音频信息时，播放跳舞动画
@@ -60,26 +61,24 @@ public class SpiderMan_Controller : MonoBehaviour
 
     #region Callback
     float averageLoudness = 0;
-    float lastSampleTime = 0;
-    float samplingRate = 0.1f;
+    public List<float> loudnessPool = new List<float>();//缓存前数个音频采样
+    int sampleCount = 5;
     public void OnRawSampleDataChanged(float[] rawSampleData)
     {
-        //Bug：以下判断还是有问题，应该是取采样时间段内的平均值
-        //Warning：要避免音频不连续导致动画停顿，需要判断采样时间段内的音量总值平均值（可能帧率设置太高导致采样不足，如音频采样率为60，但是刷新率为120就有问题（有数帧无数据导致音量为0），可以改为判断时间间隔而不是上次帧率）
-        if (Time.time - lastSampleTime > samplingRate)
-        {
-            averageLoudness = 0;//Reset
-        lastSampleTime = Time.time;
-        }
-
+        ///实现：rawSampleData偶尔会返回音量为0的数值，如果直接使用当帧的数据会导致动画频繁切换，因此要升级为检查取采样时间段内的平均值
+        ///原因：要避免音频不连续导致动画停顿，需要判断采样时间段内的音量总值平均值（可能帧率设置太高导致采样不足，如音频采样率为60，但是刷新率为120就有问题（有数帧无数据导致音量为0），可以改为判断时间间隔而不是上次帧率）
         float loudness = AC_ManagerHolder.SystemAudioManager.CalculateLoudness(rawSampleData);
-        averageLoudness += loudness;
-        bool shouldDance = averageLoudness > 0;
+
+        loudnessPool.Add(loudness);
+        if (loudnessPool.Count >= sampleCount + 1)//最多保存采样数据
+        {
+            loudnessPool.RemoveAt(0);
+        }
+        averageLoudness = loudnessPool.Average();
+        bool shouldDance = averageLoudness > 0.01f;
 
         animator.SetBool("ShouldDance", shouldDance && objectMovement.CurMoveSpeed == 0);//Only dance on not moving and has audio input
 
-        //lastLoudness = loudness;
     }
     #endregion
-
 }
