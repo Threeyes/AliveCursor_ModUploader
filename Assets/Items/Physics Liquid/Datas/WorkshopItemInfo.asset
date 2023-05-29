@@ -13,12 +13,11 @@ MonoBehaviour:
   m_Name: WorkshopItemInfo
   m_EditorClassIdentifier: 
   title: Physics Liquid
-  description: "Bend the water.\n\u5FC3\u9759\u5982\u6C34\uFF0C\u5B89\u4E4B\u82E5\u7D20(Whenever
-    you find it hard to control must find your inner peace).\n\nDemonstrate: \n1.
-    Create real-time fluid simulation and expose most configs with Zibra Liquids
-    plugin.\n2. Get reflection details via EnvironmentControllerConfig's PanoSkybox
-    settings .\n\nHowto:\n1. [Working state] Press middle mouse button to diffuse
-    the water sphere.\n"
+  description: "Bend the water, whenever you find it hard to control must find your
+    inner peace.\n\nDemonstrate: \n1. Create real-time fluid simulation and expose
+    most configs with Zibra Liquids plugin.\n2. Get reflection details via EnvironmentControllerConfig's
+    PanoSkybox settings .\n\nHowto:\n1. [Working state] Press middle mouse button
+    to diffuse the water sphere.\n"
   texturePreview: {fileID: 2800000, guid: fd7cd1f2a4bcdcd4ebb5641d707fdc86, type: 3}
   itemVisibility: 0
   ageRatingType: 1

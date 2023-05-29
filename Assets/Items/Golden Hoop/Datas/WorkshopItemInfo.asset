@@ -12,10 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5695af25494a69147873bf0ff10072ea, type: 3}
   m_Name: WorkshopItemInfo
   m_EditorClassIdentifier: 
-  title: "\u7D27\u7B8D(Golden Hoop)"
-  description: "\u72D7\u7684\u79BB\u5F00\u4E5F\u662F\u7231\u3002\n\nDemonstrate:
-    \n1. Generate runtime Splite with SplineMesh plugin.\n\nHowto:\n1. [Working state]
-    Press middle mouse button to make him suffer."
+  title: Golden Hoop
+  description: "A tied dog leave with love.\n\nDemonstrate: \n1. Generate runtime
+    Splite with SplineMesh plugin.\n\nHowto:\n1. [Working state] Press middle mouse
+    button to make him suffer."
   texturePreview: {fileID: 2800000, guid: 337e21df0a5c2a04b97c07ed700bbc1b, type: 3}
   itemVisibility: 0
   ageRatingType: 1
