@@ -1,0 +1,58 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: edf3cfc495916a746b6aaa30610009f3, type: 3}
+  m_Name: HairInstanceControllerConfig
+  m_EditorClassIdentifier: 
+  config:
+    strandScale: 1
+    strandDiameter: 5
+    strandMargin: 5
+    staging: 1
+    stagingPrecision: 1
+    stagingSubdivision: 0
+    method: 1
+    iterations: 2
+    substeps: 3
+    stiffness: 0.7
+    kSOR: 1
+    damping: 0
+    dampingFactor: 0.5
+    dampingInterval: 0
+    angularDamping: 0
+    angularDampingFactor: 0.5
+    angularDampingInterval: 0
+    cellPressure: 1
+    cellVelocity: 0.05
+    gravity: 1
+    gravityRotation: {x: 0, y: 0, z: 0}
+    boundaryCollision: 1
+    boundaryCollisionFriction: 0.5
+    distance: 1
+    distanceLRA: 1
+    distanceFTL: 0
+    distanceFTLDamping: 0.8
+    localCurvature: 1
+    localCurvatureMode: 1
+    localCurvatureValue: 0.1
+    localShape: 1
+    localShapeMode: 0
+    localShapeInfluence: 1
+    localShapeBias: 1
+    localShapeBiasValue: 0.2
+    globalPosition: 0
+    globalPositionInfluence: 1
+    globalPositionInterval: 0
+    globalRotation: 0
+    globalRotationInfluence: 1
+    globalFade: 0
+    globalFadeOffset: 0.1
+    globalFadeExtent: 0.2
