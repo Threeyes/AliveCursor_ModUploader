@@ -25,7 +25,7 @@ public class SpiderMan_Controller : MonoBehaviour
 
     private void Update()
     {
-        //当角色准备减速
+        //当角色准备减速：释放网，避免未收到通知导致残留
         if (curWebLine != null && objectMovement.CurMoveSpeedPercent < 1)
         {
             TryReleaseCurWebLine();
