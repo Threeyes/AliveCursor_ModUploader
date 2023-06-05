@@ -23,13 +23,13 @@ MonoBehaviour:
       preciseValue: 1
       transitionDuration: 0.2
     - paramName: RunRandom
-      totalAnimation: 2
+      totalAnimation: 3
       defaultValue: 1
       changeAtRuntime: 1
-      changeOnMove: 0
-      changIntervalRange: {x: 5, y: 10}
+      changeOnMove: 1
+      changIntervalRange: {x: 2, y: 10}
       preciseValue: 1
-      transitionDuration: 0
+      transitionDuration: 0.2
     - paramName: DanceRandom
       totalAnimation: 3
       defaultValue: 1
