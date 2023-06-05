@@ -19,7 +19,7 @@ MonoBehaviour:
       defaultValue: 1
       changeAtRuntime: 1
       changeOnMove: 1
-      changIntervalRange: {x: 5, y: 10}
+      changIntervalRange: {x: 2, y: 5}
       preciseValue: 1
       transitionDuration: 0.2
     - paramName: RunRandom
@@ -27,7 +27,7 @@ MonoBehaviour:
       defaultValue: 1
       changeAtRuntime: 1
       changeOnMove: 1
-      changIntervalRange: {x: 2, y: 10}
+      changIntervalRange: {x: 5, y: 10}
       preciseValue: 1
       transitionDuration: 0.2
     - paramName: DanceRandom
