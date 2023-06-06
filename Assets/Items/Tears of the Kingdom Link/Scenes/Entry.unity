@@ -155,37 +155,6 @@ Transform:
   m_Father: {fileID: 3117242964698602057}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &35593010
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 35593011}
-  m_Layer: 0
-  m_Name: "\u2014\u2014Prefabs\u2014\u2014"
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &35593011
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 35593010}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 2
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &44016254
 GameObject:
   m_ObjectHideFlags: 0
@@ -221,8 +190,8 @@ MonoBehaviour:
   logType: 3
   withName: 0
   format: 
-  tips: "+Idle\u65F6\u624B\u6301\u5251\u548C\u76FE\n+\u9E21\u98DE\u884C\u52A8\u4F5C\n-\u8863\u670D\u6539\u7528Cloth\n-\u6309\u538B\u4E2D\u952E\u51FA\u73B0\u968F\u673A\u653B\u51FB\u52A8\u753B\uFF08\u7C7B\u4F3C\u8DF3\u821E\u5B9E\u73B0\uFF09\uFF0C\u653B\u51FB\u5B8C\u6210\u540E\u4F1A\u81EA\u52A8\u56DE\u5230\u2018Normal
-    Blend\u2019\u3002\u5C06Idle\u7684\u90E8\u5206\u653B\u51FB\u52A8\u4F5C\u79FB\u5230Attack\u6587\u4EF6\u5939\n-Idle\u4E2D\uFF0C\u67D0\u4E2A\u72B6\u6001\u5360\u5927\u90E8\u5206\uFF08\u53EF\u4EE5\u662F\u591A\u4E2A\u69FD\u4E2D\u653E\u7C7B\u4F3C\u52A8\u4F5C\uFF0C\u6216\u8005\u624B\u52A8\u8C03\u8282\u533A\u95F4\u5360\u6BD4\uFF09\n-\u589E\u52A0\u5934\u53D1\u3001\u8863\u670D\u7684Rig"
+  tips: "+Idle\u65F6\u624B\u6301\u5251\u548C\u76FE\n+\u9E21\u98DE\u884C\u52A8\u4F5C\n+\u589E\u52A0\u5934\u53D1\u3001\u8863\u670D\u7684Rig\n+\u6309\u538B\u4E2D\u952E\u51FA\u73B0\u968F\u673A\u653B\u51FB\u52A8\u753B\uFF08\u7C7B\u4F3C\u8DF3\u821E\u5B9E\u73B0\uFF09\uFF0C\u653B\u51FB\u5B8C\u6210\u540E\u4F1A\u81EA\u52A8\u56DE\u5230\u2018Normal
+    Blend\u2019\u3002\u5C06Idle\u7684\u90E8\u5206\u653B\u51FB\u52A8\u4F5C\u79FB\u5230Attack\u6587\u4EF6\u5939\n-\u53D6\u6D88\u968F\u673A\u653B\u51FB\uFF0C\u6539\u4E3A\u6BCF\u6B21\u653B\u51FB\u540E\u624B\u52A8\u8C03\u7528\u8BBE\u7F6E\u65B0\u968F\u673A\u503C\uFF08\u9700\u8981\u7B49SDK\u66F4\u65B0\uFF09\n"
   isLogOnConsole: 1
 --- !u!4 &44016256
 Transform:
@@ -721,23 +690,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   defaultConfig:
-    listRandomParamInfo:
-    - paramName: IdleRandom
-      totalAnimation: 3
-      defaultValue: 1
-      changeAtRuntime: 1
-      changeOnMove: 1
-      changIntervalRange: {x: 2, y: 3}
-      preciseValue: 1
-      transitionDuration: 0.2
-    - paramName: RunRandom
-      totalAnimation: 3
-      defaultValue: 1
-      changeAtRuntime: 0
-      changeOnMove: 0
-      changIntervalRange: {x: 5, y: 10}
-      preciseValue: 1
-      transitionDuration: 0
+    listRandomParamInfo: []
   soOverrideConfig: {fileID: 11400000, guid: 4d613917884fbcb44b37a47934c93a71, type: 2}
   comp: {fileID: 5866666020702370652}
   objectMovement: {fileID: 351688544}
@@ -3227,9 +3180,98 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1503155525}
+  - {fileID: 1700831816}
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1700831815
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1700831816}
+  - component: {fileID: 1700831818}
+  - component: {fileID: 1700831817}
+  m_Layer: 0
+  m_Name: EnumPD AttackButton
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1700831816
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1700831815}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1649694922}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1700831817
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1700831815}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e69a31417fdb5654a9de02f5b2015a04, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  target: {fileID: 1954131168}
+  targetSerializeFieldName: 
+  targetSerializePropertyName: CursorInputType
+  targetSerializeGetMethodName: 
+  targetSerializeSetMethodName: 
+--- !u!114 &1700831818
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1700831815}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 45968578072108440a41d97e7f56d0f7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  key: AttackButton
+  tooltip: 
+  onUIChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  onValueChanged:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1700831817}
+        m_TargetAssemblyTypeName: Threeyes.ValueHolder.ReflectionValueHolder`1[[System.Enum,
+          mscorlib
+        m_MethodName: set_TargetPropertyValue
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  hasSetValue: 0
+  dataOption:
+    enumTypeFullName: AC_CursorInputType
+  serializeDefaultValue: MiddleButtonDownUp
+  serializePersistentValue: 
 --- !u!1 &1707228548
 GameObject:
   m_ObjectHideFlags: 0
@@ -3494,6 +3536,38 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1867875439}
   m_Mesh: {fileID: -2894733604542773250, guid: d1258fb325bd33e45aae61caba215d5f, type: 3}
+--- !u!1 &1886508230
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1886508231}
+  m_Layer: 0
+  m_Name: CIB Group
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1886508231
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1886508230}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 1954131167}
+  m_Father: {fileID: 0}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1938946617
 GameObject:
   m_ObjectHideFlags: 0
@@ -3577,6 +3651,117 @@ MonoBehaviour:
       z: 1
     m_MaintainPositionOffset: 0
     m_MaintainRotationOffset: 0
+--- !u!1 &1954131166
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1954131167}
+  - component: {fileID: 1954131168}
+  m_Layer: 0
+  m_Name: CIB Attack
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1954131167
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1954131166}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1886508231}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1954131168
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1954131166}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8c1f6b796b37caf40be60b57da32cd8f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  onPlayStop:
+    m_PersistentCalls:
+      m_Calls: []
+  onPlay:
+    m_PersistentCalls:
+      m_Calls: []
+  onStop:
+    m_PersistentCalls:
+      m_Calls: []
+  onActiveDeactive:
+    m_PersistentCalls:
+      m_Calls: []
+  isActive: 1
+  canPlay: 1
+  canStop: 1
+  isPlayOnAwake: 0
+  isPlayOnce: 0
+  isReverse: 0
+  listListener: []
+  isGroup: 0
+  isIncludeHide: 1
+  isRecursive: 0
+  id: 
+  isInvokeByID: 0
+  targetIDLocation: 1
+  targetId: 
+  isLogOnPlay: 0
+  isLogOnStop: 0
+  isPlayed: 0
+  state: -1
+  onPlayWithParam:
+    m_PersistentCalls:
+      m_Calls: []
+  onStopWithParam:
+    m_PersistentCalls:
+      m_Calls: []
+  isPlayWithParam: 0
+  isStopWithParam: 0
+  isDetectMatch: 0
+  goTarget: {fileID: 0}
+  soAction: {fileID: 0}
+  modifierKeys: 0
+  cursorInputType: 4
+  onButtonDownUp:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 2023584018}
+        m_TargetAssemblyTypeName: TearsOfTheKingdomLink_LinkController, Assembly-CSharp
+        m_MethodName: OnMouseButtonDownUp
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  onWheelScrollDownUp:
+    m_PersistentCalls:
+      m_Calls: []
+  onMove:
+    m_PersistentCalls:
+      m_Calls: []
+  onDragStartFinish:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &1959113133
 GameObject:
   m_ObjectHideFlags: 0
@@ -3679,7 +3864,8 @@ MonoBehaviour:
   goCucco: {fileID: 919132148906465151}
   idleThreshold: 0.2
   curMovingAnimationType: 0
-  isLastIdle: 0
+  isIdling: 0
+  isAttacking: 0
   isCuccoShowing: 0
 --- !u!114 &2023584019
 MonoBehaviour:

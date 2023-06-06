@@ -5,6 +5,9 @@ using UnityEngine;
 using UnityEngine.Animations.Rigging;
 public class TearsOfTheKingdomLink_LinkController : MonoBehaviour
 {
+    const string attackAnimationStateName = "Attack Blend";
+    const string attackTriggerParamName = "AttackTrigger";
+
     public Animator animator;
     public AC_ObjectMovement_FollowTarget objectMovement;
     public MultiParentConstraint multiParentConstraint_Sword;
@@ -15,7 +18,8 @@ public class TearsOfTheKingdomLink_LinkController : MonoBehaviour
 
     [Header("Runtime")]
     public MovingAnimationType curMovingAnimationType = MovingAnimationType.None;
-    public bool isLastIdle = false;
+    public bool isIdling = false;
+    public bool isAttacking = false;
     public bool isCuccoShowing = false;
     private void Start()
     {
@@ -24,64 +28,66 @@ public class TearsOfTheKingdomLink_LinkController : MonoBehaviour
     public void Update()
     {
         UpdateAnimationInfo();
-
         UpdateProps();
 
-
-        //LogCurrentClipName();
+        //LogCurrentClipNames();
     }
 
 
     AnimatorClipInfo[] arrClipInfo;
     void UpdateAnimationInfo()
     {
-        if (objectMovement.CurMoveSpeedPercent <= idleThreshold)
+         isIdling = objectMovement.CurMoveSpeedPercent <= idleThreshold;  //根据移动速度判断当前是否正在播放Idle动作（不设置为0可以增加流畅性）
+        isAttacking = animator.GetCurrentAnimatorStateInfo(0).shortNameHash == Animator.StringToHash(attackAnimationStateName);//检查攻击动画是否播放中
+
+
+        //#curMovingAnimationType
+        if (isIdling)
         {
             curMovingAnimationType = MovingAnimationType.None;
-            return;
         }
-
-        //只取第一个
-        arrClipInfo = animator.GetCurrentAnimatorClipInfo(0);
-        if (arrClipInfo.Length > 0)
+        else
         {
-            string clipName = arrClipInfo[0].clip.name;
-            if (clipName.Contains(MovingAnimationType.Run.ToString()))
+            //只取第一个
+            arrClipInfo = animator.GetCurrentAnimatorClipInfo(0);
+            if (arrClipInfo.Length > 0)
             {
-                curMovingAnimationType = MovingAnimationType.Run;
-            }
-            else if (clipName.Contains(MovingAnimationType.Hanging.ToString()))
-            {
-                curMovingAnimationType = MovingAnimationType.Hanging;
-            }
-            else if (clipName.Contains(MovingAnimationType.Skateboarding.ToString()))
-            {
-                curMovingAnimationType = MovingAnimationType.Skateboarding;
+                string clipName = arrClipInfo[0].clip.name;
+                if (clipName.Contains(MovingAnimationType.Run.ToString()))
+                {
+                    curMovingAnimationType = MovingAnimationType.Run;
+                }
+                else if (clipName.Contains(MovingAnimationType.Hanging.ToString()))
+                {
+                    curMovingAnimationType = MovingAnimationType.Hanging;
+                }
+                else if (clipName.Contains(MovingAnimationType.Skateboarding.ToString()))
+                {
+                    curMovingAnimationType = MovingAnimationType.Skateboarding;
+                }
             }
         }
     }
 
     void UpdateProps()
     {
-        //根据移动速度判断当前是否正在播放Idle动作（不设置为0可以增加流畅性）
-        bool isCurIdle = objectMovement.CurMoveSpeedPercent <= idleThreshold;
-
         ///Porps的MultiParentConstraint槽：
         ///-0：Hand（Idle）
         ///-1：Back（Move）
         ///-1：Toe（Move）
 
         //#Sword
+        bool isHoldingSword = isIdling || isAttacking;
         var sourceObjects_Sword = multiParentConstraint_Sword.data.sourceObjects;
-        sourceObjects_Sword.SetWeight(0, isCurIdle ? 1f : 0f);
-        sourceObjects_Sword.SetWeight(1, !isCurIdle ? 1f : 0f);
+        sourceObjects_Sword.SetWeight(0, isHoldingSword ? 1f : 0f);
+        sourceObjects_Sword.SetWeight(1, !isHoldingSword ? 1f : 0f);
         multiParentConstraint_Sword.data.sourceObjects = sourceObjects_Sword;
 
         //#Shield
         var sourceObjects_Shield = multiParentConstraint_Shield.data.sourceObjects;
-        sourceObjects_Shield.SetWeight(0, isCurIdle ? 1f : 0f);
-        sourceObjects_Shield.SetWeight(1, !isCurIdle && curMovingAnimationType != MovingAnimationType.Skateboarding ? 1f : 0f);
-        sourceObjects_Shield.SetWeight(2, !isCurIdle && curMovingAnimationType == MovingAnimationType.Skateboarding ? 1f : 0f);//盾滑时盾在脚下
+        sourceObjects_Shield.SetWeight(0, isIdling ? 1f : 0f);
+        sourceObjects_Shield.SetWeight(1, !isIdling && curMovingAnimationType != MovingAnimationType.Skateboarding ? 1f : 0f);
+        sourceObjects_Shield.SetWeight(2, !isIdling && curMovingAnimationType == MovingAnimationType.Skateboarding ? 1f : 0f);//盾滑时盾在脚下
         multiParentConstraint_Shield.data.sourceObjects = sourceObjects_Shield;
 
         //#Cucco (Show/Hide)
@@ -90,11 +96,6 @@ public class TearsOfTheKingdomLink_LinkController : MonoBehaviour
         else if (isCuccoShowing && curMovingAnimationType != MovingAnimationType.Hanging)
             HideCucco();
 
-        if (isCurIdle != isLastIdle)//Update on state changed
-        {
-            ///PS：上面的方法不能放到该块中，因为可能状态切换瞬间，枚举还未更新
-            isLastIdle = isCurIdle;
-        }
     }
     void ShowCucco()
     {
@@ -108,20 +109,33 @@ public class TearsOfTheKingdomLink_LinkController : MonoBehaviour
         isCuccoShowing = false;
     }
 
-    #region Debug
-    public void LogCurrentClipName()
+
+    #region Callback
+    public void OnMouseButtonDownUp(bool isDown)//Invoked by AC_CursorInputBehaviour.onButtonDownUp
     {
+        if (isDown)
+            animator.SetTrigger(attackTriggerParamName);
+        else
+            animator.ResetTrigger(attackTriggerParamName);
+    }
+    #endregion
+
+    #region Debug
+    public void LogCurrentClipNames()
+    {
+        AnimatorStateInfo animatorStateInfo = animator.GetCurrentAnimatorStateInfo(0);
+
         var arrClipInfo = animator.GetCurrentAnimatorClipInfo(0);
 
         //PS：可能有多个动画片段
         string info = "";
-        foreach (var clipInfo in arrClipInfo)
+        foreach (AnimatorClipInfo clipInfo in arrClipInfo)
         {
             if (info.NotNullOrEmpty())
                 info += " + ";
             info += clipInfo.clip.name;
         }
-        Debug.Log(info);
+        Debug.Log(animatorStateInfo.fullPathHash + "->" + info);
 
         //return arrClipInfo[0].clip.name;
     }
