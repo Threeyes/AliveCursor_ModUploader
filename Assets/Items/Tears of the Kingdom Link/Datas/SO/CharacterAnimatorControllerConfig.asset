@@ -33,7 +33,7 @@ MonoBehaviour:
     - paramName: AttackRandom
       totalAnimation: 5
       defaultValue: 0
-      changeAtRuntime: 1
+      changeAtRuntime: 0
       changeOnMove: 1
       changIntervalRange: {x: 5, y: 10}
       preciseValue: 1

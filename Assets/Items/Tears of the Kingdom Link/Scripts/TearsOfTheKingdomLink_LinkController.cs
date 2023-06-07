@@ -9,6 +9,7 @@ public class TearsOfTheKingdomLink_LinkController : MonoBehaviour
     const string attackTriggerParamName = "AttackTrigger";
 
     public Animator animator;
+    public AC_CharacterAnimatorController characterAnimatorController;
     public AC_ObjectMovement_FollowTarget objectMovement;
     public MultiParentConstraint multiParentConstraint_Sword;
     public MultiParentConstraint multiParentConstraint_Shield;
@@ -37,7 +38,7 @@ public class TearsOfTheKingdomLink_LinkController : MonoBehaviour
     AnimatorClipInfo[] arrClipInfo;
     void UpdateAnimationInfo()
     {
-         isIdling = objectMovement.CurMoveSpeedPercent <= idleThreshold;  //根据移动速度判断当前是否正在播放Idle动作（不设置为0可以增加流畅性）
+        isIdling = objectMovement.CurMoveSpeedPercent <= idleThreshold;  //根据移动速度判断当前是否正在播放Idle动作（不设置为0可以增加流畅性）
         isAttacking = animator.GetCurrentAnimatorStateInfo(0).shortNameHash == Animator.StringToHash(attackAnimationStateName);//检查攻击动画是否播放中
 
 
@@ -114,9 +115,17 @@ public class TearsOfTheKingdomLink_LinkController : MonoBehaviour
     public void OnMouseButtonDownUp(bool isDown)//Invoked by AC_CursorInputBehaviour.onButtonDownUp
     {
         if (isDown)
+        {
+            //Manual Update Random value before attack begin (Set new random animation)
+            if (characterAnimatorController.Config.listRandomParamInfo.Count > 2)
+            {
+                characterAnimatorController.Config.listRandomParamInfo[2].SetRandomValue();
+            }
             animator.SetTrigger(attackTriggerParamName);
+        }
         else
-            animator.ResetTrigger(attackTriggerParamName);
+        {
+        }
     }
     #endregion
 
