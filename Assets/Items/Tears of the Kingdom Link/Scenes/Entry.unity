@@ -241,7 +241,7 @@ Transform:
   - {fileID: 735775059}
   - {fileID: 655228803}
   m_Father: {fileID: 306084039}
-  m_RootOrder: 5
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &138932235
 MonoBehaviour:
@@ -601,10 +601,10 @@ Transform:
   - {fileID: 1200127902}
   - {fileID: 862038305}
   - {fileID: 1807716646}
+  - {fileID: 1938946618}
   - {fileID: 1298370927}
   - {fileID: 971767705}
   - {fileID: 138932234}
-  - {fileID: 1938946618}
   m_Father: {fileID: 543450652490883366}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -673,10 +673,10 @@ MonoBehaviour:
     localUpAxis: {x: 0, y: 0, z: -1}
     isInstantRotate: 1
     rotateSpeed: 360
+    stoppingDistance: 0.01
   soOverrideConfig: {fileID: 0}
   tfPosTarget: {fileID: 1799842586}
   tfLookTarget: {fileID: 1799842586}
-  stoppingDistance: 0.01
 --- !u!114 &351688546
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -812,7 +812,7 @@ MonoBehaviour:
     m_Source: {fileID: 98252943206780760}
     m_DampPosition: 0
     m_DampRotation: 0.5
-    m_MaintainAim: 0
+    m_MaintainAim: 1
 --- !u!1 &498967165
 GameObject:
   m_ObjectHideFlags: 0
@@ -1075,7 +1075,7 @@ MonoBehaviour:
     m_Source: {fileID: 8865187345941155621}
     m_DampPosition: 0
     m_DampRotation: 0.5
-    m_MaintainAim: 0
+    m_MaintainAim: 1
 --- !u!1 &564189074
 GameObject:
   m_ObjectHideFlags: 0
@@ -1362,7 +1362,7 @@ MonoBehaviour:
     m_Source: {fileID: 6001693572353117578}
     m_DampPosition: 0
     m_DampRotation: 0.5
-    m_MaintainAim: 0
+    m_MaintainAim: 1
 --- !u!1 &751558023
 GameObject:
   m_ObjectHideFlags: 0
@@ -1742,7 +1742,7 @@ MonoBehaviour:
     m_Source: {fileID: 4690914343958716948}
     m_DampPosition: 0
     m_DampRotation: 0.5
-    m_MaintainAim: 0
+    m_MaintainAim: 1
 --- !u!1 &914578321
 GameObject:
   m_ObjectHideFlags: 0
@@ -1808,7 +1808,7 @@ Transform:
   - {fileID: 475416394}
   - {fileID: 1380457769}
   m_Father: {fileID: 306084039}
-  m_RootOrder: 4
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &988000001
 PrefabInstance:
@@ -1992,7 +1992,7 @@ MonoBehaviour:
     m_Source: {fileID: 8865187345941155621}
     m_DampPosition: 0
     m_DampRotation: 0.5
-    m_MaintainAim: 0
+    m_MaintainAim: 1
 --- !u!1 &1122954024
 GameObject:
   m_ObjectHideFlags: 0
@@ -2043,7 +2043,7 @@ MonoBehaviour:
     m_Source: {fileID: 8865187345941155621}
     m_DampPosition: 0
     m_DampRotation: 0.5
-    m_MaintainAim: 0
+    m_MaintainAim: 1
 --- !u!1 &1142522264
 GameObject:
   m_ObjectHideFlags: 0
@@ -2408,7 +2408,7 @@ Transform:
   - {fileID: 680702696}
   - {fileID: 734916027}
   m_Father: {fileID: 306084039}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1326917867
 GameObject:
@@ -2673,7 +2673,7 @@ MonoBehaviour:
     m_Source: {fileID: 8865187345941155621}
     m_DampPosition: 0
     m_DampRotation: 0.5
-    m_MaintainAim: 0
+    m_MaintainAim: 1
 --- !u!1 &1404621539
 GameObject:
   m_ObjectHideFlags: 0
@@ -3596,7 +3596,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 306084039}
-  m_RootOrder: 6
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1938946619
 MonoBehaviour:

@@ -17,6 +17,11 @@ ModelImporter:
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
+      name: body_colour.001
+    second: {fileID: 2100000, guid: a24834811e5c6654ba070e5cc6067e3c, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
       name: comb_material
     second: {fileID: 2100000, guid: e3a07d674fd7af347970af2002622699, type: 2}
   - first:
