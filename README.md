@@ -2,7 +2,7 @@
 
 ## Introduction
 I create this sample project to upload mods to [Steam Workshop](https://steamcommunity.com/profiles/76561199378980403/myworkshopfiles/?appid=1606490) for my indie Steam App [AliveCursor](https://store.steampowered.com/app/1606490/_/) using [AliveCursorSDK](https://github.com/Threeyes/AliveCursorSDK).
-This project aimed for demonstrating how to using Components or Scripts to bring diffenent kinds of models alive. 
+This project aimed for demonstrating how to using Plugins or custom Scripts to bring diffenent kinds of models alive. 
 
 The items inside this project are for experimental purposes only, which will get updated frequently, may incompatible with old config data, so they may be imperfect for users. Think of this project as a tutorial, it won't cover every aspect but it will be a good start.
 
@@ -26,7 +26,7 @@ The items inside this project are for experimental purposes only, which will get
 
 <a href="https://steamcommunity.com/sharedfiles/filedetails/?id=2847246006"><img src="https://github.com/Threeyes/AliveCursor_ModUploader/wiki/images/readme/IcoSphere AudioVisualizer.gif" height="256" width="256" ></a>
 
-* **Billboard**: Using Cloth Component for simulating fabrics, also provide customize pictures and text to user.
+* **Billboard**: Using [Cloth](https://docs.unity3d.com/Manual/class-Cloth.html) Component for simulating fabrics, also provide customize pictures and text to user.
 
 <a href="https://steamcommunity.com/sharedfiles/filedetails/?id=2859024943"><img src="https://github.com/Threeyes/AliveCursor_ModUploader/wiki/images/readme/Billboard.gif" height="256" width="256" ></a>
 
@@ -42,15 +42,9 @@ The items inside this project are for experimental purposes only, which will get
 
 <a href="https://steamcommunity.com/sharedfiles/filedetails/?id=2857203254"><img src="https://github.com/Threeyes/AliveCursor_ModUploader/wiki/images/readme/Physics Liquid.gif" height="256" width="256" ></a>
 
-* **Snake**: Using [Animation Rigging](https://docs.unity3d.com/Packages/com.unity.animation.rigging@1.1/manual/index.html) plugin to create animal with dynamic joints.
+* **Snake**: Using [Animation Rigging](https://docs.unity3d.com/Packages/com.unity.animation.rigging@1.1/manual/index.html) plugin to create procedural joints.
 
 <a href="https://steamcommunity.com/sharedfiles/filedetails/?id=2847247577"><img src="https://github.com/Threeyes/AliveCursor_ModUploader/wiki/images/readme/Snake.gif" height="256" width="256" ></a>
-
-* **Spider/Hand/Robotic Hand**: Create procedural spider-like creature such as ghost hand, which can response to system audio.
-
-<a href="https://steamcommunity.com/sharedfiles/filedetails/?id=2868053102"><img src="https://github.com/Threeyes/AliveCursor_ModUploader/wiki/images/readme/Spider.gif" height="256" width="256" ></a>
-<a href="https://steamcommunity.com/sharedfiles/filedetails/?id=2879016434"><img src="https://github.com/Threeyes/AliveCursor_ModUploader/wiki/images/readme/Hand.gif" height="256" width="256" ></a>
-<a href="https://steamcommunity.com/sharedfiles/filedetails/?id=2914862770"><img src="https://github.com/Threeyes/AliveCursor_ModUploader/wiki/images/readme/Robotic Hand.gif" height="256" width="256" ></a>
 
 * **Master Chief**: Using other fun models (such as crosshair or knife) to replace cursor.
 
@@ -59,6 +53,14 @@ The items inside this project are for experimental purposes only, which will get
 * **Balloon**: Generate random objects.
 
 <a href="https://steamcommunity.com/sharedfiles/filedetails/?id=2847245294"><img src="https://github.com/Threeyes/AliveCursor_ModUploader/wiki/images/readme/Balloon.gif" height="256" width="256" ></a>
+
+## Example (Complex)
+
+* **Spider/Hand/Robotic Hand**: Create procedural spider-like creature such as ghost hand, which can response to system audio.
+
+<a href="https://steamcommunity.com/sharedfiles/filedetails/?id=2868053102"><img src="https://github.com/Threeyes/AliveCursor_ModUploader/wiki/images/readme/Spider.gif" height="256" width="256" ></a>
+<a href="https://steamcommunity.com/sharedfiles/filedetails/?id=2879016434"><img src="https://github.com/Threeyes/AliveCursor_ModUploader/wiki/images/readme/Hand.gif" height="256" width="256" ></a>
+<a href="https://steamcommunity.com/sharedfiles/filedetails/?id=2914862770"><img src="https://github.com/Threeyes/AliveCursor_ModUploader/wiki/images/readme/Robotic Hand.gif" height="256" width="256" ></a>
 
 ## Note
 + Always make sure that you have imported the latest simulator resources, see more info on [wiki](https://github.com/Threeyes/AliveCursorSDK/wiki/Setup-SDK).
