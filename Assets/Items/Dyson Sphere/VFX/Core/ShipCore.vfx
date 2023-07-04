@@ -209,14 +209,13 @@ MonoBehaviour:
     enumValues: []
     descendantCount: 0
   m_ImportDependencies: []
-  m_GraphVersion: 6
+  m_GraphVersion: 12
   m_ResourceVersion: 1
-  m_saved: 1
   m_SubgraphDependencies:
   - {fileID: 8926484042661614526, guid: 049cc134d7f1f16409be8d1a6c6ed112, type: 3}
   - {fileID: 8926484042661614526, guid: e18ff24922338944aac6f6eb1ca45c56, type: 3}
   - {fileID: 8926484042661614526, guid: d19bed95ca138a74882c90863f5bef14, type: 3}
-  - {fileID: 5371698745253816930, guid: 031c735315b2a38449661dc37bb95135, type: 3}
+  - {fileID: 0}
   m_CategoryPath: 
 --- !u!2058629511 &8926484042661614527
 VisualEffectResource:
@@ -238,6 +237,8 @@ VisualEffectResource:
     m_PreWarmDeltaTime: 0.1
     m_PreWarmStepCount: 20
     m_InitialEventName: OnPlay
+    m_InstancingMode: -1
+    m_InstancingCapacity: 64
 --- !u!114 &8926484042661620398
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3562,7 +3563,7 @@ MonoBehaviour:
   - {fileID: 8926484042661623856}
   m_OutputSlots: []
   m_Label: 
-  m_Data: {fileID: 8926484042661623761}
+  m_Data: {fileID: 0}
   m_InputFlowSlot:
   - link: []
   - link: []
@@ -3724,7 +3725,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_UIIgnoredErrors: []
-  m_Parent: {fileID: 114350483966674976}
+  m_Parent: {fileID: 0}
   m_Children: []
   m_UIPosition: {x: 0, y: 0}
   m_UICollapsed: 1
@@ -3732,7 +3733,6 @@ MonoBehaviour:
   title: 
   m_Owners:
   - {fileID: 8926484042661623631}
-  - {fileID: 8926484042661623732}
 --- !u!114 &8926484042661623762
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3746,7 +3746,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_UIIgnoredErrors: []
-  m_Parent: {fileID: 114350483966674976}
+  m_Parent: {fileID: 0}
   m_Children: []
   m_UIPosition: {x: 0, y: 0}
   m_UICollapsed: 1

@@ -78,3 +78,7 @@ crashlytics-build.properties
 
 #Umod 文件
 umod-*.pdb
+
+#AliveCursorSDK 文件
+/Assets/Samples/AliveCursorSDK
+/Assets/Samples/AliveCursorSDK.meta
