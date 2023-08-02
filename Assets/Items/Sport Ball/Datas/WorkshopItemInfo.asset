@@ -19,11 +19,11 @@ MonoBehaviour:
     modelLink: https://sketchfab.com/3d-models/golf-ball-b0b50a16aa5d431e8ed799c1a413025c\n"
   texturePreview: {fileID: 2800000, guid: be0d71be1d9b2a84d9ac32a7ab0d9192, type: 3}
   itemVisibility: 0
+  itemName: Sport Ball
+  itemId: 2848013234
   ageRatingType: 1
   itemStyle: 128
   itemGenre: 0
   itemReference: 0
   itemFeature: 0
   itemSafety: 0
-  itemName: Sport Ball
-  itemId: 2848013234

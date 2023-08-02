@@ -17,11 +17,11 @@ MonoBehaviour:
     link:https://assetstore.unity.com/packages/3d/characters/robots/spider-orange-181154"
   texturePreview: {fileID: 2800000, guid: 6390b2b3ca41b0a45aa36910c0847aac, type: 3}
   itemVisibility: 0
+  itemName: Spider
+  itemId: 2868053102
   ageRatingType: 1
   itemStyle: 1
   itemGenre: 0
   itemReference: 64
   itemFeature: 2
   itemSafety: 0
-  itemName: Spider
-  itemId: 2868053102

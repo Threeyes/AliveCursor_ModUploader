@@ -19,11 +19,11 @@ MonoBehaviour:
     Link: https://polyhaven.com/zh/a/neon_photostudio"
   texturePreview: {fileID: 2800000, guid: 36b85cc4492f0d64ab401b8fd7b647dd, type: 3}
   itemVisibility: 0
+  itemName: Disco Ball
+  itemId: 2849443075
   ageRatingType: 1
   itemStyle: 0
   itemGenre: 0
   itemReference: 0
   itemFeature: 2
   itemSafety: 1
-  itemName: Disco Ball
-  itemId: 2849443075

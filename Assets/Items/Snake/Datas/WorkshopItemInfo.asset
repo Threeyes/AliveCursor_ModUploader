@@ -16,11 +16,11 @@ MonoBehaviour:
   description: "It's a little snake, hope that you don't find it creepy (\xB4\u2200\uFF40\uFF09!"
   texturePreview: {fileID: 2800000, guid: 36c0e7a252f8de6458cd545c508c76d1, type: 3}
   itemVisibility: 0
+  itemName: Snake
+  itemId: 2847247577
   ageRatingType: 1
   itemStyle: 1
   itemGenre: 512
   itemReference: 0
   itemFeature: 0
   itemSafety: 1
-  itemName: Snake
-  itemId: 2847247577

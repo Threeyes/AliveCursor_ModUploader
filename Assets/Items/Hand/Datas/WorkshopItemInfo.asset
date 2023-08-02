@@ -19,11 +19,11 @@ MonoBehaviour:
     Asset link:https://assetstore.unity.com/packages/3d/characters/stylized-simple-hands-221297'
   texturePreview: {fileID: 2800000, guid: f041982f6183e6f4aadce2431aa98b39, type: 3}
   itemVisibility: 0
+  itemName: Hand
+  itemId: 2879016434
   ageRatingType: 1
   itemStyle: 2
   itemGenre: 4
   itemReference: 64
   itemFeature: 2
   itemSafety: 0
-  itemName: Hand
-  itemId: 2879016434

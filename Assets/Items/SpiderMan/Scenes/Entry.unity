@@ -491,7 +491,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   animator: {fileID: 330692430}
-  objectMovement: {fileID: 0}
+  objectMovement: {fileID: 351688544}
   tfWebShooter: {fileID: 772368182}
   tfWebLineGroup: {fileID: 81768435}
   goPreWeb: {fileID: 8765172285976153728, guid: cd3c29c2f092d664cafaeceda47812d5,

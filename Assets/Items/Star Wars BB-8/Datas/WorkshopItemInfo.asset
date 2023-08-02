@@ -16,11 +16,11 @@ MonoBehaviour:
   description: ModelLink:https://skfb.ly/HCNs
   texturePreview: {fileID: 2800000, guid: 09112c3004d3cb841b1f4f7fc397efa1, type: 3}
   itemVisibility: 0
+  itemName: Star Wars BB-8
+  itemId: 2958357669
   ageRatingType: 1
   itemStyle: 16
   itemGenre: 2
   itemReference: 2
   itemFeature: 0
   itemSafety: 1
-  itemName: Star Wars BB-8
-  itemId: 2958357669

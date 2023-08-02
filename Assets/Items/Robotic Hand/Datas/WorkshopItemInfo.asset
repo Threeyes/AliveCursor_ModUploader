@@ -19,11 +19,11 @@ MonoBehaviour:
     Model Link: https://skfb.ly/6XLBS'
   texturePreview: {fileID: 2800000, guid: 523df307aaae81847bdbeda1e17ad12e, type: 3}
   itemVisibility: 0
+  itemName: Robotic Hand
+  itemId: 2914862770
   ageRatingType: 1
   itemStyle: 16
   itemGenre: 2
   itemReference: 0
   itemFeature: 2
   itemSafety: 0
-  itemName: Robotic Hand
-  itemId: 2914862770
