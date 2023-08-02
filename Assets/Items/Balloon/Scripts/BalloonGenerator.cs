@@ -1,11 +1,11 @@
 using Newtonsoft.Json;
 using System.Collections;
 using UnityEngine;
-
+using Threeyes.Steamworks;
 /// <summary>
 /// Todo：改为通用的生成器，放到SDK中
 /// </summary>
-public class BalloonGenerator : AC_ObjectGenerator
+public class BalloonGenerator : ObjectGenerator
 {
 	public BoolEvent onSimulateKeyClick;//Simulate the target key get pressed
 

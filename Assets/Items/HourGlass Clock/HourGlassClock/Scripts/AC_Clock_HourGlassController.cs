@@ -1,13 +1,14 @@
 using DG.Tweening;
 using System;
 using UnityEngine;
+using Threeyes.Steamworks;
 
-public class AC_Clock_HourGlassController : AC_ClockController
+public class AC_Clock_HourGlassController : ClockController
 {
     [Header("Custom")]
     public Transform tfSecondPivot;//Pivot of the second
-    public AC_LiquidController liquidSecondTop;
-    public AC_LiquidController liquidSecondBottom;
+    public LiquidController liquidSecondTop;
+    public LiquidController liquidSecondBottom;
 
     public GameObject sandFallingHour;
     public GameObject sandFallingMinute;

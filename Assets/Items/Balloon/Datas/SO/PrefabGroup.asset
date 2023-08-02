@@ -9,7 +9,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 243ad5868cf1d6d49bd55b19e26101bd, type: 3}
+  m_Script: {fileID: 11500000, guid: 3fbcd10c1d619cf4fb01817227e8dff3, type: 3}
   m_Name: PrefabGroup
   m_EditorClassIdentifier: 
   listData:

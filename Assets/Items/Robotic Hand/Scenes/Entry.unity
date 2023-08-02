@@ -104,7 +104,7 @@ NavMeshSettings:
   serializedVersion: 2
   m_ObjectHideFlags: 0
   m_BuildSettings:
-    serializedVersion: 2
+    serializedVersion: 3
     agentTypeID: 0
     agentRadius: 0.5
     agentHeight: 2
@@ -117,7 +117,7 @@ NavMeshSettings:
     cellSize: 0.16666667
     manualTileSize: 0
     tileSize: 256
-    accuratePlacement: 0
+    buildHeightMesh: 0
     maxJobWorkers: 0
     preserveTilesOutsideBounds: 0
     debug:
@@ -225,7 +225,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 209483484}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2d4edc03063c52f46a586045a40caa0a, type: 3}
+  m_Script: {fileID: 11500000, guid: f3490f96f33adc04a9f4147670bdeec7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   defaultConfig:
@@ -342,6 +342,7 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
+    serializedVersion: 3
     m_TransformParent: {fileID: 557360111}
     m_Modifications:
     - target: {fileID: 955969844067918127, guid: 343789124739c054385817d9dedd8abd,
@@ -430,6 +431,9 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 343789124739c054385817d9dedd8abd, type: 3}
 --- !u!4 &270789180 stripped
 Transform:
@@ -534,7 +538,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 511059329}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 650e4965d97192845b8ed3b2c875169b, type: 3}
+  m_Script: {fileID: 11500000, guid: a8a2f08dde3659345bd4ab2b9877c308, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   comp: {fileID: 130928689}
@@ -546,13 +550,12 @@ MonoBehaviour:
   tweenDuration: 0.04
   easeLegUp: 3
   easeLegDown: 2
+  targetPos: {x: 0, y: 0, z: 0}
   curDistance: 0
   isExcessive: 0
   isMoving: 0
-  targetPos: {x: 0, y: 0, z: 0}
   tfModelBody: {fileID: 0}
   localPivotPos: {x: 0, y: 0, z: 0}
-  settingCursorSize: 1
   gizmosRadius: 0.1
   gizmosShowDistance: 0
 --- !u!1 &557360110
@@ -626,7 +629,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 587797777}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.409, y: -0, z: 0.124}
+  m_LocalPosition: {x: -0.372, y: 0, z: 0.047}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -642,7 +645,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 587797777}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 650e4965d97192845b8ed3b2c875169b, type: 3}
+  m_Script: {fileID: 11500000, guid: a8a2f08dde3659345bd4ab2b9877c308, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   comp: {fileID: 831615054}
@@ -654,13 +657,12 @@ MonoBehaviour:
   tweenDuration: 0.04
   easeLegUp: 3
   easeLegDown: 2
+  targetPos: {x: 0, y: 0, z: 0}
   curDistance: 0
   isExcessive: 0
   isMoving: 0
-  targetPos: {x: 0, y: 0, z: 0}
   tfModelBody: {fileID: 0}
   localPivotPos: {x: 0, y: 0, z: 0}
-  settingCursorSize: 1
   gizmosRadius: 0.1
   gizmosShowDistance: 1
 --- !u!1 &831615052
@@ -1187,7 +1189,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1472720471}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 650e4965d97192845b8ed3b2c875169b, type: 3}
+  m_Script: {fileID: 11500000, guid: a8a2f08dde3659345bd4ab2b9877c308, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   comp: {fileID: 227764583}
@@ -1199,13 +1201,12 @@ MonoBehaviour:
   tweenDuration: 0.04
   easeLegUp: 3
   easeLegDown: 2
+  targetPos: {x: 0, y: 0, z: 0}
   curDistance: 0
   isExcessive: 0
   isMoving: 0
-  targetPos: {x: 0, y: 0, z: 0}
   tfModelBody: {fileID: 0}
   localPivotPos: {x: 0, y: 0, z: 0}
-  settingCursorSize: 1
   gizmosRadius: 0.1
   gizmosShowDistance: 0
 --- !u!1 &1479836409
@@ -1387,7 +1388,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1596290021}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 650e4965d97192845b8ed3b2c875169b, type: 3}
+  m_Script: {fileID: 11500000, guid: a8a2f08dde3659345bd4ab2b9877c308, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   comp: {fileID: 1187991103}
@@ -1399,13 +1400,12 @@ MonoBehaviour:
   tweenDuration: 0.04
   easeLegUp: 3
   easeLegDown: 2
+  targetPos: {x: 0, y: 0, z: 0}
   curDistance: 0
   isExcessive: 0
   isMoving: 0
-  targetPos: {x: 0, y: 0, z: 0}
   tfModelBody: {fileID: 0}
   localPivotPos: {x: 0, y: 0, z: 0}
-  settingCursorSize: 1
   gizmosRadius: 0.1
   gizmosShowDistance: 0
 --- !u!1 &1715835906
@@ -1458,6 +1458,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   tfParent: {fileID: 1740733416}
   creeperTransformController: {fileID: 209483486}
+  baseScale: 1
 --- !u!114 &1715835909
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1476,7 +1477,7 @@ MonoBehaviour:
   m_Effectors: []
 --- !u!95 &1715835910
 Animator:
-  serializedVersion: 4
+  serializedVersion: 5
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -1493,7 +1494,8 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &1740733415
 GameObject:
   m_ObjectHideFlags: 0
@@ -1577,7 +1579,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1763492740}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 84ec0849506ecda4bb3a3ad6f5f69d35, type: 3}
+  m_Script: {fileID: 11500000, guid: 2f1d6029eb1e9b44896cb788f19791cc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   defaultConfig:
@@ -1711,7 +1713,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1945003508}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 650e4965d97192845b8ed3b2c875169b, type: 3}
+  m_Script: {fileID: 11500000, guid: a8a2f08dde3659345bd4ab2b9877c308, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   comp: {fileID: 1218589831}
@@ -1723,13 +1725,12 @@ MonoBehaviour:
   tweenDuration: 0.04
   easeLegUp: 3
   easeLegDown: 2
+  targetPos: {x: 0, y: 0, z: 0}
   curDistance: 0
   isExcessive: 0
   isMoving: 0
-  targetPos: {x: 0, y: 0, z: 0}
   tfModelBody: {fileID: 0}
   localPivotPos: {x: 0, y: 0, z: 0}
-  settingCursorSize: 1
   gizmosRadius: 0.1
   gizmosShowDistance: 0
 --- !u!1 &2003175610
@@ -4107,15 +4108,15 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4192596988856386208}
-  m_LocalRotation: {x: 0.19324765, y: 0.08216962, z: -0.17092842, w: 0.9626459}
-  m_LocalPosition: {x: 0.000000029802322, y: 0.765141, z: 0.000000022351742}
+  m_LocalRotation: {x: 0.2804957, y: 0.07267332, z: -0.1551683, w: 0.9444382}
+  m_LocalPosition: {x: 0.000013902783, y: 0.7651242, z: 0.000024676323}
   m_LocalScale: {x: 0.99999994, y: 0.99999994, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 5440510242406920506}
   m_Father: {fileID: 8333526252643441546}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 9.669, y: 8.364, z: 1.91}
+  m_LocalEulerAnglesHint: {x: 33.53, y: 3.454, z: -17.62}
 --- !u!1 &4356877828661245677
 GameObject:
   m_ObjectHideFlags: 0
@@ -4462,15 +4463,15 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3243774061803671307}
-  m_LocalRotation: {x: 0.6845847, y: 0.36987838, z: -0.27996758, w: 0.56227404}
-  m_LocalPosition: {x: -0.000000088475645, y: 0.73371625, z: 0.00000014528632}
+  m_LocalRotation: {x: 0.6982898, y: 0.33671027, z: -0.17831536, w: 0.6059879}
+  m_LocalPosition: {x: 0.000003650785, y: 0.7337248, z: 0.000007867813}
   m_LocalScale: {x: 0.9999999, y: 0.99999994, z: 1.0000001}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 6122571154626360793}
   m_Father: {fileID: 4356641071238279780}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 77.676, y: -188.792, z: -243.84799}
+  m_LocalEulerAnglesHint: {x: 75.103, y: -218.221, z: -261.31702}
 --- !u!1 &5471634688830773246
 GameObject:
   m_ObjectHideFlags: 0

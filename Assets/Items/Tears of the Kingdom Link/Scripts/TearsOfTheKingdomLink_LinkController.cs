@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using Threeyes.Steamworks;
 using UnityEngine;
 using UnityEngine.Animations.Rigging;
 public class TearsOfTheKingdomLink_LinkController : MonoBehaviour
@@ -9,8 +10,8 @@ public class TearsOfTheKingdomLink_LinkController : MonoBehaviour
     const string attackTriggerParamName = "AttackTrigger";
 
     public Animator animator;
-    public AC_CharacterAnimatorController characterAnimatorController;
-    public AC_ObjectMovement_FollowTarget objectMovement;
+    public CharacterAnimatorController characterAnimatorController;
+    public ObjectMovement_FollowTarget objectMovement;
     public MultiParentConstraint multiParentConstraint_Sword;
     public MultiParentConstraint multiParentConstraint_Shield;
     public GameObject goCucco;

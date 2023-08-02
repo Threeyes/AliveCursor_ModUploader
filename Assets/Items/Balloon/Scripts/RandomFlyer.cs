@@ -4,11 +4,12 @@ using UnityEngine;
 using UnityEngine.Events;
 using DG.Tweening;
 using Newtonsoft.Json;
+using Threeyes.Steamworks;
 
 /// <summary>
 /// 在场景中随机飞行的物体
 /// </summary>
-public class RandomFlyer : AC_GenerableObject<RandomFlyer.ConfigInfo>
+public class RandomFlyer : GenerableObject<RandomFlyer.ConfigInfo>
 {
 	public Rigidbody rig;
 	public MeshRenderer meshRenderer;

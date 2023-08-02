@@ -240,7 +240,7 @@ MonoBehaviour:
     isCompleteOnKill: 0
     option:
       onlyChangeAlpha: 0
-    endValueEx: {r: 0, g: 2.9960785, b: 2.0078433, a: 1}
+    endValueEx: {r: 0, g: 1.4980392, b: 1.3006182, a: 1}
   exitConfig:
     endValue: {r: 0, g: 0, b: 0, a: 0}
     duration: 0.2

@@ -104,7 +104,7 @@ NavMeshSettings:
   serializedVersion: 2
   m_ObjectHideFlags: 0
   m_BuildSettings:
-    serializedVersion: 2
+    serializedVersion: 3
     agentTypeID: 0
     agentRadius: 0.5
     agentHeight: 2
@@ -117,7 +117,7 @@ NavMeshSettings:
     cellSize: 0.16666667
     manualTileSize: 0
     tileSize: 256
-    accuratePlacement: 0
+    buildHeightMesh: 0
     maxJobWorkers: 0
     preserveTilesOutsideBounds: 0
     debug:
@@ -784,7 +784,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1731522096}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4f971cd1490d33b4ea7830a8d3a34dc6, type: 3}
+  m_Script: {fileID: 11500000, guid: 21f43089e4d498b4f9e86ca7f221f017, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   defaultConfig:

@@ -1,9 +1,10 @@
 using System.Collections;
 using System.Collections.Generic;
+using Threeyes.Steamworks;
 using UnityEngine;
 
 public class ZhiYinHair_Controller : MonoBehaviour
-        , IAC_SystemAudio_RawSampleDataChangedHandler
+        , IHubSystemAudio_RawSampleDataChangedHandler
 {
     public AC_HairInstanceController hairInstanceController;
     #region Callback

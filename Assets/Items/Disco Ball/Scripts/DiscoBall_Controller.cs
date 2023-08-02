@@ -1,7 +1,8 @@
+using Threeyes.Steamworks;
 using UnityEngine;
 
 public class DiscoBall_Controller : MonoBehaviour
-    , IAC_SystemAudio_RawSampleDataChangedHandler
+    , IHubSystemAudio_RawSampleDataChangedHandler
 {
     public Light lightRed;
     public Light lightGreen;

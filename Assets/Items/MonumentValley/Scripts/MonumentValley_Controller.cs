@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Threeyes.Steamworks;
 /// <summary>
 /// 
 /// 
@@ -12,7 +13,7 @@ using UnityEngine;
 /// 非指针头单元：随声音律动
 /// </summary>
 public class MonumentValley_Controller : MonoBehaviour
-    , IAC_SystemAudio_SpectrumDataChangedHandler
+    , IHubSystemAudio_SpectrumDataChangedHandler
 {
     public bool ResponseToAudio { get { return responseToAudio; } set { responseToAudio = value; } }
     bool responseToAudio = true;

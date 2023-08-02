@@ -9,7 +9,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: eef4ee4ba6af5014790d4eda4b052483, type: 3}
+  m_Script: {fileID: 11500000, guid: a44ac30dc92a3474486329327da16060, type: 3}
   m_Name: ClockControllerConfig
   m_EditorClassIdentifier: 
   config:

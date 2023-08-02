@@ -1,13 +1,14 @@
 using Newtonsoft.Json;
 using System.Collections;
 using System.Collections.Generic;
+using Threeyes.Steamworks;
 using UnityEngine;
 /// <summary>
 /// 功能：
 /// -更新LineRenderer
 /// -延迟销毁
 /// </summary>
-public class SpiderMan_WebLine : AC_GenerableObject<SpiderMan_WebLine.ConfigInfo>
+public class SpiderMan_WebLine : GenerableObject<SpiderMan_WebLine.ConfigInfo>
 {
 	public LineRenderer lineRenderer;
 	public Transform tfRoot;

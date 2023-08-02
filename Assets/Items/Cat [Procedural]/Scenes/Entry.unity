@@ -104,7 +104,7 @@ NavMeshSettings:
   serializedVersion: 2
   m_ObjectHideFlags: 0
   m_BuildSettings:
-    serializedVersion: 2
+    serializedVersion: 3
     agentTypeID: 0
     agentRadius: 0.5
     agentHeight: 2
@@ -117,7 +117,7 @@ NavMeshSettings:
     cellSize: 0.16666667
     manualTileSize: 0
     tileSize: 256
-    accuratePlacement: 0
+    buildHeightMesh: 0
     maxJobWorkers: 0
     preserveTilesOutsideBounds: 0
     debug:
@@ -313,7 +313,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 302994956}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 650e4965d97192845b8ed3b2c875169b, type: 3}
+  m_Script: {fileID: 11500000, guid: a8a2f08dde3659345bd4ab2b9877c308, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   comp: {fileID: 1246859637}
@@ -325,13 +325,12 @@ MonoBehaviour:
   tweenDuration: 0.08
   easeLegUp: 3
   easeLegDown: 2
+  targetPos: {x: 0, y: 0, z: 0}
   curDistance: 0
   isExcessive: 0
   isMoving: 0
-  targetPos: {x: 0, y: 0, z: 0}
   tfModelBody: {fileID: 0}
   localPivotPos: {x: 0, y: 0, z: 0}
-  settingCursorSize: 1
   gizmosRadius: 0.1
   gizmosShowDistance: 0
 --- !u!1 &372903989
@@ -793,7 +792,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 599853276}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 650e4965d97192845b8ed3b2c875169b, type: 3}
+  m_Script: {fileID: 11500000, guid: a8a2f08dde3659345bd4ab2b9877c308, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   comp: {fileID: 1628316389}
@@ -805,13 +804,12 @@ MonoBehaviour:
   tweenDuration: 0.08
   easeLegUp: 3
   easeLegDown: 2
+  targetPos: {x: 0, y: 0, z: 0}
   curDistance: 0
   isExcessive: 0
   isMoving: 0
-  targetPos: {x: 0, y: 0, z: 0}
   tfModelBody: {fileID: 0}
   localPivotPos: {x: 0, y: 0, z: 0}
-  settingCursorSize: 1
   gizmosRadius: 0.1
   gizmosShowDistance: 0
 --- !u!1 &626671151 stripped
@@ -1037,6 +1035,7 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
+    serializedVersion: 3
     m_TransformParent: {fileID: 1840926128}
     m_Modifications:
     - target: {fileID: -8679921383154817045, guid: e70864f1c05dee242854611f4975f198,
@@ -1665,6 +1664,49 @@ PrefabInstance:
       value: DEF_ear.R_Tween
       objectReference: {fileID: 0}
     m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects:
+    - targetCorrespondingSourceObject: {fileID: -8679921383154817045, guid: e70864f1c05dee242854611f4975f198,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 655551929}
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: e70864f1c05dee242854611f4975f198,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 7732477182736453781}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: e70864f1c05dee242854611f4975f198,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 7732477182736453780}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: e70864f1c05dee242854611f4975f198,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 7732477182736453782}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: e70864f1c05dee242854611f4975f198,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 7732477182736453783}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: e70864f1c05dee242854611f4975f198,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 7732477182736453784}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: e70864f1c05dee242854611f4975f198,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 7732477182736453785}
+    - targetCorrespondingSourceObject: {fileID: 4703808232125795689, guid: e70864f1c05dee242854611f4975f198,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 504206115}
+    - targetCorrespondingSourceObject: {fileID: 6032134736170793216, guid: e70864f1c05dee242854611f4975f198,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 626671152}
+    - targetCorrespondingSourceObject: {fileID: 8910726269909893964, guid: e70864f1c05dee242854611f4975f198,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1064053901}
   m_SourcePrefab: {fileID: 100100000, guid: e70864f1c05dee242854611f4975f198, type: 3}
 --- !u!4 &888588360 stripped
 Transform:
@@ -1761,7 +1803,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 933781264}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 650e4965d97192845b8ed3b2c875169b, type: 3}
+  m_Script: {fileID: 11500000, guid: a8a2f08dde3659345bd4ab2b9877c308, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   comp: {fileID: 2137355922}
@@ -1773,13 +1815,12 @@ MonoBehaviour:
   tweenDuration: 0.08
   easeLegUp: 3
   easeLegDown: 2
+  targetPos: {x: 0, y: 0, z: 0}
   curDistance: 0
   isExcessive: 0
   isMoving: 0
-  targetPos: {x: 0, y: 0, z: 0}
   tfModelBody: {fileID: 0}
   localPivotPos: {x: 0, y: 0, z: 0}
-  settingCursorSize: 1
   gizmosRadius: 0.1
   gizmosShowDistance: 0
 --- !u!1001 &988000001
@@ -1787,6 +1828,7 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
+    serializedVersion: 3
     m_TransformParent: {fileID: 1598879702}
     m_Modifications:
     - target: {fileID: 955969844067918127, guid: 343789124739c054385817d9dedd8abd,
@@ -1875,6 +1917,9 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 343789124739c054385817d9dedd8abd, type: 3}
 --- !u!4 &988000002 stripped
 Transform:
@@ -2201,7 +2246,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1378866382}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 650e4965d97192845b8ed3b2c875169b, type: 3}
+  m_Script: {fileID: 11500000, guid: a8a2f08dde3659345bd4ab2b9877c308, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   comp: {fileID: 372903991}
@@ -2213,13 +2258,12 @@ MonoBehaviour:
   tweenDuration: 0.08
   easeLegUp: 3
   easeLegDown: 2
+  targetPos: {x: 0, y: 0, z: 0}
   curDistance: 0
   isExcessive: 0
   isMoving: 0
-  targetPos: {x: 0, y: 0, z: 0}
   tfModelBody: {fileID: 0}
   localPivotPos: {x: 0, y: 0, z: 0}
-  settingCursorSize: 1
   gizmosRadius: 0.1
   gizmosShowDistance: 0
 --- !u!1 &1379526250
@@ -2862,7 +2906,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1952161944}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2d4edc03063c52f46a586045a40caa0a, type: 3}
+  m_Script: {fileID: 11500000, guid: f3490f96f33adc04a9f4147670bdeec7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   defaultConfig:
@@ -2978,7 +3022,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 2011203694}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 84ec0849506ecda4bb3a3ad6f5f69d35, type: 3}
+  m_Script: {fileID: 11500000, guid: 2f1d6029eb1e9b44896cb788f19791cc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   defaultConfig:
@@ -3221,7 +3265,7 @@ MonoBehaviour:
   m_Effectors: []
 --- !u!95 &7732477182736453781
 Animator:
-  serializedVersion: 4
+  serializedVersion: 5
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -3238,7 +3282,8 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!114 &7732477182736453782
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3253,6 +3298,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   tfParent: {fileID: 1698562152}
   creeperTransformController: {fileID: 1952161946}
+  baseScale: 1
 --- !u!114 &7732477182736453783
 MonoBehaviour:
   m_ObjectHideFlags: 0

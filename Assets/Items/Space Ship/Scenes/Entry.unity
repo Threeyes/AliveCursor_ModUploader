@@ -104,7 +104,7 @@ NavMeshSettings:
   serializedVersion: 2
   m_ObjectHideFlags: 0
   m_BuildSettings:
-    serializedVersion: 2
+    serializedVersion: 3
     agentTypeID: 0
     agentRadius: 0.5
     agentHeight: 2
@@ -117,7 +117,7 @@ NavMeshSettings:
     cellSize: 0.16666667
     manualTileSize: 0
     tileSize: 256
-    accuratePlacement: 0
+    buildHeightMesh: 0
     maxJobWorkers: 0
     preserveTilesOutsideBounds: 0
     debug:
@@ -785,7 +785,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 819724582}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2a28ee0e7fab62f4482003ada04400be, type: 3}
+  m_Script: {fileID: 11500000, guid: 5f601ef4194cc81438dfae367d4729ec, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   defaultConfig:
@@ -999,10 +999,21 @@ Rigidbody:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 957079505}
-  serializedVersion: 2
+  serializedVersion: 4
   m_Mass: 1
   m_Drag: 0
   m_AngularDrag: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
   m_UseGravity: 1
   m_IsKinematic: 1
   m_Interpolate: 0
@@ -1735,6 +1746,7 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
+    serializedVersion: 3
     m_TransformParent: {fileID: 201240044}
     m_Modifications:
     - target: {fileID: 819927870741295728, guid: 6ddc5cb510dedc549b9f166a7af7d948,
@@ -1878,6 +1890,9 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6ddc5cb510dedc549b9f166a7af7d948, type: 3}
 --- !u!4 &1630247717 stripped
 Transform:
@@ -1973,6 +1988,7 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
+    serializedVersion: 3
     m_TransformParent: {fileID: 839905184}
     m_Modifications:
     - target: {fileID: 8288735466259896721, guid: 34c9c091d79010a42a984fe4f6352a0a,
@@ -2111,6 +2127,29 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects:
+    - targetCorrespondingSourceObject: {fileID: 7277333988997454821, guid: 34c9c091d79010a42a984fe4f6352a0a,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 406381516}
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 9039850149654745485, guid: 34c9c091d79010a42a984fe4f6352a0a,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1720640171}
+    - targetCorrespondingSourceObject: {fileID: 9039850149654745485, guid: 34c9c091d79010a42a984fe4f6352a0a,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1720640172}
+    - targetCorrespondingSourceObject: {fileID: 5880631223195126422, guid: 34c9c091d79010a42a984fe4f6352a0a,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1720640168}
+    - targetCorrespondingSourceObject: {fileID: 5880631223195126422, guid: 34c9c091d79010a42a984fe4f6352a0a,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1720640169}
   m_SourcePrefab: {fileID: 100100000, guid: 34c9c091d79010a42a984fe4f6352a0a, type: 3}
 --- !u!224 &1720640166 stripped
 RectTransform:
@@ -2236,7 +2275,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   defaultConfig:
-    targetWorldAngle: {x: 0, y: 0, z: 0}
+    targetWorldAngle: {x: 0, y: 1, z: 0}
   soOverrideConfig: {fileID: 0}
   comp: {fileID: 0}
   updateMethodType: 2
@@ -2280,9 +2319,17 @@ MeshCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1827032535}
   m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
   m_IsTrigger: 0
+  m_ProvidesContacts: 0
   m_Enabled: 1
-  serializedVersion: 4
+  serializedVersion: 5
   m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: 7491405523665559290, guid: f7570dd674e2bee449905dc264e50636, type: 3}
@@ -2518,6 +2565,7 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
+    serializedVersion: 3
     m_TransformParent: {fileID: 419777781}
     m_Modifications:
     - target: {fileID: 5854178813713287171, guid: 6ddc5cb510dedc549b9f166a7af7d948,
@@ -2581,4 +2629,11 @@ PrefabInstance:
       value: Luminaris Starship_Modify
       objectReference: {fileID: 0}
     m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects:
+    - targetCorrespondingSourceObject: {fileID: 5854178813713287171, guid: 6ddc5cb510dedc549b9f166a7af7d948,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 132116804}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6ddc5cb510dedc549b9f166a7af7d948, type: 3}

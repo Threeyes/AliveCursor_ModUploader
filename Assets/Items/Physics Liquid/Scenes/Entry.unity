@@ -104,7 +104,7 @@ NavMeshSettings:
   serializedVersion: 2
   m_ObjectHideFlags: 0
   m_BuildSettings:
-    serializedVersion: 2
+    serializedVersion: 3
     agentTypeID: 0
     agentRadius: 0.5
     agentHeight: 2
@@ -117,7 +117,7 @@ NavMeshSettings:
     cellSize: 0.16666667
     manualTileSize: 0
     tileSize: 256
-    accuratePlacement: 0
+    buildHeightMesh: 0
     maxJobWorkers: 0
     preserveTilesOutsideBounds: 0
     debug:
@@ -573,7 +573,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 683307341}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 06c932c7828a2484fa01d45fe2aba99c, type: 3}
+  m_Script: {fileID: 11500000, guid: cc8b2921a31baa0498f215142c0319e8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   defaultConfig:
@@ -648,6 +648,7 @@ MonoBehaviour:
     sunLightRotation: {x: 30, y: 30, z: 240}
     sunLightIntensity: 0.3
     sunLightColor: {r: 1, g: 1, b: 1, a: 1}
+    lightShadowType: 0
     isUseReflection: 0
     isUseSkybox: 1
     skyboxType: 1
@@ -660,10 +661,12 @@ MonoBehaviour:
     externalPanoramaTextureFilePath: 
     panoramaSkyboxRotation: 0
     PersistentDirPath: 
+    isUseGround: 0
   soOverrideConfig: {fileID: 11400000, guid: d548d5a9af7d9a647b3004306f16f77c, type: 2}
   goLightGroup: {fileID: 723394699}
   sunSourceLight: {fileID: 1788889241}
   reflectionProbe: {fileID: 113847686}
+  goGround: {fileID: 0}
 --- !u!4 &845516204
 Transform:
   m_ObjectHideFlags: 0
@@ -742,6 +745,7 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
+    serializedVersion: 3
     m_TransformParent: {fileID: 1598879702}
     m_Modifications:
     - target: {fileID: 955969844067918127, guid: 343789124739c054385817d9dedd8abd,
@@ -830,6 +834,13 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 2412534872887555755, guid: 343789124739c054385817d9dedd8abd,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1737040388}
   m_SourcePrefab: {fileID: 100100000, guid: 343789124739c054385817d9dedd8abd, type: 3}
 --- !u!4 &988000002 stripped
 Transform:
@@ -1106,7 +1117,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1291004042}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 81e42b0439400d143bf6c8f4c606e782, type: 3}
+  m_Script: {fileID: 11500000, guid: 8861c75cf8050214aa69479637f855e1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   defaultConfig:
@@ -1123,7 +1134,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1291004042}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 58894a8ab3518de48936b2518a79a6af, type: 3}
+  m_Script: {fileID: 11500000, guid: 5b816e61d919f8646b0dd1c55100ffce, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   defaultConfig:
@@ -1151,7 +1162,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1291004042}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 43bd8e8226970f34688bd7fa8d3f4a97, type: 3}
+  m_Script: {fileID: 11500000, guid: cbbed40b3e7641d48bf0481aaf5fff46, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   defaultConfig:
@@ -1171,7 +1182,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1291004042}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b7f801585acd0dd40a4c34b901cd648d, type: 3}
+  m_Script: {fileID: 11500000, guid: ac8c6ea1b55630745a2d9966795081fa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   defaultConfig:
@@ -1233,13 +1244,14 @@ PositionConstraint:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1345806213}
   m_Enabled: 1
+  serializedVersion: 2
   m_Weight: 1
   m_TranslationAtRest: {x: 0, y: -0.7, z: 0}
   m_TranslationOffset: {x: 0, y: 0, z: 0}
   m_AffectTranslationX: 1
   m_AffectTranslationY: 1
   m_AffectTranslationZ: 1
-  m_IsContraintActive: 1
+  m_Active: 1
   m_IsLocked: 0
   m_Sources:
   - sourceTransform: {fileID: 1799842586}
@@ -1503,9 +1515,17 @@ MeshCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1737040384}
   m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
   m_IsTrigger: 0
+  m_ProvidesContacts: 0
   m_Enabled: 1
-  serializedVersion: 4
+  serializedVersion: 5
   m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: 4300000, guid: f276f77f1632fef44ae7cb2ab97ff01d, type: 2}
@@ -1554,14 +1574,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 474bcb49853aa07438625e644c072ee6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Version: 1
+  m_Version: 3
   m_UsePipelineSettings: 1
   m_AdditionalLightsShadowResolutionTier: 2
   m_LightLayerMask: 1
+  m_RenderingLayers: 1
   m_CustomShadowLayers: 0
   m_ShadowLayerMask: 1
+  m_ShadowRenderingLayers: 1
   m_LightCookieSize: {x: 1, y: 1}
   m_LightCookieOffset: {x: 0, y: 0}
+  m_SoftShadowQuality: 1
 --- !u!108 &1788889241
 Light:
   m_ObjectHideFlags: 0

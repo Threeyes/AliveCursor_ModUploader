@@ -2,13 +2,14 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using System.Linq;
+using Threeyes.Steamworks;
 /// <summary>
 /// 功能：
 /// -当接收到音频信息时，播放跳舞动画
 /// -当角色动画调用该类中的方法时，会自动发射蜘蛛网
 /// </summary>
 public class SpiderMan_Controller : MonoBehaviour
-    , IAC_SystemAudio_RawSampleDataChangedHandler
+    , IHubSystemAudio_RawSampleDataChangedHandler
 {
     public Animator animator;
     public AC_ObjectMovement_FollowTarget objectMovement;

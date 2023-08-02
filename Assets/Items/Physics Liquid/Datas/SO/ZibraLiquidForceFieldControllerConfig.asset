@@ -9,7 +9,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d264755524977b442838f2425c55a527, type: 3}
+  m_Script: {fileID: 11500000, guid: 2c68778d59c7046448d281a79fe9b3b4, type: 3}
   m_Name: ZibraLiquidForceFieldControllerConfig
   m_EditorClassIdentifier: 
   config:

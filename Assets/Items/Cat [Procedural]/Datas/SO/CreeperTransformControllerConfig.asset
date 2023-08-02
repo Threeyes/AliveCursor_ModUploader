@@ -9,7 +9,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c50b784f7a03f0640989a9701ed9bb09, type: 3}
+  m_Script: {fileID: 11500000, guid: be14455463daef34a8a91e81d6244246, type: 3}
   m_Name: CreeperTransformControllerConfig
   m_EditorClassIdentifier: 
   config:

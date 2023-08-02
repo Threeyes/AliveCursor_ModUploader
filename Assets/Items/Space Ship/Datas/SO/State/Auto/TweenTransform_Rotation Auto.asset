@@ -16,7 +16,7 @@ MonoBehaviour:
   isActiveEnter: 1
   isActiveExit: 0
   enterConfig:
-    endValue: {x: 0, y: 60, z: 90}
+    endValue: {x: 0, y: 0, z: 90}
     duration: 1
     delay: 0
     easeType: 1
@@ -231,7 +231,7 @@ MonoBehaviour:
       m_PostInfinity: 2
       m_RotationOrder: 4
     loops: -1
-    loopType: 1
+    loopType: 2
     id: 
     isRelative: 0
     isFrom: 0
@@ -246,7 +246,7 @@ MonoBehaviour:
       randomness: 90
       fadeOut: 1
       isLocal: 1
-      rotateMode: 0
+      rotateMode: 3
       transformType: 2
   exitConfig:
     endValue: {x: 0, y: 0, z: 0}

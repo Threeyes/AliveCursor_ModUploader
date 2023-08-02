@@ -3,7 +3,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using Threeyes.EventPlayer;
-public class MasterChief_Grenade : AC_GenerableObject<MasterChief_Grenade.ConfigInfo>
+using Threeyes.Steamworks;
+
+public class MasterChief_Grenade : GenerableObject<MasterChief_Grenade.ConfigInfo>
 {
     //Self
     public Rigidbody rig;

@@ -104,7 +104,7 @@ NavMeshSettings:
   serializedVersion: 2
   m_ObjectHideFlags: 0
   m_BuildSettings:
-    serializedVersion: 2
+    serializedVersion: 3
     agentTypeID: 0
     agentRadius: 0.5
     agentHeight: 2
@@ -117,7 +117,7 @@ NavMeshSettings:
     cellSize: 0.16666667
     manualTileSize: 0
     tileSize: 256
-    accuratePlacement: 0
+    buildHeightMesh: 0
     maxJobWorkers: 0
     preserveTilesOutsideBounds: 0
     debug:
@@ -224,6 +224,7 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
+    serializedVersion: 3
     m_TransformParent: {fileID: 1726722037}
     m_Modifications:
     - target: {fileID: 4236326137854150412, guid: d16eae4e4638dd2428d0da7bac695040,
@@ -287,6 +288,9 @@ PrefabInstance:
       value: Football
       objectReference: {fileID: 0}
     m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d16eae4e4638dd2428d0da7bac695040, type: 3}
 --- !u!4 &713554128 stripped
 Transform:
@@ -463,6 +467,7 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
+    serializedVersion: 3
     m_TransformParent: {fileID: 1598879702}
     m_Modifications:
     - target: {fileID: 955969844067918127, guid: 343789124739c054385817d9dedd8abd,
@@ -551,6 +556,9 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 343789124739c054385817d9dedd8abd, type: 3}
 --- !u!4 &988000002 stripped
 Transform:
@@ -698,7 +706,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1082312508}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 593e4351aff697546b229f16abf19099, type: 3}
+  m_Script: {fileID: 11500000, guid: 6aa4d5c48fbc22e428e3655141245055, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   key: Skin
@@ -896,6 +904,7 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
+    serializedVersion: 3
     m_TransformParent: {fileID: 181547249}
     m_Modifications:
     - target: {fileID: 3375800210721814088, guid: a0a33552457dabd4aa3b77d46525b16d,
@@ -959,6 +968,9 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a0a33552457dabd4aa3b77d46525b16d, type: 3}
 --- !u!4 &1413460043 stripped
 Transform:
@@ -971,6 +983,7 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
+    serializedVersion: 3
     m_TransformParent: {fileID: 389676654}
     m_Modifications:
     - target: {fileID: 389988634208185265, guid: beb146a0aba982f40a22980945eef415,
@@ -1034,6 +1047,9 @@ PrefabInstance:
       value: Basketball
       objectReference: {fileID: 0}
     m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: beb146a0aba982f40a22980945eef415, type: 3}
 --- !u!4 &1487471861 stripped
 Transform:

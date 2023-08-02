@@ -104,7 +104,7 @@ NavMeshSettings:
   serializedVersion: 2
   m_ObjectHideFlags: 0
   m_BuildSettings:
-    serializedVersion: 2
+    serializedVersion: 3
     agentTypeID: 0
     agentRadius: 0.5
     agentHeight: 2
@@ -117,7 +117,7 @@ NavMeshSettings:
     cellSize: 0.16666667
     manualTileSize: 0
     tileSize: 256
-    accuratePlacement: 0
+    buildHeightMesh: 0
     maxJobWorkers: 0
     preserveTilesOutsideBounds: 0
     debug:
@@ -358,9 +358,17 @@ MeshCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1895436658409191009}
   m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
   m_IsTrigger: 1
+  m_ProvidesContacts: 0
   m_Enabled: 1
-  serializedVersion: 4
+  serializedVersion: 5
   m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: -3726052387536107708, guid: 579e574468a64ee4ebea3bf9af96a7d1, type: 3}
@@ -451,7 +459,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 633978237}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 593e4351aff697546b229f16abf19099, type: 3}
+  m_Script: {fileID: 11500000, guid: 6aa4d5c48fbc22e428e3655141245055, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   key: Skin
@@ -502,9 +510,17 @@ MeshCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 642773284}
   m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
   m_IsTrigger: 0
+  m_ProvidesContacts: 0
   m_Enabled: 1
-  serializedVersion: 4
+  serializedVersion: 5
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 10210, guid: 0000000000000000e000000000000000, type: 0}
@@ -567,7 +583,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 642773284}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c6f0896d53ffda64a9bd126d85998e1d, type: 3}
+  m_Script: {fileID: 11500000, guid: c63e8249712ce254c96d3791c5645f72, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   defaultConfig:
@@ -665,7 +681,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 929934192}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a41951048c772c84ba9fecad4962927b, type: 3}
+  m_Script: {fileID: 11500000, guid: 562fb4cb418ebd54eb934c59a6416c98, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   isDontDestroyOnLoad: 0
@@ -1716,6 +1732,7 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
+    serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 1727671588909380394, guid: 7bf6f350fbd360a4c810824755ffc3da,
@@ -2229,6 +2246,9 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7bf6f350fbd360a4c810824755ffc3da, type: 3}
 --- !u!4 &8981028132546523716
 Transform:

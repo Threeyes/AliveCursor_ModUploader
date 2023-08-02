@@ -104,7 +104,7 @@ NavMeshSettings:
   serializedVersion: 2
   m_ObjectHideFlags: 0
   m_BuildSettings:
-    serializedVersion: 2
+    serializedVersion: 3
     agentTypeID: 0
     agentRadius: 0.5
     agentHeight: 2
@@ -117,7 +117,7 @@ NavMeshSettings:
     cellSize: 0.16666667
     manualTileSize: 0
     tileSize: 256
-    accuratePlacement: 0
+    buildHeightMesh: 0
     maxJobWorkers: 0
     preserveTilesOutsideBounds: 0
     debug:
@@ -189,13 +189,14 @@ PositionConstraint:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 153018190}
   m_Enabled: 1
+  serializedVersion: 2
   m_Weight: 1
   m_TranslationAtRest: {x: 0, y: 0, z: 0}
   m_TranslationOffset: {x: 0, y: 0, z: 0}
   m_AffectTranslationX: 1
   m_AffectTranslationY: 1
   m_AffectTranslationZ: 1
-  m_IsContraintActive: 1
+  m_Active: 1
   m_IsLocked: 1
   m_Sources:
   - sourceTransform: {fileID: 557360111}
@@ -951,7 +952,9 @@ Canvas:
   m_OverrideSorting: 0
   m_OverridePixelPerfect: 0
   m_SortingBucketNormalizedSize: 0
+  m_VertexColorAlwaysGammaSpace: 0
   m_AdditionalShaderChannelsFlag: 0
+  m_UpdateRectTransformForStandalone: 0
   m_SortingLayerID: 0
   m_SortingOrder: 0
   m_TargetDisplay: 0
@@ -1021,6 +1024,7 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
+    serializedVersion: 3
     m_TransformParent: {fileID: 1112192918}
     m_Modifications:
     - target: {fileID: -8679921383154817045, guid: dd6a4214d6f9e434b9dc6de534a0938c,
@@ -1099,12 +1103,16 @@ PrefabInstance:
       value: RUI
       objectReference: {fileID: 0}
     m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: dd6a4214d6f9e434b9dc6de534a0938c, type: 3}
 --- !u!1001 &1274040321
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
+    serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 92745335110220822, guid: 93d2c0813ffcc0841b98afc849bf3710,
@@ -1178,6 +1186,9 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 93d2c0813ffcc0841b98afc849bf3710, type: 3}
 --- !u!1 &1430714743
 GameObject:
@@ -1354,7 +1365,7 @@ MonoBehaviour:
   logType: 3
   withName: 0
   format: 
-  tips: "\u6CE8\u610F\uFF1A\n1.\u4E3A\u4E86\u907F\u514D\u590D\u6742\u5EA6\uFF0C\u7C92\u5B50\u7279\u6548\u6682\u65F6\u56FA\u5B9A\u5927\u5C0F\uFF0C\u4E0ECursorSize\u65E0\u5173\n\n1.\u5148\u505A\u624B\u6307\u7684\u52A8\u4F5C\uFF0C\u914D\u5408\u63E1\u62F3\u7684Animation\n"
+  tips: "\u6CE8\u610F\uFF1A\n1.\u4E3A\u4E86\u907F\u514D\u590D\u6742\u5EA6\uFF0C\u7C92\u5B50\u7279\u6548\u6682\u65F6\u56FA\u5B9A\u5927\u5C0F\uFF0C\u4E0ECursorSize\u65E0\u5173\n\n1.\u5148\u505A\u624B\u6307\u7684\u52A8\u4F5C\uFF0C\u914D\u5408\u63E1\u62F3\u7684Animation\n\nPS\uFF1A\n-\u5F00\u542F\u5730\u9762\u6295\u5F71\u540E\uFF0C\u4F1A\u6709\u58EB\u5B98\u957F\u7684\u6295\u5F71\u3002\uFF08\u4F5C\u4E3A\u5F69\u86CB\uFF0C\u6682\u4E0D\u4FEE\u590D\uFF09\nToFix:\n-\u5982\u679C\u5C4F\u5E55\u63A5\u8FD1\u6B63\u65B9\u5F62\uFF0C\u53F3\u4FA7\u7684Bounds\u78B0\u649E\u4F53\u53EF\u80FD\u4F1A\u6321\u4F4F\u624B\u96F7"
   isLogOnConsole: 1
 --- !u!4 &1559654070
 Transform:
@@ -1571,13 +1582,14 @@ PositionConstraint:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1878870943}
   m_Enabled: 1
+  serializedVersion: 2
   m_Weight: 1
   m_TranslationAtRest: {x: 0, y: 0, z: 0}
   m_TranslationOffset: {x: 0, y: 0, z: 0}
   m_AffectTranslationX: 1
   m_AffectTranslationY: 1
   m_AffectTranslationZ: 1
-  m_IsContraintActive: 1
+  m_Active: 1
   m_IsLocked: 1
   m_Sources:
   - sourceTransform: {fileID: 557360111}
@@ -1743,9 +1755,17 @@ MeshCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1965197315}
   m_Material: {fileID: 13400000, guid: 998bf9b98b6dde341a3a98f920b4a636, type: 2}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
   m_IsTrigger: 0
+  m_ProvidesContacts: 0
   m_Enabled: 1
-  serializedVersion: 4
+  serializedVersion: 5
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
@@ -2992,7 +3012,7 @@ GameObject:
   m_IsActive: 1
 --- !u!95 &4213698620383028082
 Animator:
-  serializedVersion: 4
+  serializedVersion: 5
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -3009,7 +3029,8 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &4214981743437457122
 GameObject:
   m_ObjectHideFlags: 0

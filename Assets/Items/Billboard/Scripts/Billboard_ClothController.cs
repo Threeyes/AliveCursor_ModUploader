@@ -1,6 +1,7 @@
 using UnityEngine;
 using System.Collections;
 using Threeyes.Coroutine;
+using Threeyes.Steamworks;
 /// <summary>
 /// 功能：增加相对位置反向的力（以及横向的随机力，模拟摇摆的状态）
 /// </summary>
@@ -9,7 +10,7 @@ public class Billboard_ClothController : ComponentHelperBase<Cloth>
     , IAC_CommonSetting_IsAliveCursorActiveHandler
     , IAC_CursorState_ChangedHandler
     , IAC_CommonSetting_CursorSizeHandler
-    , IAC_SystemWindow_ChangedHandler
+    , IHubSystemWindow_ChangeCompletedHandler
 {
     public Vector3 relateWindForce = new Vector3(0, -1, 0);
     Transform tfParent;
@@ -48,9 +49,8 @@ public class Billboard_ClothController : ComponentHelperBase<Cloth>
         Resize();
     }
     public void OnModDeinit() { }
-    public void OnWindowChanged(AC_WindowEventExtArgs e)
+    public void OnWindowChangeCompleted()
     {
-        if (e.stateChange == AC_WindowEventExtArgs.StateChange.After)
             Resize();
     }
 
