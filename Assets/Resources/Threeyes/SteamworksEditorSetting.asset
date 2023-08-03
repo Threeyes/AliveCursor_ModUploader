@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b7e8b8198aa90344cb8786c0cce1a236, type: 3}
   m_Name: SteamworksEditorSetting
   m_EditorClassIdentifier: 
-  curWorkshopItemInfo: {fileID: 11400000, guid: 537e2e51fa9b1034dbf1f87134cbb674,
+  curWorkshopItemInfo: {fileID: 11400000, guid: 3be756a06337aeb4fae8025c4648432d,
     type: 2}
   itemWindow_ExePath: I:\Unity Group\My Group\App Group\AliveCursor\Build Group\AliveCursor\AliveCursor.exe
   itemWindow_IsPreviewGif: 0

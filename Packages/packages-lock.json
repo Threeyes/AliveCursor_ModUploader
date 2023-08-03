@@ -24,9 +24,9 @@
       "url": "https://package.openupm.com"
     },
     "com.threeyes.alivecursor.sdk": {
-      "version": "file:../../AliveCursorSDK",
+      "version": "4.0.0",
       "depth": 0,
-      "source": "local",
+      "source": "registry",
       "dependencies": {
         "com.unity.2d.animation": "9.0.3",
         "com.unity.2d.psdimporter": "8.0.2",
@@ -70,7 +70,8 @@
         "com.unity.modules.vehicles": "1.0.0",
         "com.unity.modules.video": "1.0.0",
         "com.unity.modules.wind": "1.0.0"
-      }
+      },
+      "url": "https://package.openupm.com"
     },
     "com.unity.2d.animation": {
       "version": "9.0.3",

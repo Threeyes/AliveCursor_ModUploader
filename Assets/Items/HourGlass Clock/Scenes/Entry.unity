@@ -633,6 +633,12 @@ PrefabInstance:
       propertyPath: m_Name
       value: HourGlass Clock
       objectReference: {fileID: 0}
+    - target: {fileID: 6734862188328791261, guid: 07e4effb8f34d2246817f3cc299aa029,
+        type: 3}
+      propertyPath: soOverrideConfig
+      value: 
+      objectReference: {fileID: 11400000, guid: 1d4ef3d6538ef2f4b82160a759bec7f6,
+        type: 2}
     - target: {fileID: 6734862188328791262, guid: 07e4effb8f34d2246817f3cc299aa029,
         type: 3}
       propertyPath: m_RootOrder
