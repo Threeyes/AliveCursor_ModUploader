@@ -2,7 +2,10 @@ using System.Collections;
 using System.Collections.Generic;
 using Threeyes.UI;
 using UnityEngine;
-
+/// <summary>
+/// ToUpdate:
+/// -删掉，后期改用RendererHelper代替
+/// </summary>
 public class ZhiYinHair_FaceController : MonoBehaviour
 {
     public GifPlayer gifPlayer;//Warning：因为AC_ImagePlayer的[RequireComponent]会自动增加一个GifPlayer组件，因此要指定对应的组件
