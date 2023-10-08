@@ -26,7 +26,7 @@ public class DiscoBall_Controller : MonoBehaviour
         ///功能：
         ///-灯光随音频调节亮度
         ///-有声音时才会旋转
-        volume = AC_ManagerHolder.SystemAudioManager.CalculateLoudness(data);
+        volume = AudioVisualizerTool.CalculateLoudness(data);
         Vector3 axisPercent = Vector3.zero;//偏转实现：将输入值分成三等分，分别对应XYZ的旋转缩放值
 
         //data range: [-1.0, 1.0]

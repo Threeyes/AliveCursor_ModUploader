@@ -11,7 +11,7 @@ public class ComputerMouse_AudioVisualizer : MonoBehaviour
     #region Callback
     public void OnRawSampleDataChanged(float[] rawSampleData)
     {
-        SetVisual(AC_ManagerHolder.SystemAudioManager.CalculateLoudness(rawSampleData));
+        SetVisual(AudioVisualizerTool.CalculateLoudness(rawSampleData));
     }
 
     private void SetVisual(float loudness)

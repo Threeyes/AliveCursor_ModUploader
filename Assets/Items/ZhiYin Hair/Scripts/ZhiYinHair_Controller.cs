@@ -27,7 +27,7 @@ public class ZhiYinHair_Controller : MonoBehaviour
 
         ///功能：
         ///-基于音量调整头发升起幅度
-        volume = AC_ManagerHolder.SystemAudioManager.CalculateLoudness(data);
+        volume = AudioVisualizerTool.CalculateLoudness(data);
         if (volume != lastVolume)
         {
             hairInstanceController.Config.strandDiameter = 5 + RaiseHairPower * volume;//Raise hair with the rhythm [5,100]

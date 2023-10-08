@@ -68,7 +68,7 @@ public class SpiderMan_Controller : MonoBehaviour
     {
         ///实现：rawSampleData偶尔会返回音量为0的数值，如果直接使用当帧的数据会导致动画频繁切换，因此要升级为检查取采样时间段内的平均值
         ///原因：要避免音频不连续导致动画停顿，需要判断采样时间段内的音量总值平均值（可能帧率设置太高导致采样不足，如音频采样率为60，但是刷新率为120就有问题（有数帧无数据导致音量为0），可以改为判断时间间隔而不是上次帧率）
-        float loudness = AC_ManagerHolder.SystemAudioManager.CalculateLoudness(rawSampleData);
+        float loudness = AudioVisualizerTool.CalculateLoudness(rawSampleData);
 
         loudnessPool.Add(loudness);
         if (loudnessPool.Count >= sampleCount + 1)//最多保存采样数据
