@@ -30,7 +30,7 @@ The items inside this project are for experimental purposes only, which will get
 
 <a href="https://steamcommunity.com/sharedfiles/filedetails/?id=2859024943"><img src="https://github.com/Threeyes/AliveCursor_ModUploader/wiki/images/readme/Billboard.gif" height="256" width="256" ></a>
 
-* **Golden Hoop**: Using [SplineMesh](https://github.com/methusalah/SplineMesh) plugin to create runtime Splite.
+* **Golden Hoop**: Using [SplineMesh](https://github.com/methusalah/SplineMesh) plugin to create runtime Spline.
 
 <a href="https://steamcommunity.com/sharedfiles/filedetails/?id=2858012046"><img src="https://github.com/Threeyes/AliveCursor_ModUploader/wiki/images/readme/Golden Hoop.gif" height="256" width="256" ></a>
 
