@@ -38,7 +38,7 @@ The items inside this project are for experimental purposes only, which will get
 
 <a href="https://steamcommunity.com/sharedfiles/filedetails/?id=2889759157"><img src="https://github.com/Threeyes/AliveCursor_ModUploader/wiki/images/readme/Hairy.gif" height="256" width="256" ></a>
 
-* **Physics Liquid**: Using [Zibra Liquids (Free version)](https://github.com/ZibraAI/com.zibra.liquids-free) plugin to create real-time liquid.
+* **Physics Liquid**: Using [Zibra Liquids (Free version)](https://github.com/Shaidyk/com.zibra.liquids-free) plugin to create real-time liquid.
 
 <a href="https://steamcommunity.com/sharedfiles/filedetails/?id=2857203254"><img src="https://github.com/Threeyes/AliveCursor_ModUploader/wiki/images/readme/Physics Liquid.gif" height="256" width="256" ></a>
 
