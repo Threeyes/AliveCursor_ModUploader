@@ -12,10 +12,11 @@ The items inside this project are for experimental purposes only, which will get
 </p>
 
 ## Example (Simple)
-* **Space Ship**: Simulate tilting object such as SpaceShip/HoverCar.
+* **Space Ship/Rocket Ship/Hover Car**: Tilt or rotate object base on cursor offset.
 
 <a href="https://steamcommunity.com/sharedfiles/filedetails/?id=2847247854"><img src="https://github.com/Threeyes/AliveCursor_ModUploader/wiki/images/readme/SpaceShip.gif" height="256" width="256" ></a>
 <a href="https://steamcommunity.com/sharedfiles/filedetails/?id=2947919750"><img src="https://github.com/Threeyes/AliveCursor_ModUploader/wiki/images/readme/Rocket Ship.gif" height="256" width="256" ></a>
+<a href="https://steamcommunity.com/sharedfiles/filedetails/?id=2938058460"><img src="https://github.com/Threeyes/AliveCursor_ModUploader/wiki/images/readme/Hover Car.gif" height="256" width="256" ></a>
 
 * **2D Clock/HourGlass Clock**: Display system time in different ways.
 
@@ -34,9 +35,11 @@ The items inside this project are for experimental purposes only, which will get
 
 <a href="https://steamcommunity.com/sharedfiles/filedetails/?id=2858012046"><img src="https://github.com/Threeyes/AliveCursor_ModUploader/wiki/images/readme/Golden Hoop.gif" height="256" width="256" ></a>
 
-* **Hairy**: Using [Unity hair system](https://github.com/Unity-Technologies/com.unity.demoteam.hair) plugin to create realistic strand-based hair.
+* **Hairy/ZhiYin Hair**: Using [Unity hair system](https://github.com/Unity-Technologies/com.unity.demoteam.hair) plugin to create realistic strand-based hair.
 
 <a href="https://steamcommunity.com/sharedfiles/filedetails/?id=2889759157"><img src="https://github.com/Threeyes/AliveCursor_ModUploader/wiki/images/readme/Hairy.gif" height="256" width="256" ></a>
+<a href="https://steamcommunity.com/sharedfiles/filedetails/?id=2956577286"><img src="https://github.com/Threeyes/AliveCursor_ModUploader/wiki/images/readme/ZhiYin_Hair.gif" height="256" width="256" ></a>
+
 
 * **Physics Liquid**: Using [Zibra Liquids (Free version)](https://github.com/Shaidyk/com.zibra.liquids-free) plugin to create real-time liquid.
 
@@ -54,13 +57,26 @@ The items inside this project are for experimental purposes only, which will get
 
 <a href="https://steamcommunity.com/sharedfiles/filedetails/?id=2847245294"><img src="https://github.com/Threeyes/AliveCursor_ModUploader/wiki/images/readme/Balloon.gif" height="256" width="256" ></a>
 
+
+
 ## Example (Complex)
 
-* **Spider/Hand/Robotic Hand**: Create procedural spider-like creature such as ghost hand, which can response to system audio.
+* **Spider/Hand/Robotic Hand/Cat [Procedural]**: Create procedural spider-like creature, which can response to system audio. You can use it to make a role with any number of feet.
 
 <a href="https://steamcommunity.com/sharedfiles/filedetails/?id=2868053102"><img src="https://github.com/Threeyes/AliveCursor_ModUploader/wiki/images/readme/Spider.gif" height="256" width="256" ></a>
 <a href="https://steamcommunity.com/sharedfiles/filedetails/?id=2879016434"><img src="https://github.com/Threeyes/AliveCursor_ModUploader/wiki/images/readme/Hand.gif" height="256" width="256" ></a>
 <a href="https://steamcommunity.com/sharedfiles/filedetails/?id=2914862770"><img src="https://github.com/Threeyes/AliveCursor_ModUploader/wiki/images/readme/Robotic Hand.gif" height="256" width="256" ></a>
+<a href="https://steamcommunity.com/sharedfiles/filedetails/?id=2968253792"><img src="https://github.com/Threeyes/AliveCursor_ModUploader/wiki/images/readme/Cat [Procedural].gif" height="256" width="256" ></a>
+
+* **SpiderMan/Tears of the Kingdom Link**: Create a character that switch animation based on his/her states.
+
+<a href="https://steamcommunity.com/sharedfiles/filedetails/?id=2974472367"><img src="https://github.com/Threeyes/AliveCursor_ModUploader/wiki/images/readme/SpiderMan.gif" height="256" width="256" ></a>
+<a href="https://steamcommunity.com/sharedfiles/filedetails/?id=2984276367"><img src="https://github.com/Threeyes/AliveCursor_ModUploader/wiki/images/readme/Tears of the Kingdom Link.gif" height="256" width="256" ></a>
+
+* **Apple Pencil**: Draw doodles on Screen.
+
+<a href="https://steamcommunity.com/sharedfiles/filedetails/?id=2967916555"><img src="https://github.com/Threeyes/AliveCursor_ModUploader/wiki/images/readme/Apple Pencil.gif" height="256" width="256" ></a>
+
 
 ## Note
 + Always make sure that you have imported the latest simulator resources, see more info on [wiki](https://github.com/Threeyes/AliveCursorSDK/wiki/Setup-SDK).
