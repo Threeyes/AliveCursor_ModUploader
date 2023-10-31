@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   curWorkshopItemInfo: {fileID: 11400000, guid: 7cda84733c8c0ce42b2cf2cb13a51009,
     type: 2}
-  itemWindow_ExePath: H:\SteamLibrary\steamapps\common\AliveCursor\AliveCursor\AliveCursor.exe
+  itemWindow_ExePath: I:\SteamLibrary\steamapps\common\AliveCursor\AliveCursor\AliveCursor.exe
   itemWindow_IsPreviewGif: 0
   hubSimulator_ShowAssistantGizmo: 1
   hubSimulator_ShowAssistantInfo: 1
