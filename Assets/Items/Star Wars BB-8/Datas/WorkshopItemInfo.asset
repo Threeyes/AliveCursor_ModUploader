@@ -22,5 +22,5 @@ MonoBehaviour:
   itemStyle: 16
   itemGenre: 2
   itemReference: 2
-  itemFeature: 0
-  itemSafety: 1
+  itemFeature: 2
+  itemAdvance: 1

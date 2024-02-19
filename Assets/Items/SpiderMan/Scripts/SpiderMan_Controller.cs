@@ -60,6 +60,17 @@ public class SpiderMan_Controller : MonoBehaviour
     }
     #endregion
 
+    #region Init
+    protected virtual void OnEnable()
+    {
+        ManagerHolder.SystemAudioManager.Register(this);
+    }
+    protected virtual void OnDisable()
+    {
+        ManagerHolder.SystemAudioManager.UnRegister(this);
+    }
+    #endregion
+
     #region Callback
     float averageLoudness = 0;
     public List<float> loudnessPool = new List<float>();//缓存前数个音频采样

@@ -9,6 +9,17 @@ public class StarWarsBB8_AudioVisualizer : MonoBehaviour
     public Transform tfTarget;
     public Vector3 maxOffset;
 
+    #region Init
+    protected virtual void OnEnable()
+    {
+        ManagerHolder.SystemAudioManager.Register(this);
+    }
+    protected virtual void OnDisable()
+    {
+        ManagerHolder.SystemAudioManager.UnRegister(this);
+    }
+    #endregion
+
     #region Callback
     public void OnRawSampleDataChanged(float[] rawSampleData)
     {
@@ -19,6 +30,4 @@ public class StarWarsBB8_AudioVisualizer : MonoBehaviour
         tfTarget.localPosition = Vector3.Lerp(Vector3.zero, maxOffset, loudness);
     }
     #endregion
-
-
 }

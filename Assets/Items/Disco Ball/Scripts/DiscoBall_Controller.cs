@@ -17,6 +17,17 @@ public class DiscoBall_Controller : MonoBehaviour
     public float LightRotateSpeed { get { return lightRotateSpeed; } set { lightRotateSpeed = value; } }
     [SerializeField] private float lightRotateSpeed = 5f;
 
+    #region Init
+    protected virtual void OnEnable()
+    {
+        ManagerHolder.SystemAudioManager.Register(this);
+    }
+    protected virtual void OnDisable()
+    {
+        ManagerHolder.SystemAudioManager.UnRegister(this);
+    }
+    #endregion
+
     #region Callback
     public void OnRawSampleDataChanged(float[] data)
     {
@@ -48,9 +59,9 @@ public class DiscoBall_Controller : MonoBehaviour
         curSpeed = Mathf.Lerp(curSpeed, (volume > 0) ? BallRotateSpeed : 0, Time.deltaTime);
     }
     #endregion
+
     float volume = 0;
     float curSpeed = 0;
-
     private void Update()
     {
         tfLightRig.Rotate(Vector3.up * lightRotateSpeed * Time.deltaTime, Space.Self);

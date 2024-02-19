@@ -27,6 +27,17 @@ public class MonumentValley_Controller : MonoBehaviour
         }
     }
 
+    #region Init
+    protected virtual void OnEnable()
+    {
+        ManagerHolder.SystemAudioManager.Register(this);
+    }
+    protected virtual void OnDisable()
+    {
+        ManagerHolder.SystemAudioManager.UnRegister(this);
+    }
+    #endregion
+    
     #region Callback
     public void OnSpectrumDataChanged(float[] data)
     {
