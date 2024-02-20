@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b7e8b8198aa90344cb8786c0cce1a236, type: 3}
   m_Name: SteamworksEditorSetting
   m_EditorClassIdentifier: 
-  curWorkshopItemInfo: {fileID: 11400000, guid: 383fce0159dc93848a7f530a64aac564,
+  curWorkshopItemInfo: {fileID: 11400000, guid: 3288191be9a1de94788b8e7bcd0f8d9f,
     type: 2}
   itemWindow_ExePath: I:\SteamLibrary\steamapps\common\AliveCursor\AliveCursor\AliveCursor.exe
   itemWindow_IsPreviewGif: 0

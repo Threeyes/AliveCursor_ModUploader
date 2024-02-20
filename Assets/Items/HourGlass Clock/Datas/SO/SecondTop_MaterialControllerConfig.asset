@@ -1,0 +1,53 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8dd3a65807b492d4b9960441d27b7891, type: 3}
+  m_Name: SecondTop_MaterialControllerConfig
+  m_EditorClassIdentifier: 
+  config:
+    materialIndex: 0
+    listTextureShaderProperty:
+    - name: _BaseMap
+      defaultTexture: {fileID: 0}
+      externalTexture: {fileID: 0}
+      externalTextureFilePath: 
+      scale: {x: 1, y: 1}
+      offset: {x: 0, y: 0}
+      PersistentDirPath: 
+    listColorShaderProperty:
+    - name: _MainColor
+      value: {r: 0.4117647, g: 0.39215687, b: 0.4392157, a: 1}
+      dataOption_Color:
+        useAlpha: 1
+        useHDR: 1
+    - name: _TopColor
+      value: {r: 0.6039216, g: 0.6039216, b: 0.6039216, a: 1}
+      dataOption_Color:
+        useAlpha: 1
+        useHDR: 1
+    - name: _FoamColor
+      value: {r: 1, g: 1, b: 1, a: 1}
+      dataOption_Color:
+        useAlpha: 1
+        useHDR: 1
+    - name: _RimColor
+      value: {r: 1, g: 1, b: 1, a: 1}
+      dataOption_Color:
+        useAlpha: 1
+        useHDR: 1
+    listIntShaderProperty: []
+    listFloatShaderProperty:
+    - name: _RimPower
+      value: 0.2
+      dataOption_Float:
+        useRange: 1
+        minValue: 0
+        maxValue: 10
