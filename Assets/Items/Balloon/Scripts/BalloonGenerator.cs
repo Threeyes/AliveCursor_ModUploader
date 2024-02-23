@@ -2,6 +2,7 @@ using Newtonsoft.Json;
 using System.Collections;
 using UnityEngine;
 using Threeyes.Steamworks;
+using Threeyes.Core;
 /// <summary>
 /// Todo：改为通用的生成器，放到SDK中
 /// </summary>

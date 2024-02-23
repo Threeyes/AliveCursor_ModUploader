@@ -441,6 +441,7 @@ MonoBehaviour:
   onActiveDeactive:
     m_PersistentCalls:
       m_Calls: []
+  isPlayed: 0
   isActive: 1
   canPlay: 1
   canStop: 1
@@ -457,7 +458,6 @@ MonoBehaviour:
   targetId: 
   isLogOnPlay: 0
   isLogOnStop: 0
-  isPlayed: 0
   state: -1
   onPlayWithParam:
     m_PersistentCalls:
@@ -974,7 +974,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1156548580}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 545dfab51480ded4980181882be72fb5, type: 3}
+  m_Script: {fileID: 11500000, guid: ee9159b6a29b19d41b5ee6130ec8ba46, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   defaultConfig:
@@ -1246,6 +1246,7 @@ MonoBehaviour:
   onActiveDeactive:
     m_PersistentCalls:
       m_Calls: []
+  isPlayed: 0
   isActive: 1
   canPlay: 1
   canStop: 1
@@ -1262,7 +1263,6 @@ MonoBehaviour:
   targetId: 
   isLogOnPlay: 0
   isLogOnStop: 0
-  isPlayed: 0
   state: -1
   onPlayWithParam:
     m_PersistentCalls:

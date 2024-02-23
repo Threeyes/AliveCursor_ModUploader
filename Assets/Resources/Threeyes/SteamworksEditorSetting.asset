@@ -12,10 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b7e8b8198aa90344cb8786c0cce1a236, type: 3}
   m_Name: SteamworksEditorSetting
   m_EditorClassIdentifier: 
-  curWorkshopItemInfo: {fileID: 11400000, guid: c06100509455c0b4daf802982730b9fb,
+  curWorkshopItemInfo: {fileID: 11400000, guid: 7cda84733c8c0ce42b2cf2cb13a51009,
     type: 2}
   itemWindow_ExePath: I:\SteamLibrary\steamapps\common\AliveCursor\AliveCursor\AliveCursor.exe
   itemWindow_IsPreviewGif: 0
-  itemWindow_ShowOutputDirectory: 1
+  itemWindow_ShowOutputDirectory: 0
   hubSimulator_ShowAssistantGizmo: 1
   hubSimulator_ShowAssistantInfo: 1

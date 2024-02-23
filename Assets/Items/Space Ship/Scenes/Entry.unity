@@ -2241,10 +2241,6 @@ PrefabInstance:
         type: 3}
       insertIndex: -1
       addedObject: {fileID: 1720640171}
-    - targetCorrespondingSourceObject: {fileID: 9039850149654745485, guid: 34c9c091d79010a42a984fe4f6352a0a,
-        type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1720640172}
     - targetCorrespondingSourceObject: {fileID: 5880631223195126422, guid: 34c9c091d79010a42a984fe4f6352a0a,
         type: 3}
       insertIndex: -1
@@ -2365,23 +2361,6 @@ MonoBehaviour:
   format: 
   tips: Use AC_FixedRotation to parallel to Body
   isLogOnConsole: 1
---- !u!114 &1720640172
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 82687099}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 545dfab51480ded4980181882be72fb5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  defaultConfig:
-    targetWorldAngle: {x: 0, y: 1, z: 0}
-  soOverrideConfig: {fileID: 0}
-  comp: {fileID: 0}
-  updateMethodType: 2
 --- !u!1 &1827032535
 GameObject:
   m_ObjectHideFlags: 0

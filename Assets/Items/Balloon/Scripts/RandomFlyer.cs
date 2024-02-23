@@ -5,6 +5,7 @@ using UnityEngine.Events;
 using DG.Tweening;
 using Newtonsoft.Json;
 using Threeyes.Steamworks;
+using Threeyes.Core;
 
 /// <summary>
 /// 在场景中随机飞行的物体

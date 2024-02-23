@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using Threeyes.Steamworks;
+using Threeyes.Core;
 /// <summary>
 /// 检查附近的兴趣点
 /// Todo：
