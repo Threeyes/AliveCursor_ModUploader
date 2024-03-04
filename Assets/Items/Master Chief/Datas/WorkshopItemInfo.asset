@@ -22,6 +22,8 @@ MonoBehaviour:
   texturePreview: {fileID: 2800000, guid: 96d287f3ba9c33d448d43b33ad7d03b8, type: 3}
   itemVisibility: 0
   itemName: Master Chief
+  ID:
+    m_Guid: 1c9f2352-8ecb-49cf-a926-cf0d2f015b06
   itemId: 2847246319
   ageRatingType: 2
   itemStyle: 64

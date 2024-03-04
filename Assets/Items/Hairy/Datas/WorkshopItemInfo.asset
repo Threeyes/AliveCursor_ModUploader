@@ -17,6 +17,8 @@ MonoBehaviour:
   texturePreview: {fileID: 2800000, guid: 5807686dc4e950b4fa91d2b0616d795f, type: 3}
   itemVisibility: 0
   itemName: Hairy
+  ID:
+    m_Guid: aefd4ff2-eace-4dd6-8888-33e342d26336
   itemId: 2889759157
   ageRatingType: 1
   itemStyle: 3

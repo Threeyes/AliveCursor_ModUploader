@@ -17,6 +17,8 @@ MonoBehaviour:
   texturePreview: {fileID: 2800000, guid: 09112c3004d3cb841b1f4f7fc397efa1, type: 3}
   itemVisibility: 0
   itemName: Star Wars BB-8
+  ID:
+    m_Guid: d78b2c5a-8493-4f81-96f2-c67ddb2d5b2b
   itemId: 2958357669
   ageRatingType: 1
   itemStyle: 16

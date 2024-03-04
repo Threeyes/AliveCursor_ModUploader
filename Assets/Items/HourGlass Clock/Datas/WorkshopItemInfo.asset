@@ -23,6 +23,8 @@ MonoBehaviour:
   texturePreview: {fileID: 2800000, guid: a6cea33fb8389144da0c5fe3e942faff, type: 3}
   itemVisibility: 0
   itemName: HourGlass Clock
+  ID:
+    m_Guid: d0119be7-d991-490c-9ed1-d2b6e86642a6
   itemId: 2847245798
   ageRatingType: 1
   itemStyle: 16

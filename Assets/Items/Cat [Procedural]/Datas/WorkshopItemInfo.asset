@@ -18,6 +18,8 @@ MonoBehaviour:
   texturePreview: {fileID: 2800000, guid: c53f01fb92c8c514cb7dc8a69d901818, type: 3}
   itemVisibility: 0
   itemName: Cat [Procedural]
+  ID:
+    m_Guid: 96b27500-9508-49fe-9f2c-2410834c5780
   itemId: 2968253792
   ageRatingType: 1
   itemStyle: 1

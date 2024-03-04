@@ -20,6 +20,8 @@ MonoBehaviour:
   texturePreview: {fileID: 2800000, guid: 2f51f5edf83d3d94791338032378f9c6, type: 3}
   itemVisibility: 0
   itemName: Robotic Hand
+  ID:
+    m_Guid: 8722f58e-a3aa-4d89-af47-6b43b780256a
   itemId: 2914862770
   ageRatingType: 1
   itemStyle: 16

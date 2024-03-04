@@ -17,6 +17,8 @@ MonoBehaviour:
   texturePreview: {fileID: 2800000, guid: 1997e734c2dbeda41b498b0e3e195a57, type: 3}
   itemVisibility: 0
   itemName: ZhiYin Hair
+  ID:
+    m_Guid: 853e1cc9-6ebc-4c10-b3b0-039326918fac
   itemId: 2956577286
   ageRatingType: 1
   itemStyle: 2

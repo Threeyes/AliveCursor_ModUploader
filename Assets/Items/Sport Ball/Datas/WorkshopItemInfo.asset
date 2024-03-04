@@ -20,6 +20,8 @@ MonoBehaviour:
   texturePreview: {fileID: 2800000, guid: be0d71be1d9b2a84d9ac32a7ab0d9192, type: 3}
   itemVisibility: 0
   itemName: Sport Ball
+  ID:
+    m_Guid: c8760c77-6564-4480-ba24-0796c3561914
   itemId: 2848013234
   ageRatingType: 1
   itemStyle: 128

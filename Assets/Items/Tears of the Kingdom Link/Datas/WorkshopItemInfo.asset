@@ -18,6 +18,8 @@ MonoBehaviour:
   texturePreview: {fileID: 2800000, guid: 757b23941a213894884602df550c434a, type: 3}
   itemVisibility: 0
   itemName: Tears of the Kingdom Link
+  ID:
+    m_Guid: 976747f7-70f3-4c5f-aec3-c06d795b1b98
   itemId: 2984276367
   ageRatingType: 1
   itemStyle: 2

@@ -19,6 +19,8 @@ MonoBehaviour:
   texturePreview: {fileID: 2800000, guid: 878b4df91707ab9469ab5a7b2a0a8e4b, type: 3}
   itemVisibility: 0
   itemName: Space Ship
+  ID:
+    m_Guid: 1ed17515-eb66-41e0-9f76-9cce0d57f76a
   itemId: 2847247854
   ageRatingType: 1
   itemStyle: 32

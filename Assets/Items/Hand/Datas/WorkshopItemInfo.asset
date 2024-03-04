@@ -20,6 +20,8 @@ MonoBehaviour:
   texturePreview: {fileID: 2800000, guid: f041982f6183e6f4aadce2431aa98b39, type: 3}
   itemVisibility: 0
   itemName: Hand
+  ID:
+    m_Guid: eb524618-dd17-48ca-b4d8-09030b55011b
   itemId: 2879016434
   ageRatingType: 1
   itemStyle: 2

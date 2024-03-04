@@ -18,6 +18,8 @@ MonoBehaviour:
   texturePreview: {fileID: 2800000, guid: 7f6c79be7feae7f4d9dc1bc9c80c9f9e, type: 3}
   itemVisibility: 0
   itemName: Red Lantern
+  ID:
+    m_Guid: 7a1832e6-bd6a-4cbc-b4a2-eace51900c7a
   itemId: 2919933197
   ageRatingType: 1
   itemStyle: 0

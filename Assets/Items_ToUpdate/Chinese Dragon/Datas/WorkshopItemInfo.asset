@@ -16,11 +16,13 @@ MonoBehaviour:
   description: 
   texturePreview: {fileID: 0}
   itemVisibility: 0
+  itemName: Chinese Dragon
+  ID:
+    m_Guid: 89b539c5-439a-48ba-8f39-580846383252
+  itemId: 0
   ageRatingType: 1
   itemStyle: 0
   itemGenre: 0
   itemReference: 0
   itemFeature: 0
-  itemSafety: 0
-  itemName: Chinese Dragon
-  itemId: 0
+  itemAdvance: 0
