@@ -10,7 +10,7 @@
       "url": "https://package.openupm.com"
     },
     "com.coffee.ui-effect": {
-      "version": "4.0.0-preview.9",
+      "version": "4.0.0-preview.10",
       "depth": 0,
       "source": "registry",
       "dependencies": {},
@@ -24,22 +24,22 @@
       "url": "https://package.openupm.com"
     },
     "com.threeyes.alivecursor.sdk": {
-      "version": "4.3.0",
+      "version": "4.3.2",
       "depth": 0,
       "source": "registry",
       "dependencies": {
-        "com.unity.2d.animation": "9.0.3",
-        "com.unity.2d.psdimporter": "8.0.2",
-        "com.unity.ai.navigation": "1.1.4",
+        "com.unity.2d.animation": "9.0.4",
+        "com.unity.2d.psdimporter": "8.0.4",
+        "com.unity.ai.navigation": "1.1.5",
         "com.unity.animation.rigging": "1.2.1",
         "com.unity.nuget.newtonsoft-json": "3.2.1",
         "com.unity.probuilder": "5.1.0",
         "com.unity.render-pipelines.universal": "14.0.8",
         "com.unity.splines": "2.3.0",
-        "com.unity.textmeshpro": "3.0.6",
-        "com.unity.timeline": "1.7.5",
+        "com.unity.textmeshpro": "3.0.8",
+        "com.unity.timeline": "1.7.6",
         "com.unity.visualeffectgraph": "14.0.8",
-        "com.unity.visualscripting": "1.8.0",
+        "com.unity.visualscripting": "1.9.2",
         "com.unity.2d.sprite": "1.0.0",
         "com.unity.ugui": "1.0.0",
         "com.unity.modules.ai": "1.0.0",
@@ -74,11 +74,11 @@
       "url": "https://package.openupm.com"
     },
     "com.unity.2d.animation": {
-      "version": "9.0.3",
-      "depth": 1,
+      "version": "9.1.0",
+      "depth": 2,
       "source": "registry",
       "dependencies": {
-        "com.unity.2d.common": "8.0.1",
+        "com.unity.2d.common": "8.0.2",
         "com.unity.2d.sprite": "1.0.0",
         "com.unity.collections": "1.1.0",
         "com.unity.modules.animation": "1.0.0",
@@ -87,7 +87,7 @@
       "url": "https://packages.unity.com"
     },
     "com.unity.2d.common": {
-      "version": "8.0.1",
+      "version": "8.0.2",
       "depth": 2,
       "source": "registry",
       "dependencies": {
@@ -100,12 +100,12 @@
       "url": "https://packages.unity.com"
     },
     "com.unity.2d.psdimporter": {
-      "version": "8.0.2",
+      "version": "8.0.4",
       "depth": 1,
       "source": "registry",
       "dependencies": {
-        "com.unity.2d.animation": "9.0.1",
-        "com.unity.2d.common": "8.0.1",
+        "com.unity.2d.animation": "9.1.0",
+        "com.unity.2d.common": "8.0.2",
         "com.unity.2d.sprite": "1.0.0"
       },
       "url": "https://packages.unity.com"
@@ -117,7 +117,7 @@
       "dependencies": {}
     },
     "com.unity.ai.navigation": {
-      "version": "1.1.4",
+      "version": "1.1.5",
       "depth": 0,
       "source": "registry",
       "dependencies": {
@@ -155,7 +155,7 @@
       "url": "https://packages.unity.com"
     },
     "com.unity.demoteam.hair": {
-      "version": "https://github.com/Unity-Technologies/com.unity.demoteam.hair.git#0.10.0-exp.1",
+      "version": "https://github.com/Unity-Technologies/com.unity.demoteam.hair.git#0.11.0-exp.1",
       "depth": 0,
       "source": "git",
       "dependencies": {
@@ -165,7 +165,7 @@
         "com.unity.render-pipelines.core": "10.2.2",
         "com.unity.shadergraph": "10.2.2"
       },
-      "hash": "1189211f0bfa018c57115867624a1d093adfa1da"
+      "hash": "12279cb83ccdf0a0b734df3efcc5f2ee2776ce4f"
     },
     "com.unity.ext.nunit": {
       "version": "1.0.6",
@@ -175,7 +175,7 @@
       "url": "https://packages.unity.com"
     },
     "com.unity.ide.visualstudio": {
-      "version": "2.0.18",
+      "version": "2.0.22",
       "depth": 0,
       "source": "registry",
       "dependencies": {
@@ -276,7 +276,7 @@
       "url": "https://packages.unity.com"
     },
     "com.unity.textmeshpro": {
-      "version": "3.0.6",
+      "version": "3.0.8",
       "depth": 1,
       "source": "registry",
       "dependencies": {
@@ -285,7 +285,7 @@
       "url": "https://packages.unity.com"
     },
     "com.unity.timeline": {
-      "version": "1.7.5",
+      "version": "1.7.6",
       "depth": 1,
       "source": "registry",
       "dependencies": {
@@ -315,7 +315,7 @@
       }
     },
     "com.unity.visualscripting": {
-      "version": "1.9.0",
+      "version": "1.9.2",
       "depth": 1,
       "source": "registry",
       "dependencies": {
@@ -339,7 +339,7 @@
       "url": "https://package.openupm.com"
     },
     "jillejr.newtonsoft.json-for-unity.converters": {
-      "version": "1.5.1",
+      "version": "1.6.3",
       "depth": 0,
       "source": "registry",
       "dependencies": {},
