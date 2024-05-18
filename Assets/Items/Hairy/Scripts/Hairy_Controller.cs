@@ -3,8 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 using Unity.DemoTeam.Hair;
 using static Unity.DemoTeam.Hair.HairInstance;
-using Threeyes.Coroutine;
 using static Unity.DemoTeam.Hair.HairAsset;
+using Threeyes.Core;
 //using Unity.DemoTeam.Hair;/ToFix：/无法引用的原因可能是其Assembled文件丢失了部分引用
 
 /// <summary>

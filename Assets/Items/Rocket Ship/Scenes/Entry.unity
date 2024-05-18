@@ -829,6 +829,7 @@ MonoBehaviour:
     isUseSkybox: 1
     skyboxType: 0
     defaultSkyboxMaterial: {fileID: 0}
+    defaultSkyboxSunSize: 0.04
     panoramaSkyboxMaterial: {fileID: 0}
     defaultPanoramaTexture: {fileID: 0}
     externalPanoramaTexture: {fileID: 0}
@@ -2125,6 +2126,7 @@ MonoBehaviour:
   onActiveDeactive:
     m_PersistentCalls:
       m_Calls: []
+  isPlayed: 0
   isActive: 1
   canPlay: 1
   canStop: 1
@@ -2141,7 +2143,6 @@ MonoBehaviour:
   targetId: 
   isLogOnPlay: 0
   isLogOnStop: 0
-  isPlayed: 0
   state: -1
   onPlayWithParam:
     m_PersistentCalls:
@@ -2152,6 +2153,12 @@ MonoBehaviour:
   isPlayWithParam: 0
   isStopWithParam: 0
   isDetectMatch: 0
+  onPlayComplete:
+    m_PersistentCalls:
+      m_Calls: []
+  onStopComplete:
+    m_PersistentCalls:
+      m_Calls: []
   goTarget: {fileID: 0}
   soAction: {fileID: 0}
   modifierKeys: 0
@@ -2538,6 +2545,7 @@ MonoBehaviour:
   onActiveDeactive:
     m_PersistentCalls:
       m_Calls: []
+  isPlayed: 0
   isActive: 1
   canPlay: 1
   canStop: 1
@@ -2554,7 +2562,6 @@ MonoBehaviour:
   targetId: 
   isLogOnPlay: 0
   isLogOnStop: 0
-  isPlayed: 0
   state: -1
   onPlayWithParam:
     m_PersistentCalls:
@@ -2565,6 +2572,12 @@ MonoBehaviour:
   isPlayWithParam: 0
   isStopWithParam: 0
   isDetectMatch: 0
+  onPlayComplete:
+    m_PersistentCalls:
+      m_Calls: []
+  onStopComplete:
+    m_PersistentCalls:
+      m_Calls: []
   goTarget: {fileID: 1626445719}
   soAction: {fileID: 11400000, guid: d4b7fd58568af8d4c89d2d6978ee737a, type: 2}
 --- !u!1 &1665907929
@@ -2640,7 +2653,7 @@ MonoBehaviour:
       - m_Target: {fileID: 1665907931}
         m_TargetAssemblyTypeName: Threeyes.ValueHolder.ReflectionValueHolder`1[[System.Enum,
           mscorlib
-        m_MethodName: set_TargetPropertyValue
+        m_MethodName: set_CurValue
         m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

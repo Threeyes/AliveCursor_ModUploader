@@ -530,7 +530,7 @@ MonoBehaviour:
       - m_Target: {fileID: 407326389}
         m_TargetAssemblyTypeName: Threeyes.ValueHolder.ReflectionValueHolder`1[[System.Enum,
           mscorlib
-        m_MethodName: set_TargetPropertyValue
+        m_MethodName: set_CurValue
         m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1001,6 +1001,7 @@ MonoBehaviour:
   onActiveDeactive:
     m_PersistentCalls:
       m_Calls: []
+  isPlayed: 0
   isActive: 1
   canPlay: 1
   canStop: 1
@@ -1017,7 +1018,6 @@ MonoBehaviour:
   targetId: 
   isLogOnPlay: 0
   isLogOnStop: 0
-  isPlayed: 0
   state: -1
   onPlayWithParam:
     m_PersistentCalls:
@@ -1028,6 +1028,12 @@ MonoBehaviour:
   isPlayWithParam: 0
   isStopWithParam: 0
   isDetectMatch: 0
+  onPlayComplete:
+    m_PersistentCalls:
+      m_Calls: []
+  onStopComplete:
+    m_PersistentCalls:
+      m_Calls: []
   goTarget: {fileID: 626671151}
   soAction: {fileID: 11400000, guid: b45c35b269d1bfd4f975d46f5333c478, type: 2}
 --- !u!1 &655551928
@@ -2177,6 +2183,7 @@ MonoBehaviour:
   onActiveDeactive:
     m_PersistentCalls:
       m_Calls: []
+  isPlayed: 0
   isActive: 1
   canPlay: 1
   canStop: 1
@@ -2193,7 +2200,6 @@ MonoBehaviour:
   targetId: 
   isLogOnPlay: 0
   isLogOnStop: 0
-  isPlayed: 0
   state: -1
   onPlayWithParam:
     m_PersistentCalls:
@@ -2204,6 +2210,12 @@ MonoBehaviour:
   isPlayWithParam: 0
   isStopWithParam: 0
   isDetectMatch: 0
+  onPlayComplete:
+    m_PersistentCalls:
+      m_Calls: []
+  onStopComplete:
+    m_PersistentCalls:
+      m_Calls: []
   goTarget: {fileID: 0}
   soAction: {fileID: 0}
   modifierKeys: 0
@@ -2262,6 +2274,7 @@ MonoBehaviour:
   onActiveDeactive:
     m_PersistentCalls:
       m_Calls: []
+  isPlayed: 0
   isActive: 1
   canPlay: 1
   canStop: 1
@@ -2278,7 +2291,6 @@ MonoBehaviour:
   targetId: 
   isLogOnPlay: 0
   isLogOnStop: 0
-  isPlayed: 0
   state: -1
   onPlayWithParam:
     m_PersistentCalls:
@@ -2289,6 +2301,12 @@ MonoBehaviour:
   isPlayWithParam: 0
   isStopWithParam: 0
   isDetectMatch: 0
+  onPlayComplete:
+    m_PersistentCalls:
+      m_Calls: []
+  onStopComplete:
+    m_PersistentCalls:
+      m_Calls: []
   goTarget: {fileID: 1064053900}
   soAction: {fileID: 11400000, guid: 14cda7db97ae97b4298976bc2b657f92, type: 2}
 --- !u!1 &1194821555
@@ -3566,6 +3584,7 @@ MonoBehaviour:
   onActiveDeactive:
     m_PersistentCalls:
       m_Calls: []
+  isPlayed: 0
   isActive: 1
   canPlay: 1
   canStop: 1
@@ -3582,7 +3601,6 @@ MonoBehaviour:
   targetId: 
   isLogOnPlay: 0
   isLogOnStop: 0
-  isPlayed: 0
   state: -1
 --- !u!1 &2011203694
 GameObject:

@@ -4941,7 +4941,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 766383162827178936}
         m_TargetAssemblyTypeName: Threeyes.ModuleHelper.GameObjectHelper, Threeyes.Plugin.ModuleHelper
-        m_MethodName: DeStroy
+        m_MethodName: DestroySelf
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

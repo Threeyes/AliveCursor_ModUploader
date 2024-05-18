@@ -1,7 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
+using Threeyes.Core;
 using UnityEngine;
-using Threeyes.Coroutine;
 public class RocketShip_MeteorController : MonoBehaviour
 {
     public Rigidbody rig;

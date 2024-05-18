@@ -196,7 +196,7 @@ MonoBehaviour:
       - m_Target: {fileID: 135161312}
         m_TargetAssemblyTypeName: Threeyes.ValueHolder.ReflectionValueHolder`1[[System.Enum,
           mscorlib
-        m_MethodName: set_TargetPropertyValue
+        m_MethodName: set_CurValue
         m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -527,6 +527,12 @@ MonoBehaviour:
   isPlayWithParam: 0
   isStopWithParam: 0
   isDetectMatch: 0
+  onPlayComplete:
+    m_PersistentCalls:
+      m_Calls: []
+  onStopComplete:
+    m_PersistentCalls:
+      m_Calls: []
   goTarget: {fileID: 1191027341}
   soAction: {fileID: 11400000, guid: a98ff1f0ed3e86f438be78c028276ddd, type: 2}
   modifierKeys: 1
@@ -692,53 +698,6 @@ MonoBehaviour:
   id:
     m_Guid: 04cbb6bb-d366-4cf4-8824-e93ca80904b9
   runtimeEditableDisplayName: 
-  cacheDefaultConfig:
-    sphereSubdivisions: 2
-    sphereRadius: 0.5
-    extrudeMethod: 0
-    idleExtrusion: 0.01
-    maxExtrusion: 0.1
-    showShell: 1
-    shellThickness: 0.01
-    shellSizeIncludeMaxExtrusion: 1
-    fftBounds: 32
-    showWaveform: 1
-    waveformDownSample: 1
-    waveformGradient:
-      serializedVersion: 2
-      key0: {r: 1, g: 1, b: 1, a: 1}
-      key1: {r: 1, g: 1, b: 1, a: 1}
-      key2: {r: 0, g: 0, b: 0, a: 0}
-      key3: {r: 0, g: 0, b: 0, a: 0}
-      key4: {r: 0, g: 0, b: 0, a: 0}
-      key5: {r: 0, g: 0, b: 0, a: 0}
-      key6: {r: 0, g: 0, b: 0, a: 0}
-      key7: {r: 0, g: 0, b: 0, a: 0}
-      ctime0: 0
-      ctime1: 65535
-      ctime2: 0
-      ctime3: 0
-      ctime4: 0
-      ctime5: 0
-      ctime6: 0
-      ctime7: 0
-      atime0: 0
-      atime1: 65535
-      atime2: 0
-      atime3: 0
-      atime4: 0
-      atime5: 0
-      atime6: 0
-      atime7: 0
-      m_Mode: 0
-      m_ColorSpace: -1
-      m_NumColorKeys: 2
-      m_NumAlphaKeys: 2
-    waveformWidthMultiplier: 0.5
-    waveformRadius: 0.6
-    waveformHeight: 0.2
-    rotateWaveformRing: 0
-    waveformRotateSpeed: {x: 0, y: 3, z: 0}
   tfParent: {fileID: 0}
   frequencyCurve:
     serializedVersion: 2
@@ -809,19 +768,15 @@ MonoBehaviour:
     listColorShaderProperty: []
     listIntShaderProperty: []
     listFloatShaderProperty: []
+    listBoolShaderProperty: []
   soOverrideConfig: {fileID: 11400000, guid: bc5f9966be7fc934e947faedbc67fa2b, type: 2}
   id:
     m_Guid: 6b830f5c-bd26-496d-b437-95856204133f
   runtimeEditableDisplayName: 
-  cacheDefaultConfig:
-    materialIndex: 0
-    listTextureShaderProperty: []
-    listColorShaderProperty: []
-    listIntShaderProperty: []
-    listFloatShaderProperty: []
   targetRenderer: {fileID: 242097701}
   targetMaterial: {fileID: 0}
-  cloneMaterial: {fileID: 0}
+  useSharedMaterial: 0
+  listRendererMaterialInfo: []
 --- !u!114 &1253112526
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -840,19 +795,15 @@ MonoBehaviour:
     listColorShaderProperty: []
     listIntShaderProperty: []
     listFloatShaderProperty: []
+    listBoolShaderProperty: []
   soOverrideConfig: {fileID: 11400000, guid: 91bda662e40fe1444ba191cfc6a030c8, type: 2}
   id:
     m_Guid: 33c81561-9147-412a-a652-508549cd0a8d
   runtimeEditableDisplayName: 
-  cacheDefaultConfig:
-    materialIndex: 0
-    listTextureShaderProperty: []
-    listColorShaderProperty: []
-    listIntShaderProperty: []
-    listFloatShaderProperty: []
   targetRenderer: {fileID: 2078946968}
   targetMaterial: {fileID: 0}
-  cloneMaterial: {fileID: 0}
+  useSharedMaterial: 0
+  listRendererMaterialInfo: []
 --- !u!1 &1507957516
 GameObject:
   m_ObjectHideFlags: 0

@@ -1,6 +1,5 @@
 using UnityEngine;
 using System.Collections;
-using Threeyes.Coroutine;
 using Threeyes.Steamworks;
 using Threeyes.Core;
 /// <summary>

@@ -462,6 +462,12 @@ MonoBehaviour:
   isPlayWithParam: 0
   isStopWithParam: 0
   isDetectMatch: 0
+  onPlayComplete:
+    m_PersistentCalls:
+      m_Calls: []
+  onStopComplete:
+    m_PersistentCalls:
+      m_Calls: []
   goTarget: {fileID: 0}
   soAction: {fileID: 0}
   onAliveCursorActiveDeactive:
@@ -3418,7 +3424,7 @@ MonoBehaviour:
       - m_Target: {fileID: 1700831817}
         m_TargetAssemblyTypeName: Threeyes.ValueHolder.ReflectionValueHolder`1[[System.Enum,
           mscorlib
-        m_MethodName: set_TargetPropertyValue
+        m_MethodName: set_CurValue
         m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -3897,6 +3903,12 @@ MonoBehaviour:
   isPlayWithParam: 0
   isStopWithParam: 0
   isDetectMatch: 0
+  onPlayComplete:
+    m_PersistentCalls:
+      m_Calls: []
+  onStopComplete:
+    m_PersistentCalls:
+      m_Calls: []
   goTarget: {fileID: 0}
   soAction: {fileID: 0}
   modifierKeys: 0
@@ -11359,6 +11371,12 @@ MonoBehaviour:
   isPlayWithParam: 0
   isStopWithParam: 0
   isDetectMatch: 0
+  onPlayComplete:
+    m_PersistentCalls:
+      m_Calls: []
+  onStopComplete:
+    m_PersistentCalls:
+      m_Calls: []
   goTarget: {fileID: 4732060228616707669}
   soAction: {fileID: 11400000, guid: 723c215b2e8943544b7b4b1fea5f0113, type: 2}
 --- !u!1 &6490786135033512682
@@ -11431,6 +11449,12 @@ MonoBehaviour:
   isPlayWithParam: 0
   isStopWithParam: 0
   isDetectMatch: 0
+  onPlayComplete:
+    m_PersistentCalls:
+      m_Calls: []
+  onStopComplete:
+    m_PersistentCalls:
+      m_Calls: []
   goTarget: {fileID: 6490786135033512682}
   soAction: {fileID: 11400000, guid: 723c215b2e8943544b7b4b1fea5f0113, type: 2}
 --- !u!4 &6524711743227756001

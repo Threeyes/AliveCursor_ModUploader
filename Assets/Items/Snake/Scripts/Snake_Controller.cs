@@ -1,8 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
+using Threeyes.Action;
 using UnityEngine;
 using UnityEngine.Events;
-using Threeyes.EventPlayer;
 public class Snake_Controller : MonoBehaviour
 {
     [Header("Common")]
