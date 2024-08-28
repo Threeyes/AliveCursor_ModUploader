@@ -2,7 +2,7 @@ using DG.Tweening;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using Threeyes.Steamworks;
+using Threeyes.GameFramework;
 public class ComputerMouse_AudioVisualizer : MonoBehaviour
 {
     public Renderer rendererTarget;//Target to change "_Cutoff"

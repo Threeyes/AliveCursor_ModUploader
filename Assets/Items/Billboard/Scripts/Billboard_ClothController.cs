@@ -1,6 +1,6 @@
 using UnityEngine;
 using System.Collections;
-using Threeyes.Steamworks;
+using Threeyes.GameFramework;
 using Threeyes.Core;
 /// <summary>
 /// 功能：增加相对位置反向的力（以及横向的随机力，模拟摇摆的状态）
